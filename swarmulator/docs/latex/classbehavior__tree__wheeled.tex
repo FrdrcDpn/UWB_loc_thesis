@@ -1,0 +1,89 @@
+\hypertarget{classbehavior__tree__wheeled}{}\doxysubsection{behavior\+\_\+tree\+\_\+wheeled Class Reference}
+\label{classbehavior__tree__wheeled}\index{behavior\_tree\_wheeled@{behavior\_tree\_wheeled}}
+
+
+Inheritance diagram for behavior\+\_\+tree\+\_\+wheeled\+:
+% FIG 0
+
+
+Collaboration diagram for behavior\+\_\+tree\+\_\+wheeled\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbehavior__tree__wheeled_a0a676fb37d5245337ff25ebaca757277}{behavior\+\_\+tree\+\_\+wheeled}} ()
+\item 
+void \mbox{\hyperlink{classbehavior__tree__wheeled_ae6e30d56c4fcc9858f0079e6cd0d520c}{lattice\+\_\+all}} (const int \&ID, const std\+::vector$<$ uint $>$ \&closest, float \&v\+\_\+x, float \&v\+\_\+y)
+\item 
+virtual void \mbox{\hyperlink{classbehavior__tree__wheeled_a5b4e8a4ae5e9368bc554a45140f930c9}{get\+\_\+velocity\+\_\+command}} (const uint16\+\_\+t ID, float \&v\+\_\+x, float \&v\+\_\+y)
+\item 
+\mbox{\Hypertarget{classbehavior__tree__wheeled_ab1ad4bcfd40cb4a6735b7069b5350a84}\label{classbehavior__tree__wheeled_ab1ad4bcfd40cb4a6735b7069b5350a84}} 
+virtual void {\bfseries animation} (const uint16\+\_\+t ID)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbehavior__tree__wheeled_ae00a1067c6a4c72f626bb1d7e78faafe}\label{classbehavior__tree__wheeled_ae00a1067c6a4c72f626bb1d7e78faafe}} 
+float {\bfseries v\+\_\+x\+\_\+ref}
+\item 
+\mbox{\Hypertarget{classbehavior__tree__wheeled_a6383faf643af681bcf6dfe657439bbbd}\label{classbehavior__tree__wheeled_a6383faf643af681bcf6dfe657439bbbd}} 
+float {\bfseries v\+\_\+y\+\_\+ref}
+\item 
+\mbox{\Hypertarget{classbehavior__tree__wheeled_a8f0b3b5036ed7d58bde51780d9cc28af}\label{classbehavior__tree__wheeled_a8f0b3b5036ed7d58bde51780d9cc28af}} 
+float {\bfseries ang}
+\item 
+\mbox{\Hypertarget{classbehavior__tree__wheeled_a7347961e9a0625404452b0e7c6097313}\label{classbehavior__tree__wheeled_a7347961e9a0625404452b0e7c6097313}} 
+uint {\bfseries moving\+\_\+timer}
+\item 
+\mbox{\Hypertarget{classbehavior__tree__wheeled_ab23b9238300be09d2bd8233d49922e5a}\label{classbehavior__tree__wheeled_ab23b9238300be09d2bd8233d49922e5a}} 
+\mbox{\hyperlink{classBT_1_1composite}{composite}} $\ast$ {\bfseries tree}
+\item 
+\mbox{\Hypertarget{classbehavior__tree__wheeled_a21e1e8164afb7354635f438b677ee0a3}\label{classbehavior__tree__wheeled_a21e1e8164afb7354635f438b677ee0a3}} 
+\mbox{\hyperlink{structblackboard}{blackboard}} {\bfseries B\+L\+KB}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbehavior__tree__wheeled_a0a676fb37d5245337ff25ebaca757277}\label{classbehavior__tree__wheeled_a0a676fb37d5245337ff25ebaca757277}} 
+\index{behavior\_tree\_wheeled@{behavior\_tree\_wheeled}!behavior\_tree\_wheeled@{behavior\_tree\_wheeled}}
+\index{behavior\_tree\_wheeled@{behavior\_tree\_wheeled}!behavior\_tree\_wheeled@{behavior\_tree\_wheeled}}
+\doxyparagraph{\texorpdfstring{behavior\_tree\_wheeled()}{behavior\_tree\_wheeled()}}
+{\footnotesize\ttfamily behavior\+\_\+tree\+\_\+wheeled\+::behavior\+\_\+tree\+\_\+wheeled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initialize Initialize the behavior tree 
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbehavior__tree__wheeled_a5b4e8a4ae5e9368bc554a45140f930c9}\label{classbehavior__tree__wheeled_a5b4e8a4ae5e9368bc554a45140f930c9}} 
+\index{behavior\_tree\_wheeled@{behavior\_tree\_wheeled}!get\_velocity\_command@{get\_velocity\_command}}
+\index{get\_velocity\_command@{get\_velocity\_command}!behavior\_tree\_wheeled@{behavior\_tree\_wheeled}}
+\doxyparagraph{\texorpdfstring{get\_velocity\_command()}{get\_velocity\_command()}}
+{\footnotesize\ttfamily void behavior\+\_\+tree\+\_\+wheeled\+::get\+\_\+velocity\+\_\+command (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{ID,  }\item[{float \&}]{v\+\_\+x,  }\item[{float \&}]{v\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Update the inputs and run the behavior tree command 
+
+Implements \mbox{\hyperlink{classController_a2cefe37f2817de5f54535ebb35e0d32f}{Controller}}.
+
+\mbox{\Hypertarget{classbehavior__tree__wheeled_ae6e30d56c4fcc9858f0079e6cd0d520c}\label{classbehavior__tree__wheeled_ae6e30d56c4fcc9858f0079e6cd0d520c}} 
+\index{behavior\_tree\_wheeled@{behavior\_tree\_wheeled}!lattice\_all@{lattice\_all}}
+\index{lattice\_all@{lattice\_all}!behavior\_tree\_wheeled@{behavior\_tree\_wheeled}}
+\doxyparagraph{\texorpdfstring{lattice\_all()}{lattice\_all()}}
+{\footnotesize\ttfamily void behavior\+\_\+tree\+\_\+wheeled\+::lattice\+\_\+all (\begin{DoxyParamCaption}\item[{const int \&}]{ID,  }\item[{const std\+::vector$<$ uint $>$ \&}]{closest,  }\item[{float \&}]{v\+\_\+x,  }\item[{float \&}]{v\+\_\+y }\end{DoxyParamCaption})}
+
+Function for lattice to all robots
+
+
+\begin{DoxyParams}{Parameters}
+{\em closest} & vector of ID of all closest neighbors \\
+\hline
+{\em v\+\_\+x} & \\
+\hline
+{\em v\+\_\+y} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sw/simulation/controllers/behavior\+\_\+tree/behavior\+\_\+tree\+\_\+wheeled.\+h\item 
+sw/simulation/controllers/behavior\+\_\+tree/behavior\+\_\+tree\+\_\+wheeled.\+cpp\end{DoxyCompactItemize}

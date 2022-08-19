@@ -1,0 +1,49 @@
+\hypertarget{classboid}{}\doxysubsection{boid Class Reference}
+\label{classboid}\index{boid@{boid}}
+
+
+Inheritance diagram for boid\+:
+% FIG 0
+
+
+Collaboration diagram for boid\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classboid_a83e89c7a1d12811135c9066c015b5010}{get\+\_\+velocity\+\_\+command}} (const uint16\+\_\+t ID, float \&v\+\_\+x, float \&v\+\_\+y)
+\item 
+\mbox{\Hypertarget{classboid_a0a5967a075c280d114ccb3990b214da8}\label{classboid_a0a5967a075c280d114ccb3990b214da8}} 
+virtual void {\bfseries animation} (const uint16\+\_\+t ID)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classboid_a83e89c7a1d12811135c9066c015b5010}\label{classboid_a83e89c7a1d12811135c9066c015b5010}} 
+\index{boid@{boid}!get\_velocity\_command@{get\_velocity\_command}}
+\index{get\_velocity\_command@{get\_velocity\_command}!boid@{boid}}
+\doxyparagraph{\texorpdfstring{get\_velocity\_command()}{get\_velocity\_command()}}
+{\footnotesize\ttfamily void boid\+::get\+\_\+velocity\+\_\+command (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{ID,  }\item[{float \&}]{v\+\_\+x,  }\item[{float \&}]{v\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Virtual function to be implemented by child class that defines the controller The outputs are the desired v\+\_\+x and v\+\_\+y velocities
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & The ID of the robot to control \\
+\hline
+{\em v\+\_\+x} & The desired velocity in v\+\_\+x (to be set in this function) \\
+\hline
+{\em v\+\_\+y} & The desired velocity in v\+\_\+y (to be set in this function) \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classController_a2cefe37f2817de5f54535ebb35e0d32f}{Controller}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sw/simulation/controllers/boid/boid.\+h\item 
+sw/simulation/controllers/boid/boid.\+cpp\end{DoxyCompactItemize}

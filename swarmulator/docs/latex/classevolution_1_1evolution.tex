@@ -1,0 +1,131 @@
+\hypertarget{classevolution_1_1evolution}{}\doxysubsection{evolution.\+evolution Class Reference}
+\label{classevolution_1_1evolution}\index{evolution.evolution@{evolution.evolution}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classevolution_1_1evolution_a7344cfae3a9b83a329ced5aaf4776037}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classevolution_1_1evolution_af46d35d2c524f812132a088037c2cb30}{setup}} (self, fitness\+\_\+function\+\_\+handle, constraint=None, G\+E\+N\+O\+M\+E\+\_\+\+L\+E\+N\+G\+TH=20, P\+O\+P\+U\+L\+A\+T\+I\+O\+N\+\_\+\+S\+I\+ZE=100, P\+\_\+\+C\+R\+O\+S\+S\+O\+V\+ER=0.\+5, P\+\_\+\+M\+U\+T\+A\+T\+I\+ON=0.\+2)
+\item 
+def \mbox{\hyperlink{classevolution_1_1evolution_abf83b438f132f87f91d6601590a83f5f}{store\+\_\+stats}} (self, population, iteration=0)
+\item 
+def \mbox{\hyperlink{classevolution_1_1evolution_a279dd1ba3b99235bd0a05030b2e8173c}{disp\+\_\+stats}} (self, iteration=0)
+\item 
+def \mbox{\hyperlink{classevolution_1_1evolution_a0a458176194718fdba085e34bd925417}{plot\+\_\+evolution}} (self, figurename=None)
+\item 
+def \mbox{\hyperlink{classevolution_1_1evolution_a1afe61e9c14d6761e5c76362141b4214}{evolve}} (self, generations=100, verbose=False, population=None, checkpoint=None)
+\item 
+def \mbox{\hyperlink{classevolution_1_1evolution_a56f14f0d5989cfa6d5fdc6a77ac8c367}{save}} (self, filename, pop=None, gen=None, stats=None)
+\item 
+def \mbox{\hyperlink{classevolution_1_1evolution_a00ee6baa72e4e7082132670ac8598951}{load}} (self, filename)
+\item 
+def \mbox{\hyperlink{classevolution_1_1evolution_a3a0b61237602b5969652e25fd1a016c6}{get\+\_\+best}} (self, pop=None)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classevolution_1_1evolution_a8a6a19cb9300ef5938a65bb7ce30d467}\label{classevolution_1_1evolution_a8a6a19cb9300ef5938a65bb7ce30d467}} 
+{\bfseries G\+E\+N\+O\+M\+E\+\_\+\+L\+E\+N\+G\+TH}
+\item 
+\mbox{\Hypertarget{classevolution_1_1evolution_addafd2f1035e046904a328e94523d060}\label{classevolution_1_1evolution_addafd2f1035e046904a328e94523d060}} 
+{\bfseries P\+O\+P\+U\+L\+A\+T\+I\+O\+N\+\_\+\+S\+I\+ZE}
+\item 
+\mbox{\Hypertarget{classevolution_1_1evolution_a36571f3e3e84dc3d70165875179c65e7}\label{classevolution_1_1evolution_a36571f3e3e84dc3d70165875179c65e7}} 
+{\bfseries P\+\_\+\+C\+R\+O\+S\+S\+O\+V\+ER}
+\item 
+\mbox{\Hypertarget{classevolution_1_1evolution_ab6f430c854f30fd8ae96e505321a308c}\label{classevolution_1_1evolution_ab6f430c854f30fd8ae96e505321a308c}} 
+{\bfseries P\+\_\+\+M\+U\+T\+A\+T\+I\+ON}
+\item 
+\mbox{\Hypertarget{classevolution_1_1evolution_a3417518fd3b24920387f45c99946d2af}\label{classevolution_1_1evolution_a3417518fd3b24920387f45c99946d2af}} 
+{\bfseries toolbox}
+\item 
+\mbox{\Hypertarget{classevolution_1_1evolution_ab658dd219829a5419d3b5488a2f6d5dc}\label{classevolution_1_1evolution_ab658dd219829a5419d3b5488a2f6d5dc}} 
+{\bfseries stats}
+\item 
+\mbox{\Hypertarget{classevolution_1_1evolution_ac0da7363538ea362c6898e58a6776279}\label{classevolution_1_1evolution_ac0da7363538ea362c6898e58a6776279}} 
+{\bfseries pop}
+\item 
+\mbox{\Hypertarget{classevolution_1_1evolution_a79f18b06da2cab9d49037fa1d28fdbad}\label{classevolution_1_1evolution_a79f18b06da2cab9d49037fa1d28fdbad}} 
+{\bfseries best\+\_\+ind}
+\item 
+\mbox{\Hypertarget{classevolution_1_1evolution_a3f62e9eeadc715dc389cd8f94a3cd530}\label{classevolution_1_1evolution_a3f62e9eeadc715dc389cd8f94a3cd530}} 
+{\bfseries g}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+\begin{DoxyVerb}Wrapper around the DEAP package to run an evolutionary process with just a few commands\end{DoxyVerb}
+ 
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classevolution_1_1evolution_a7344cfae3a9b83a329ced5aaf4776037}\label{classevolution_1_1evolution_a7344cfae3a9b83a329ced5aaf4776037}} 
+\index{evolution.evolution@{evolution.evolution}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!evolution.evolution@{evolution.evolution}}
+\doxyparagraph{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def evolution.\+evolution.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Itilize the DEAP wrapper\end{DoxyVerb}
+ 
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classevolution_1_1evolution_a279dd1ba3b99235bd0a05030b2e8173c}\label{classevolution_1_1evolution_a279dd1ba3b99235bd0a05030b2e8173c}} 
+\index{evolution.evolution@{evolution.evolution}!disp\_stats@{disp\_stats}}
+\index{disp\_stats@{disp\_stats}!evolution.evolution@{evolution.evolution}}
+\doxyparagraph{\texorpdfstring{disp\_stats()}{disp\_stats()}}
+{\footnotesize\ttfamily def evolution.\+evolution.\+disp\+\_\+stats (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{iteration = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Print the current stats\end{DoxyVerb}
+ \mbox{\Hypertarget{classevolution_1_1evolution_a1afe61e9c14d6761e5c76362141b4214}\label{classevolution_1_1evolution_a1afe61e9c14d6761e5c76362141b4214}} 
+\index{evolution.evolution@{evolution.evolution}!evolve@{evolve}}
+\index{evolve@{evolve}!evolution.evolution@{evolution.evolution}}
+\doxyparagraph{\texorpdfstring{evolve()}{evolve()}}
+{\footnotesize\ttfamily def evolution.\+evolution.\+evolve (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{generations = {\ttfamily 100},  }\item[{}]{verbose = {\ttfamily False},  }\item[{}]{population = {\ttfamily None},  }\item[{}]{checkpoint = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Run the evolution. Use checkpoint="filename.pkl" to save the status to a file after each generation, just in case.\end{DoxyVerb}
+ \mbox{\Hypertarget{classevolution_1_1evolution_a3a0b61237602b5969652e25fd1a016c6}\label{classevolution_1_1evolution_a3a0b61237602b5969652e25fd1a016c6}} 
+\index{evolution.evolution@{evolution.evolution}!get\_best@{get\_best}}
+\index{get\_best@{get\_best}!evolution.evolution@{evolution.evolution}}
+\doxyparagraph{\texorpdfstring{get\_best()}{get\_best()}}
+{\footnotesize\ttfamily def evolution.\+evolution.\+get\+\_\+best (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{pop = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the fittest element of a population\end{DoxyVerb}
+ \mbox{\Hypertarget{classevolution_1_1evolution_a00ee6baa72e4e7082132670ac8598951}\label{classevolution_1_1evolution_a00ee6baa72e4e7082132670ac8598951}} 
+\index{evolution.evolution@{evolution.evolution}!load@{load}}
+\index{load@{load}!evolution.evolution@{evolution.evolution}}
+\doxyparagraph{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily def evolution.\+evolution.\+load (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{filename }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Load the status from a pkl file\end{DoxyVerb}
+ \mbox{\Hypertarget{classevolution_1_1evolution_a0a458176194718fdba085e34bd925417}\label{classevolution_1_1evolution_a0a458176194718fdba085e34bd925417}} 
+\index{evolution.evolution@{evolution.evolution}!plot\_evolution@{plot\_evolution}}
+\index{plot\_evolution@{plot\_evolution}!evolution.evolution@{evolution.evolution}}
+\doxyparagraph{\texorpdfstring{plot\_evolution()}{plot\_evolution()}}
+{\footnotesize\ttfamily def evolution.\+evolution.\+plot\+\_\+evolution (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{figurename = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Plot the evolution outcome\end{DoxyVerb}
+ \mbox{\Hypertarget{classevolution_1_1evolution_a56f14f0d5989cfa6d5fdc6a77ac8c367}\label{classevolution_1_1evolution_a56f14f0d5989cfa6d5fdc6a77ac8c367}} 
+\index{evolution.evolution@{evolution.evolution}!save@{save}}
+\index{save@{save}!evolution.evolution@{evolution.evolution}}
+\doxyparagraph{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily def evolution.\+evolution.\+save (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{filename,  }\item[{}]{pop = {\ttfamily None},  }\item[{}]{gen = {\ttfamily None},  }\item[{}]{stats = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Save the current status in a pkl file\end{DoxyVerb}
+ \mbox{\Hypertarget{classevolution_1_1evolution_af46d35d2c524f812132a088037c2cb30}\label{classevolution_1_1evolution_af46d35d2c524f812132a088037c2cb30}} 
+\index{evolution.evolution@{evolution.evolution}!setup@{setup}}
+\index{setup@{setup}!evolution.evolution@{evolution.evolution}}
+\doxyparagraph{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily def evolution.\+evolution.\+setup (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{fitness\+\_\+function\+\_\+handle,  }\item[{}]{constraint = {\ttfamily None},  }\item[{}]{G\+E\+N\+O\+M\+E\+\_\+\+L\+E\+N\+G\+TH = {\ttfamily 20},  }\item[{}]{P\+O\+P\+U\+L\+A\+T\+I\+O\+N\+\_\+\+S\+I\+ZE = {\ttfamily 100},  }\item[{}]{P\+\_\+\+C\+R\+O\+S\+S\+O\+V\+ER = {\ttfamily 0.5},  }\item[{}]{P\+\_\+\+M\+U\+T\+A\+T\+I\+ON = {\ttfamily 0.2} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Set up the parameters\end{DoxyVerb}
+ \mbox{\Hypertarget{classevolution_1_1evolution_abf83b438f132f87f91d6601590a83f5f}\label{classevolution_1_1evolution_abf83b438f132f87f91d6601590a83f5f}} 
+\index{evolution.evolution@{evolution.evolution}!store\_stats@{store\_stats}}
+\index{store\_stats@{store\_stats}!evolution.evolution@{evolution.evolution}}
+\doxyparagraph{\texorpdfstring{store\_stats()}{store\_stats()}}
+{\footnotesize\ttfamily def evolution.\+evolution.\+store\+\_\+stats (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{population,  }\item[{}]{iteration = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Store the current stats and return a dict\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+scripts/python/classes/evolution.\+py\end{DoxyCompactItemize}

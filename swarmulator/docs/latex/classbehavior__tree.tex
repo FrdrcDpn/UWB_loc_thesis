@@ -1,0 +1,89 @@
+\hypertarget{classbehavior__tree}{}\doxysubsection{behavior\+\_\+tree Class Reference}
+\label{classbehavior__tree}\index{behavior\_tree@{behavior\_tree}}
+
+
+Inheritance diagram for behavior\+\_\+tree\+:
+% FIG 0
+
+
+Collaboration diagram for behavior\+\_\+tree\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbehavior__tree_aac5d079c9458682890b817eaaf1c042e}{behavior\+\_\+tree}} ()
+\item 
+void \mbox{\hyperlink{classbehavior__tree_ab5524d224ef75c5adda725cf45040468}{lattice\+\_\+all}} (const int \&ID, const std\+::vector$<$ uint $>$ \&closest, float \&v\+\_\+x, float \&v\+\_\+y)
+\item 
+virtual void \mbox{\hyperlink{classbehavior__tree_a78aa96f1d7e238d2e55bac5d4625522d}{get\+\_\+velocity\+\_\+command}} (const uint16\+\_\+t ID, float \&v\+\_\+x, float \&v\+\_\+y)
+\item 
+\mbox{\Hypertarget{classbehavior__tree_aec78b67e087c79bac485129b0deb570f}\label{classbehavior__tree_aec78b67e087c79bac485129b0deb570f}} 
+virtual void {\bfseries animation} (const uint16\+\_\+t ID)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbehavior__tree_af400d7e32ea9ea52d6802e1bf946c8ec}\label{classbehavior__tree_af400d7e32ea9ea52d6802e1bf946c8ec}} 
+float {\bfseries v\+\_\+x\+\_\+ref}
+\item 
+\mbox{\Hypertarget{classbehavior__tree_a33961e570ba77c405962fa4e00ccbe6a}\label{classbehavior__tree_a33961e570ba77c405962fa4e00ccbe6a}} 
+float {\bfseries v\+\_\+y\+\_\+ref}
+\item 
+\mbox{\Hypertarget{classbehavior__tree_ad2f46ef392e4376ecaeda25093f42839}\label{classbehavior__tree_ad2f46ef392e4376ecaeda25093f42839}} 
+float {\bfseries ang}
+\item 
+\mbox{\Hypertarget{classbehavior__tree_af80f9395257bc78e3788b0764964c709}\label{classbehavior__tree_af80f9395257bc78e3788b0764964c709}} 
+uint {\bfseries moving\+\_\+timer}
+\item 
+\mbox{\Hypertarget{classbehavior__tree_ab7a91cbc5acb76e83e3805c8d2211533}\label{classbehavior__tree_ab7a91cbc5acb76e83e3805c8d2211533}} 
+\mbox{\hyperlink{classBT_1_1composite}{composite}} $\ast$ {\bfseries tree}
+\item 
+\mbox{\Hypertarget{classbehavior__tree_ab1b1cd0b3760de32027a4acb0bd2a4ba}\label{classbehavior__tree_ab1b1cd0b3760de32027a4acb0bd2a4ba}} 
+\mbox{\hyperlink{structblackboard}{blackboard}} {\bfseries B\+L\+KB}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbehavior__tree_aac5d079c9458682890b817eaaf1c042e}\label{classbehavior__tree_aac5d079c9458682890b817eaaf1c042e}} 
+\index{behavior\_tree@{behavior\_tree}!behavior\_tree@{behavior\_tree}}
+\index{behavior\_tree@{behavior\_tree}!behavior\_tree@{behavior\_tree}}
+\doxyparagraph{\texorpdfstring{behavior\_tree()}{behavior\_tree()}}
+{\footnotesize\ttfamily behavior\+\_\+tree\+::behavior\+\_\+tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initialize Initialize the behavior tree 
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbehavior__tree_a78aa96f1d7e238d2e55bac5d4625522d}\label{classbehavior__tree_a78aa96f1d7e238d2e55bac5d4625522d}} 
+\index{behavior\_tree@{behavior\_tree}!get\_velocity\_command@{get\_velocity\_command}}
+\index{get\_velocity\_command@{get\_velocity\_command}!behavior\_tree@{behavior\_tree}}
+\doxyparagraph{\texorpdfstring{get\_velocity\_command()}{get\_velocity\_command()}}
+{\footnotesize\ttfamily void behavior\+\_\+tree\+::get\+\_\+velocity\+\_\+command (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{ID,  }\item[{float \&}]{v\+\_\+x,  }\item[{float \&}]{v\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Update the inputs and run the behavior tree command 
+
+Implements \mbox{\hyperlink{classController_a2cefe37f2817de5f54535ebb35e0d32f}{Controller}}.
+
+\mbox{\Hypertarget{classbehavior__tree_ab5524d224ef75c5adda725cf45040468}\label{classbehavior__tree_ab5524d224ef75c5adda725cf45040468}} 
+\index{behavior\_tree@{behavior\_tree}!lattice\_all@{lattice\_all}}
+\index{lattice\_all@{lattice\_all}!behavior\_tree@{behavior\_tree}}
+\doxyparagraph{\texorpdfstring{lattice\_all()}{lattice\_all()}}
+{\footnotesize\ttfamily void behavior\+\_\+tree\+::lattice\+\_\+all (\begin{DoxyParamCaption}\item[{const int \&}]{ID,  }\item[{const std\+::vector$<$ uint $>$ \&}]{closest,  }\item[{float \&}]{v\+\_\+x,  }\item[{float \&}]{v\+\_\+y }\end{DoxyParamCaption})}
+
+Function for lattice to all robots
+
+
+\begin{DoxyParams}{Parameters}
+{\em closest} & vector of ID of all closest neighbors \\
+\hline
+{\em v\+\_\+x} & \\
+\hline
+{\em v\+\_\+y} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sw/simulation/controllers/behavior\+\_\+tree/behavior\+\_\+tree.\+h\item 
+sw/simulation/controllers/behavior\+\_\+tree/behavior\+\_\+tree.\+cpp\end{DoxyCompactItemize}

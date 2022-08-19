@@ -1,0 +1,51 @@
+#ifndef __LPS_TWR_TAG_H__
+#define __LPS_TWR_TAG_H__
+
+#include "locodeck.h"
+#include "libdw1000.h"
+#include "mac.h"
+#include <stdlib.h>
+#define LPS_TWR_POLL    0x01  
+#define LPS_TWR_ANSWER  0x02
+#define LPS_TWR_FINAL   0x03
+#define LPS_TWR_REPORT  0x04
+
+#define LPS_TWR_TYPE  0
+#define LPS_TWR_SEQ   1
+
+#define NumUWB 4
+
+extern uwbAlgorithm_t uwbTwrTagAlgorithm;
+
+typedef enum {
+  rangemode_disabled = 0,
+  rangemode_vanilla = 1,
+  rangemode_CU = 2,
+  rangemode_CI_CU = 3,
+} rangemode;
+
+typedef struct {
+  rangemode userRequestedrangemode;
+  rangemode currentrangemode;
+  } lpsRangeoptions;
+
+typedef struct {
+  uint8_t pollRx[5];
+  uint8_t answerTx[5];
+  uint8_t finalRx[5];
+  uint16_t reciprocalDistance;
+  float selfVx;
+  float selfVy;
+  float selfVz;
+  float selfKx;
+  float selfKy;
+  float selfKz;
+  float selfGz;
+  float selfh;
+  bool keep_flying;
+} __attribute__((packed)) lpsTwrTagReportPayload_t;
+
+bool twrGetSwarmInfo(int robNum, uint16_t* range, float* vx, float* vy, float* vz, float* gyroZ, float* height);
+bool command_share(int RobIDfromControl, bool keep_flying);
+
+#endif // __LPS_TWR_TAG_H__

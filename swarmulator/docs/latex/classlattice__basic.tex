@@ -1,0 +1,274 @@
+\hypertarget{classlattice__basic}{}\doxysubsection{lattice\+\_\+basic Class Reference}
+\label{classlattice__basic}\index{lattice\_basic@{lattice\_basic}}
+
+
+{\ttfamily \#include $<$lattice\+\_\+basic.\+h$>$}
+
+
+
+Inheritance diagram for lattice\+\_\+basic\+:
+% FIG 0
+
+
+Collaboration diagram for lattice\+\_\+basic\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlattice__basic_ab3c356a92cdcc5e3b9b4e0624479fe98}\label{classlattice__basic_ab3c356a92cdcc5e3b9b4e0624479fe98}} 
+\mbox{\hyperlink{classlattice__basic_ab3c356a92cdcc5e3b9b4e0624479fe98}{lattice\+\_\+basic}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classlattice__basic}{lattice\+\_\+basic}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlattice__basic_a331dff6c4694f96832a39006faee5aa1}{$\sim$lattice\+\_\+basic}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the lattice basic object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlattice__basic_a7b67de61a5813ba188fc20b82d4fce3f}{attractionmotion}} (const float \&v\+\_\+r, const float \&v\+\_\+b, float \&v\+\_\+x, float \&v\+\_\+y)
+\item 
+void \mbox{\hyperlink{classlattice__basic_ad13cdc494cdefdc6ab9924131e94a8d8}{latticemotion}} (const float \&v\+\_\+r, const float \&v\+\_\+adj, const float \&v\+\_\+b, const float \&bdes, float \&v\+\_\+x, float \&v\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Lattice motion. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classlattice__basic_a9d2489296a409933b65419cfaf365933}{f\+\_\+attraction}} (const float \&u, const float \&b\+\_\+eq)
+\begin{DoxyCompactList}\small\item\em Attraction force. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classlattice__basic_ae9f6128a8f34d53d5c7d580c37bf6522}{get\+\_\+attraction\+\_\+velocity}} (const float \&u, const float \&b\+\_\+eq)
+\begin{DoxyCompactList}\small\item\em Get the attraction velocity object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlattice__basic_abbf45556d999853f9cca38dcddbd783c}{actionmotion}} (const int \&selected\+\_\+action, float \&v\+\_\+x, float \&v\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Move along the lattice. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classlattice__basic_a37df218a5281c10f9e43af30d005ab69}{check\+\_\+motion}} (const std\+::vector$<$ int $>$ \&state\+\_\+\+ID)
+\item 
+void \mbox{\hyperlink{classlattice__basic_ab0faa16011fb653b69e90af789296179}{get\+\_\+lattice\+\_\+motion}} (const int \&ID, const int \&state\+\_\+\+ID, float \&v\+\_\+x, float \&v\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Get the lattice motion object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlattice__basic_acf14e0c17ddd7b82972ea661023a8cd2}{get\+\_\+lattice\+\_\+motion\+\_\+all}} (const int \&ID, const std\+::vector$<$ int $>$ \&state\+\_\+\+ID, const std\+::vector$<$ uint $>$ \&closest, float \&v\+\_\+x, float \&v\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Handles all the above in one command, it can be called by the child controller to handle the lower level lattice control (see pattern formation controller for an example) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classlattice__basic_a99340bcfce48acc50843c7ef79952aaf}{get\+\_\+velocity\+\_\+command}} (const uint16\+\_\+t ID, float \&v\+\_\+x, float \&v\+\_\+y)=0
+\begin{DoxyCompactList}\small\item\em Get the velocity command object. Not implemented here, but by child controllers of this class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlattice__basic_a34b8287ada140435dbc7a1742a4903e4}\label{classlattice__basic_a34b8287ada140435dbc7a1742a4903e4}} 
+\mbox{\hyperlink{classTemplate__Calculator}{Template\+\_\+\+Calculator}} {\bfseries t}
+\item 
+\mbox{\Hypertarget{classlattice__basic_a799e9f560b42ebefd464db1396772a4b}\label{classlattice__basic_a799e9f560b42ebefd464db1396772a4b}} 
+std\+::vector$<$ float $>$ {\bfseries beta\+\_\+des}
+\item 
+\mbox{\Hypertarget{classlattice__basic_a1c45e9829c536d65839f675953f2691b}\label{classlattice__basic_a1c45e9829c536d65839f675953f2691b}} 
+float {\bfseries \+\_\+v\+\_\+adj}
+\item 
+\mbox{\Hypertarget{classlattice__basic_a6e0377497bbafb91b2a75b7d1b9df4b6}\label{classlattice__basic_a6e0377497bbafb91b2a75b7d1b9df4b6}} 
+float {\bfseries d\+\_\+safe}
+\item 
+\mbox{\Hypertarget{classlattice__basic_a25a358e7ee9200d079251ffe26e41029}\label{classlattice__basic_a25a358e7ee9200d079251ffe26e41029}} 
+float {\bfseries sensor\+\_\+range}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+
+
+\doxysubsubsection{Detailed Description}
+\mbox{\hyperlink{classController}{Controller}} that holds a basic lattice between particles by handling attraction and repulsion forces This class is meant to be used as a parent class for any higher level controller that wants to hold a lattice at all times, as is the case for the pattern formation controller for instance. 
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlattice__basic_a331dff6c4694f96832a39006faee5aa1}\label{classlattice__basic_a331dff6c4694f96832a39006faee5aa1}} 
+\index{lattice\_basic@{lattice\_basic}!````~lattice\_basic@{$\sim$lattice\_basic}}
+\index{````~lattice\_basic@{$\sim$lattice\_basic}!lattice\_basic@{lattice\_basic}}
+\doxyparagraph{\texorpdfstring{$\sim$lattice\_basic()}{~lattice\_basic()}}
+{\footnotesize\ttfamily lattice\+\_\+basic\+::$\sim$lattice\+\_\+basic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destroy the lattice basic object. 
+
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlattice__basic_abbf45556d999853f9cca38dcddbd783c}\label{classlattice__basic_abbf45556d999853f9cca38dcddbd783c}} 
+\index{lattice\_basic@{lattice\_basic}!actionmotion@{actionmotion}}
+\index{actionmotion@{actionmotion}!lattice\_basic@{lattice\_basic}}
+\doxyparagraph{\texorpdfstring{actionmotion()}{actionmotion()}}
+{\footnotesize\ttfamily void lattice\+\_\+basic\+::actionmotion (\begin{DoxyParamCaption}\item[{const int \&}]{selected\+\_\+action,  }\item[{float \&}]{v\+\_\+x,  }\item[{float \&}]{v\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+Move along the lattice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em selected\+\_\+action} & \\
+\hline
+{\em v\+\_\+x} & \\
+\hline
+{\em v\+\_\+y} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlattice__basic_a7b67de61a5813ba188fc20b82d4fce3f}\label{classlattice__basic_a7b67de61a5813ba188fc20b82d4fce3f}} 
+\index{lattice\_basic@{lattice\_basic}!attractionmotion@{attractionmotion}}
+\index{attractionmotion@{attractionmotion}!lattice\_basic@{lattice\_basic}}
+\doxyparagraph{\texorpdfstring{attractionmotion()}{attractionmotion()}}
+{\footnotesize\ttfamily void lattice\+\_\+basic\+::attractionmotion (\begin{DoxyParamCaption}\item[{const float \&}]{v\+\_\+r,  }\item[{const float \&}]{v\+\_\+b,  }\item[{float \&}]{v\+\_\+x,  }\item[{float \&}]{v\+\_\+y }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em v\+\_\+r} & \\
+\hline
+{\em v\+\_\+b} & \\
+\hline
+{\em v\+\_\+x} & \\
+\hline
+{\em v\+\_\+y} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlattice__basic_a37df218a5281c10f9e43af30d005ab69}\label{classlattice__basic_a37df218a5281c10f9e43af30d005ab69}} 
+\index{lattice\_basic@{lattice\_basic}!check\_motion@{check\_motion}}
+\index{check\_motion@{check\_motion}!lattice\_basic@{lattice\_basic}}
+\doxyparagraph{\texorpdfstring{check\_motion()}{check\_motion()}}
+{\footnotesize\ttfamily bool lattice\+\_\+basic\+::check\+\_\+motion (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{state\+\_\+\+ID }\end{DoxyParamCaption})}
+
+Determine if neighbors are moving
+
+
+\begin{DoxyParams}{Parameters}
+{\em state\+\_\+\+ID} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__basic_a9d2489296a409933b65419cfaf365933}\label{classlattice__basic_a9d2489296a409933b65419cfaf365933}} 
+\index{lattice\_basic@{lattice\_basic}!f\_attraction@{f\_attraction}}
+\index{f\_attraction@{f\_attraction}!lattice\_basic@{lattice\_basic}}
+\doxyparagraph{\texorpdfstring{f\_attraction()}{f\_attraction()}}
+{\footnotesize\ttfamily float lattice\+\_\+basic\+::f\+\_\+attraction (\begin{DoxyParamCaption}\item[{const float \&}]{u,  }\item[{const float \&}]{b\+\_\+eq }\end{DoxyParamCaption})}
+
+
+
+Attraction force. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & \\
+\hline
+{\em b\+\_\+eq} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__basic_ae9f6128a8f34d53d5c7d580c37bf6522}\label{classlattice__basic_ae9f6128a8f34d53d5c7d580c37bf6522}} 
+\index{lattice\_basic@{lattice\_basic}!get\_attraction\_velocity@{get\_attraction\_velocity}}
+\index{get\_attraction\_velocity@{get\_attraction\_velocity}!lattice\_basic@{lattice\_basic}}
+\doxyparagraph{\texorpdfstring{get\_attraction\_velocity()}{get\_attraction\_velocity()}}
+{\footnotesize\ttfamily float lattice\+\_\+basic\+::get\+\_\+attraction\+\_\+velocity (\begin{DoxyParamCaption}\item[{const float \&}]{u,  }\item[{const float \&}]{b\+\_\+eq }\end{DoxyParamCaption})}
+
+
+
+Get the attraction velocity object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & \\
+\hline
+{\em b\+\_\+eq} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__basic_ab0faa16011fb653b69e90af789296179}\label{classlattice__basic_ab0faa16011fb653b69e90af789296179}} 
+\index{lattice\_basic@{lattice\_basic}!get\_lattice\_motion@{get\_lattice\_motion}}
+\index{get\_lattice\_motion@{get\_lattice\_motion}!lattice\_basic@{lattice\_basic}}
+\doxyparagraph{\texorpdfstring{get\_lattice\_motion()}{get\_lattice\_motion()}}
+{\footnotesize\ttfamily void lattice\+\_\+basic\+::get\+\_\+lattice\+\_\+motion (\begin{DoxyParamCaption}\item[{const int \&}]{ID,  }\item[{const int \&}]{state\+\_\+\+ID,  }\item[{float \&}]{v\+\_\+x,  }\item[{float \&}]{v\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+Get the lattice motion object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & \\
+\hline
+{\em state\+\_\+\+ID} & \\
+\hline
+{\em v\+\_\+x} & \\
+\hline
+{\em v\+\_\+y} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlattice__basic_acf14e0c17ddd7b82972ea661023a8cd2}\label{classlattice__basic_acf14e0c17ddd7b82972ea661023a8cd2}} 
+\index{lattice\_basic@{lattice\_basic}!get\_lattice\_motion\_all@{get\_lattice\_motion\_all}}
+\index{get\_lattice\_motion\_all@{get\_lattice\_motion\_all}!lattice\_basic@{lattice\_basic}}
+\doxyparagraph{\texorpdfstring{get\_lattice\_motion\_all()}{get\_lattice\_motion\_all()}}
+{\footnotesize\ttfamily void lattice\+\_\+basic\+::get\+\_\+lattice\+\_\+motion\+\_\+all (\begin{DoxyParamCaption}\item[{const int \&}]{ID,  }\item[{const std\+::vector$<$ int $>$ \&}]{state\+\_\+\+ID,  }\item[{const std\+::vector$<$ uint $>$ \&}]{closest,  }\item[{float \&}]{v\+\_\+x,  }\item[{float \&}]{v\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+Handles all the above in one command, it can be called by the child controller to handle the lower level lattice control (see pattern formation controller for an example) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & \\
+\hline
+{\em state\+\_\+\+ID} & \\
+\hline
+{\em closest} & \\
+\hline
+{\em v\+\_\+x} & \\
+\hline
+{\em v\+\_\+y} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlattice__basic_a99340bcfce48acc50843c7ef79952aaf}\label{classlattice__basic_a99340bcfce48acc50843c7ef79952aaf}} 
+\index{lattice\_basic@{lattice\_basic}!get\_velocity\_command@{get\_velocity\_command}}
+\index{get\_velocity\_command@{get\_velocity\_command}!lattice\_basic@{lattice\_basic}}
+\doxyparagraph{\texorpdfstring{get\_velocity\_command()}{get\_velocity\_command()}}
+{\footnotesize\ttfamily virtual void lattice\+\_\+basic\+::get\+\_\+velocity\+\_\+command (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{ID,  }\item[{float \&}]{v\+\_\+x,  }\item[{float \&}]{v\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the velocity command object. Not implemented here, but by child controllers of this class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & \\
+\hline
+{\em v\+\_\+x} & \\
+\hline
+{\em v\+\_\+y} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classController_a2cefe37f2817de5f54535ebb35e0d32f}{Controller}}.
+
+
+
+Implemented in \mbox{\hyperlink{classpattern__formation_a1b493eb7852adaa305ebb190777aa420}{pattern\+\_\+formation}}, and \mbox{\hyperlink{classlattice_af494dfd7003a13e58a0d61dac1b5bcd8}{lattice}}.
+
+\mbox{\Hypertarget{classlattice__basic_ad13cdc494cdefdc6ab9924131e94a8d8}\label{classlattice__basic_ad13cdc494cdefdc6ab9924131e94a8d8}} 
+\index{lattice\_basic@{lattice\_basic}!latticemotion@{latticemotion}}
+\index{latticemotion@{latticemotion}!lattice\_basic@{lattice\_basic}}
+\doxyparagraph{\texorpdfstring{latticemotion()}{latticemotion()}}
+{\footnotesize\ttfamily void lattice\+\_\+basic\+::latticemotion (\begin{DoxyParamCaption}\item[{const float \&}]{v\+\_\+r,  }\item[{const float \&}]{v\+\_\+adj,  }\item[{const float \&}]{v\+\_\+b,  }\item[{const float \&}]{bdes,  }\item[{float \&}]{v\+\_\+x,  }\item[{float \&}]{v\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+Lattice motion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v\+\_\+r} & \\
+\hline
+{\em v\+\_\+adj} & \\
+\hline
+{\em v\+\_\+b} & \\
+\hline
+{\em bdes} & \\
+\hline
+{\em v\+\_\+x} & \\
+\hline
+{\em v\+\_\+y} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sw/simulation/controllers/pattern\+\_\+formation/lattice\+\_\+basic.\+h\item 
+sw/simulation/controllers/pattern\+\_\+formation/lattice\+\_\+basic.\+cpp\end{DoxyCompactItemize}

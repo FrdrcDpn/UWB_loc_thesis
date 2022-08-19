@@ -1,0 +1,65 @@
+\hypertarget{classparticle}{}\doxysubsection{particle Class Reference}
+\label{classparticle}\index{particle@{particle}}
+
+
+{\ttfamily \#include $<$particle.\+h$>$}
+
+
+
+Inheritance diagram for particle\+:
+% FIG 0
+
+
+Collaboration diagram for particle\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticle_ad6190dcc3007a0b39466a0fed9061b86}{particle}} (int i, std\+::vector$<$ float $>$ state, float tstep)
+\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{classparticle_ad893b05e96fbbb14abf53c7331837b6e}{state\+\_\+update}} (std\+::vector$<$ float $>$ state)
+\item 
+void \mbox{\hyperlink{classparticle_a056be542e7e86db0698116a95602b27f}{animation}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+
+
+\doxysubsubsection{Detailed Description}
+This child class of agent implements the dynamics of simple accelerated particles using a kinematic model 
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticle_ad6190dcc3007a0b39466a0fed9061b86}\label{classparticle_ad6190dcc3007a0b39466a0fed9061b86}} 
+\index{particle@{particle}!particle@{particle}}
+\index{particle@{particle}!particle@{particle}}
+\doxyparagraph{\texorpdfstring{particle()}{particle()}}
+{\footnotesize\ttfamily particle\+::particle (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{std\+::vector$<$ float $>$}]{state,  }\item[{float}]{tstep }\end{DoxyParamCaption})}
+
+Constructor 
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticle_a056be542e7e86db0698116a95602b27f}\label{classparticle_a056be542e7e86db0698116a95602b27f}} 
+\index{particle@{particle}!animation@{animation}}
+\index{animation@{animation}!particle@{particle}}
+\doxyparagraph{\texorpdfstring{animation()}{animation()}}
+{\footnotesize\ttfamily void particle\+::animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Animation open\+GL implementation for visualization 
+
+Implements \mbox{\hyperlink{classAgent_a35916fdf13ea43b557d16906018780bf}{Agent}}.
+
+\mbox{\Hypertarget{classparticle_ad893b05e96fbbb14abf53c7331837b6e}\label{classparticle_ad893b05e96fbbb14abf53c7331837b6e}} 
+\index{particle@{particle}!state\_update@{state\_update}}
+\index{state\_update@{state\_update}!particle@{particle}}
+\doxyparagraph{\texorpdfstring{state\_update()}{state\_update()}}
+{\footnotesize\ttfamily std\+::vector$<$ float $>$ particle\+::state\+\_\+update (\begin{DoxyParamCaption}\item[{std\+::vector$<$ float $>$}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+State update implementation 
+
+Implements \mbox{\hyperlink{classAgent_ac52e74a6e61302777e5bbca0042785d8}{Agent}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sw/simulation/agents/particle/particle.\+h\item 
+sw/simulation/agents/particle/particle.\+cpp\end{DoxyCompactItemize}

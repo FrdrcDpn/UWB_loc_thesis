@@ -1,0 +1,218 @@
+\hypertarget{classBT_1_1composite}{}\doxysubsection{BT\+::composite Class Reference}
+\label{classBT_1_1composite}\index{BT::composite@{BT::composite}}
+
+
+{\ttfamily \#include $<$composites.\+h$>$}
+
+
+
+Inheritance diagram for BT\+::composite\+:
+% FIG 0
+
+
+Collaboration diagram for BT\+::composite\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBT_1_1composite_a40456e96a1da6a2c961bdf845d58a335}\label{classBT_1_1composite_a40456e96a1da6a2c961bdf845d58a335}} 
+void {\bfseries reset} ()
+\item 
+void \mbox{\hyperlink{classBT_1_1composite_a515cbecc3a70ab68a932bab98489c7a5}{add\+Child}} (\mbox{\hyperlink{classBT_1_1node}{node}} $\ast$child, int position=-\/1)
+\item 
+nodes \mbox{\hyperlink{classBT_1_1composite_a9949d14fccd0b927e82388b9290764c7}{set\+Children}} (nodes children)
+\begin{DoxyCompactList}\small\item\em Set the Children object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBT_1_1node}{node}} $\ast$ \mbox{\hyperlink{classBT_1_1composite_a3f5b2a818776bb2c607ef70d0c28fd0e}{get\+Child}} (size\+\_\+t k\+\_\+child)
+\begin{DoxyCompactList}\small\item\em Get the Child object. \end{DoxyCompactList}\item 
+nodes \mbox{\hyperlink{classBT_1_1composite_af69a3f8a4e29b6463aece440d39d1bae}{get\+Children}} ()
+\begin{DoxyCompactList}\small\item\em Get the Children object. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classBT_1_1composite_a8ae545162aad229312760da16f85cc12}{k\+Children}} ()
+\item 
+\mbox{\hyperlink{classBT_1_1node}{node}} $\ast$ \mbox{\hyperlink{classBT_1_1composite_a3f9a529703b88ca3b4f7005aac89d988}{replace\+Child}} (\mbox{\hyperlink{classBT_1_1node}{node}} $\ast$task, size\+\_\+t k\+\_\+child, size\+\_\+t is\+N\+EW=0)
+\item 
+bool \mbox{\hyperlink{classBT_1_1composite_a93be4b7b12af695db1654ceed6119786}{can\+Fit}} (\mbox{\hyperlink{classBT_1_1node}{node}} $\ast$task, size\+\_\+t parallel\+\_\+found)
+\item 
+void \mbox{\hyperlink{classBT_1_1composite_a2aef02fb2ffe27ad14aea10e96ef9139}{delete\+Child}} (size\+\_\+t k\+\_\+child)
+\item 
+virtual \mbox{\hyperlink{classBT_1_1composite_a79662ce2ba618221bd7fd6fb99797932}{$\sim$composite}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the composite object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBT_1_1composite_a87f1d9d3092cbc109183652f9279590c}{composite}} (std\+::string Name, std\+::string Type, std\+::string Function)
+\begin{DoxyCompactList}\small\item\em Construct a new composite object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBT_1_1composite_a6f4e0d4b6f670e98079d68370e84a4a9}\label{classBT_1_1composite_a6f4e0d4b6f670e98079d68370e84a4a9}} 
+virtual void {\bfseries on\+Initialise} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBT_1_1composite_ad68a4a6a169dbb7eaea36656d05c473f}\label{classBT_1_1composite_ad68a4a6a169dbb7eaea36656d05c473f}} 
+nodes {\bfseries m\+\_\+children}
+\item 
+\mbox{\Hypertarget{classBT_1_1composite_ac3ef170b2512de998537d5e01b1888f9}\label{classBT_1_1composite_ac3ef170b2512de998537d5e01b1888f9}} 
+nodes\+::iterator {\bfseries m\+\_\+current}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+
+
+\doxysubsubsection{Detailed Description}
+Composite behaviors 
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBT_1_1composite_a79662ce2ba618221bd7fd6fb99797932}\label{classBT_1_1composite_a79662ce2ba618221bd7fd6fb99797932}} 
+\index{BT::composite@{BT::composite}!````~composite@{$\sim$composite}}
+\index{````~composite@{$\sim$composite}!BT::composite@{BT::composite}}
+\doxyparagraph{\texorpdfstring{$\sim$composite()}{~composite()}}
+{\footnotesize\ttfamily virtual B\+T\+::composite\+::$\sim$composite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroy the composite object. 
+
+\mbox{\Hypertarget{classBT_1_1composite_a87f1d9d3092cbc109183652f9279590c}\label{classBT_1_1composite_a87f1d9d3092cbc109183652f9279590c}} 
+\index{BT::composite@{BT::composite}!composite@{composite}}
+\index{composite@{composite}!BT::composite@{BT::composite}}
+\doxyparagraph{\texorpdfstring{composite()}{composite()}}
+{\footnotesize\ttfamily B\+T\+::composite\+::composite (\begin{DoxyParamCaption}\item[{std\+::string}]{Name,  }\item[{std\+::string}]{Type,  }\item[{std\+::string}]{Function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Construct a new composite object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Name} & \\
+\hline
+{\em Type} & \\
+\hline
+{\em Function} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBT_1_1composite_a515cbecc3a70ab68a932bab98489c7a5}\label{classBT_1_1composite_a515cbecc3a70ab68a932bab98489c7a5}} 
+\index{BT::composite@{BT::composite}!addChild@{addChild}}
+\index{addChild@{addChild}!BT::composite@{BT::composite}}
+\doxyparagraph{\texorpdfstring{addChild()}{addChild()}}
+{\footnotesize\ttfamily void B\+T\+::composite\+::add\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBT_1_1node}{node}} $\ast$}]{child,  }\item[{int}]{position = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em child} & \\
+\hline
+{\em position} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBT_1_1composite_a93be4b7b12af695db1654ceed6119786}\label{classBT_1_1composite_a93be4b7b12af695db1654ceed6119786}} 
+\index{BT::composite@{BT::composite}!canFit@{canFit}}
+\index{canFit@{canFit}!BT::composite@{BT::composite}}
+\doxyparagraph{\texorpdfstring{canFit()}{canFit()}}
+{\footnotesize\ttfamily bool B\+T\+::composite\+::can\+Fit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBT_1_1node}{node}} $\ast$}]{task,  }\item[{size\+\_\+t}]{parallel\+\_\+found }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em task} & \\
+\hline
+{\em parallel\+\_\+found} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBT_1_1composite_a2aef02fb2ffe27ad14aea10e96ef9139}\label{classBT_1_1composite_a2aef02fb2ffe27ad14aea10e96ef9139}} 
+\index{BT::composite@{BT::composite}!deleteChild@{deleteChild}}
+\index{deleteChild@{deleteChild}!BT::composite@{BT::composite}}
+\doxyparagraph{\texorpdfstring{deleteChild()}{deleteChild()}}
+{\footnotesize\ttfamily void B\+T\+::composite\+::delete\+Child (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{k\+\_\+child }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em k\+\_\+child} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBT_1_1composite_a3f5b2a818776bb2c607ef70d0c28fd0e}\label{classBT_1_1composite_a3f5b2a818776bb2c607ef70d0c28fd0e}} 
+\index{BT::composite@{BT::composite}!getChild@{getChild}}
+\index{getChild@{getChild}!BT::composite@{BT::composite}}
+\doxyparagraph{\texorpdfstring{getChild()}{getChild()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBT_1_1node}{node}} $\ast$ B\+T\+::composite\+::get\+Child (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{k\+\_\+child }\end{DoxyParamCaption})}
+
+
+
+Get the Child object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k\+\_\+child} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+node$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBT_1_1composite_af69a3f8a4e29b6463aece440d39d1bae}\label{classBT_1_1composite_af69a3f8a4e29b6463aece440d39d1bae}} 
+\index{BT::composite@{BT::composite}!getChildren@{getChildren}}
+\index{getChildren@{getChildren}!BT::composite@{BT::composite}}
+\doxyparagraph{\texorpdfstring{getChildren()}{getChildren()}}
+{\footnotesize\ttfamily nodes B\+T\+::composite\+::get\+Children (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Children object. 
+
+\begin{DoxyReturn}{Returns}
+nodes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBT_1_1composite_a8ae545162aad229312760da16f85cc12}\label{classBT_1_1composite_a8ae545162aad229312760da16f85cc12}} 
+\index{BT::composite@{BT::composite}!kChildren@{kChildren}}
+\index{kChildren@{kChildren}!BT::composite@{BT::composite}}
+\doxyparagraph{\texorpdfstring{kChildren()}{kChildren()}}
+{\footnotesize\ttfamily size\+\_\+t B\+T\+::composite\+::k\+Children (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBT_1_1composite_a3f9a529703b88ca3b4f7005aac89d988}\label{classBT_1_1composite_a3f9a529703b88ca3b4f7005aac89d988}} 
+\index{BT::composite@{BT::composite}!replaceChild@{replaceChild}}
+\index{replaceChild@{replaceChild}!BT::composite@{BT::composite}}
+\doxyparagraph{\texorpdfstring{replaceChild()}{replaceChild()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBT_1_1node}{node}} $\ast$ B\+T\+::composite\+::replace\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBT_1_1node}{node}} $\ast$}]{task,  }\item[{size\+\_\+t}]{k\+\_\+child,  }\item[{size\+\_\+t}]{is\+N\+EW = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em task} & \\
+\hline
+{\em k\+\_\+child} & \\
+\hline
+{\em is\+N\+EW} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+node$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBT_1_1composite_a9949d14fccd0b927e82388b9290764c7}\label{classBT_1_1composite_a9949d14fccd0b927e82388b9290764c7}} 
+\index{BT::composite@{BT::composite}!setChildren@{setChildren}}
+\index{setChildren@{setChildren}!BT::composite@{BT::composite}}
+\doxyparagraph{\texorpdfstring{setChildren()}{setChildren()}}
+{\footnotesize\ttfamily nodes B\+T\+::composite\+::set\+Children (\begin{DoxyParamCaption}\item[{nodes}]{children }\end{DoxyParamCaption})}
+
+
+
+Set the Children object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em children} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nodes 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sw/simulation/controllers/behavior\+\_\+tree/bt/composites.\+h\item 
+sw/simulation/controllers/behavior\+\_\+tree/bt/composites.\+cpp\end{DoxyCompactItemize}

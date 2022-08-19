@@ -1,0 +1,18 @@
+digraph "wheeled"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="wheeled",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Agent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classAgent.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" beacon" ,fontname="Helvetica"];
+  Node3 [label="Beacon",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBeacon.html",tooltip=" "];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" rg" ,fontname="Helvetica"];
+  Node4 [label="random_generator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrandom__generator.html",tooltip=" "];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" controller" ,fontname="Helvetica"];
+  Node5 [label="Controller",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classController.html",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" rg" ,fontname="Helvetica"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" o" ,fontname="Helvetica"];
+  Node6 [label="OmniscientObserver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classOmniscientObserver.html",tooltip=" "];
+}

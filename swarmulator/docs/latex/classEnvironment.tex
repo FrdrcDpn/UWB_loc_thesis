@@ -1,0 +1,168 @@
+\hypertarget{classEnvironment}{}\doxysubsection{Environment Class Reference}
+\label{classEnvironment}\index{Environment@{Environment}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEnvironment_a8b427c4448d8b7536666837521b9e83d}{Environment}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classEnvironment}{Environment}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEnvironment_a8e294735187880dd3d59be10c425b29d}{$\sim$\+Environment}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classEnvironment}{Environment}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEnvironment_a8cfab964647abbcede006378b6546d8c}\label{classEnvironment_a8cfab964647abbcede006378b6546d8c}} 
+void {\bfseries define\+\_\+uwb\+\_\+beacon} (uint64\+\_\+t n)
+\item 
+\mbox{\Hypertarget{classEnvironment_a004769ee296fb2823ace3008a0701b06}\label{classEnvironment_a004769ee296fb2823ace3008a0701b06}} 
+void \mbox{\hyperlink{classEnvironment_a004769ee296fb2823ace3008a0701b06}{define\+\_\+walls}} (void)
+\begin{DoxyCompactList}\small\item\em Define the initial obstacle list according to the list in conf/environments/.txt You can indicate obstacle list in the conf/parameters.\+xml file, under $<$environment$>$ Make sure the file exists! \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEnvironment_a1912f89a705047bf1f62039020aa1bff}\label{classEnvironment_a1912f89a705047bf1f62039020aa1bff}} 
+void \mbox{\hyperlink{classEnvironment_a1912f89a705047bf1f62039020aa1bff}{define\+\_\+food}} (uint64\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Define the initial obstacle list according to the list in conf/environments/.txt You can indicate obstacle list in the conf/parameters.\+xml file, under $<$environment$>$ Make sure the file exists! \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEnvironment_a57f31991dd0b494c071b43abbb3cb489}\label{classEnvironment_a57f31991dd0b494c071b43abbb3cb489}} 
+void {\bfseries define\+\_\+beacon} (float x, float y)
+\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{classEnvironment_a4c9a5f2b5d7fe04ba85aded3d2193694}{start}} (void)
+\begin{DoxyCompactList}\small\item\em Returns a point within the environment. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classEnvironment_a2c4a02600b86d6e1ae45ca63ad083dbe}{limits}} (void)
+\begin{DoxyCompactList}\small\item\em Returns the furthers point from (0,0) in the environment, used for initialization so that the robots can be initialized in the same spot. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEnvironment_a8950f6f0a171a4b979d3432c9c5fb657}{add\+\_\+wall}} (float x0, float y0, float x1, float y1)
+\begin{DoxyCompactList}\small\item\em Add a new wall to the list, going from (x0,y0) to (x1,y1). This is used to interactively create walls in the animation, just right click with the mouse! \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classEnvironment_a366b569f434341a90aa72369307abd9d}{sensor}} (const uint16\+\_\+t ID, std\+::vector$<$ float $>$ s\+\_\+n, std\+::vector$<$ float $>$ s, float \&angle)
+\item 
+\mbox{\Hypertarget{classEnvironment_a1acc9b5cd1417585d04203d4bbaffe81}\label{classEnvironment_a1acc9b5cd1417585d04203d4bbaffe81}} 
+bool {\bfseries valid} (const uint16\+\_\+t ID, std\+::vector$<$ float $>$ s\+\_\+n, std\+::vector$<$ float $>$ s)
+\item 
+\mbox{\Hypertarget{classEnvironment_a9edd7a79aa4fccc331407a905b73f105}\label{classEnvironment_a9edd7a79aa4fccc331407a905b73f105}} 
+void {\bfseries grab\+\_\+food} (uint64\+\_\+t food\+\_\+\+ID)
+\item 
+\mbox{\Hypertarget{classEnvironment_ae77e297d98e72b24c58a5e87a874c206}\label{classEnvironment_ae77e297d98e72b24c58a5e87a874c206}} 
+void {\bfseries drop\+\_\+food} ()
+\item 
+\mbox{\Hypertarget{classEnvironment_a72c4881030e4955cc079b3f7697fda05}\label{classEnvironment_a72c4881030e4955cc079b3f7697fda05}} 
+void {\bfseries eat\+\_\+food} (float)
+\item 
+\mbox{\Hypertarget{classEnvironment_ae5b669f26fe2d5ecfb5e1e818113d5de}\label{classEnvironment_ae5b669f26fe2d5ecfb5e1e818113d5de}} 
+void {\bfseries loop} (void)
+\item 
+void \mbox{\hyperlink{classEnvironment_aeea06a0860e62298acf8f2a193f59899}{animate}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classEnvironment_a475163b352836c6347297c57d353669f}\label{classEnvironment_a475163b352836c6347297c57d353669f}} 
+std\+::vector$<$ std\+::vector$<$ float $>$ $>$ {\bfseries food}
+\item 
+\mbox{\Hypertarget{classEnvironment_acd467f61c18092f247048efafd08cca8}\label{classEnvironment_acd467f61c18092f247048efafd08cca8}} 
+std\+::vector$<$ float $>$ {\bfseries beacon}
+\item 
+\mbox{\Hypertarget{classEnvironment_a69d4b9ab90d5fe5a4ccf38dff07d42d7}\label{classEnvironment_a69d4b9ab90d5fe5a4ccf38dff07d42d7}} 
+std\+::vector$<$ std\+::vector$<$ float $>$ $>$ {\bfseries uwb\+\_\+beacon}
+\item 
+\mbox{\Hypertarget{classEnvironment_aabb62ed944e07120ea1bc974f6c201ec}\label{classEnvironment_aabb62ed944e07120ea1bc974f6c201ec}} 
+float {\bfseries nest}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEnvironment_a8b427c4448d8b7536666837521b9e83d}\label{classEnvironment_a8b427c4448d8b7536666837521b9e83d}} 
+\index{Environment@{Environment}!Environment@{Environment}}
+\index{Environment@{Environment}!Environment@{Environment}}
+\doxyparagraph{\texorpdfstring{Environment()}{Environment()}}
+{\footnotesize\ttfamily Environment\+::\+Environment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classEnvironment}{Environment}} object. 
+
+\mbox{\Hypertarget{classEnvironment_a8e294735187880dd3d59be10c425b29d}\label{classEnvironment_a8e294735187880dd3d59be10c425b29d}} 
+\index{Environment@{Environment}!````~Environment@{$\sim$Environment}}
+\index{````~Environment@{$\sim$Environment}!Environment@{Environment}}
+\doxyparagraph{\texorpdfstring{$\sim$Environment()}{~Environment()}}
+{\footnotesize\ttfamily Environment\+::$\sim$\+Environment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destroy the \mbox{\hyperlink{classEnvironment}{Environment}} object. 
+
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEnvironment_a8950f6f0a171a4b979d3432c9c5fb657}\label{classEnvironment_a8950f6f0a171a4b979d3432c9c5fb657}} 
+\index{Environment@{Environment}!add\_wall@{add\_wall}}
+\index{add\_wall@{add\_wall}!Environment@{Environment}}
+\doxyparagraph{\texorpdfstring{add\_wall()}{add\_wall()}}
+{\footnotesize\ttfamily void Environment\+::add\+\_\+wall (\begin{DoxyParamCaption}\item[{float}]{x0,  }\item[{float}]{y0,  }\item[{float}]{x1,  }\item[{float}]{y1 }\end{DoxyParamCaption})}
+
+
+
+Add a new wall to the list, going from (x0,y0) to (x1,y1). This is used to interactively create walls in the animation, just right click with the mouse! 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x0} & Initial x \\
+\hline
+{\em y0} & Initial y \\
+\hline
+{\em x1} & Final x \\
+\hline
+{\em y1} & Final y \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEnvironment_aeea06a0860e62298acf8f2a193f59899}\label{classEnvironment_aeea06a0860e62298acf8f2a193f59899}} 
+\index{Environment@{Environment}!animate@{animate}}
+\index{animate@{animate}!Environment@{Environment}}
+\doxyparagraph{\texorpdfstring{animate()}{animate()}}
+{\footnotesize\ttfamily void Environment\+::animate (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Function used to draw all the walls in the animation. It is called by the animation thread. \mbox{\Hypertarget{classEnvironment_a2c4a02600b86d6e1ae45ca63ad083dbe}\label{classEnvironment_a2c4a02600b86d6e1ae45ca63ad083dbe}} 
+\index{Environment@{Environment}!limits@{limits}}
+\index{limits@{limits}!Environment@{Environment}}
+\doxyparagraph{\texorpdfstring{limits()}{limits()}}
+{\footnotesize\ttfamily float Environment\+::limits (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns the furthers point from (0,0) in the environment, used for initialization so that the robots can be initialized in the same spot. 
+
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEnvironment_a366b569f434341a90aa72369307abd9d}\label{classEnvironment_a366b569f434341a90aa72369307abd9d}} 
+\index{Environment@{Environment}!sensor@{sensor}}
+\index{sensor@{sensor}!Environment@{Environment}}
+\doxyparagraph{\texorpdfstring{sensor()}{sensor()}}
+{\footnotesize\ttfamily bool Environment\+::sensor (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{ID,  }\item[{std\+::vector$<$ float $>$}]{s\+\_\+n,  }\item[{std\+::vector$<$ float $>$}]{s,  }\item[{float \&}]{angle }\end{DoxyParamCaption})}
+
+Senses whether the next state will go through a wall
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & Robot to consider \\
+\hline
+{\em s\+\_\+n} & Next state \\
+\hline
+{\em s} & Current state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the lines intersect, meaning that it will go through a wall, so that we can handle it. 
+
+false if the lines do not intersect, so that the robot will not go through a wall and can act normally. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEnvironment_a4c9a5f2b5d7fe04ba85aded3d2193694}\label{classEnvironment_a4c9a5f2b5d7fe04ba85aded3d2193694}} 
+\index{Environment@{Environment}!start@{start}}
+\index{start@{start}!Environment@{Environment}}
+\doxyparagraph{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily std\+::vector$<$ float $>$ Environment\+::start (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns a point within the environment. 
+
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sw/simulation/environment.\+h\item 
+sw/simulation/environment.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,103 @@
+\hypertarget{classbeacon__tdoa}{}\doxysubsection{beacon\+\_\+tdoa Class Reference}
+\label{classbeacon__tdoa}\index{beacon\_tdoa@{beacon\_tdoa}}
+
+
+Inheritance diagram for beacon\+\_\+tdoa\+:
+% FIG 0
+
+
+Collaboration diagram for beacon\+\_\+tdoa\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbeacon__tdoa_a6cc24ef3b335055433335e0d1358fe56}{beacon\+\_\+tdoa}} ()
+\item 
+void \mbox{\hyperlink{classbeacon__tdoa_a34f4f29478ab19ae5b1a8c25d74d374b}{ranges\+\_\+terminal}} (const uint16\+\_\+t ID)
+\begin{DoxyCompactList}\small\item\em Output exact distances from agent to all active beacons to the terminal. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbeacon__tdoa_ade4978a4ca4c7959148f527fb6b59549}\label{classbeacon__tdoa_ade4978a4ca4c7959148f527fb6b59549}} 
+float {\bfseries measurement} (const uint16\+\_\+t ID, const uint16\+\_\+t I\+D\+\_\+beacon\+\_\+0)
+\item 
+float \mbox{\hyperlink{classbeacon__tdoa_a59ae05c3eb02f8785bc67afe96a20cb2}{measurement}} (const uint16\+\_\+t ID, const uint16\+\_\+t I\+D\+\_\+beacon\+\_\+0, const uint16\+\_\+t I\+D\+\_\+beacon\+\_\+1)
+\begin{DoxyCompactList}\small\item\em Output twr range from agent to all active beacons to the terminal. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classbeacon__tdoa_a6fea03d62f2a5c2f7c39613d92875738}{add\+\_\+ht\+\_\+cauchy\+\_\+noise}} (float value)
+\begin{DoxyCompactList}\small\item\em Return noisy value following cauchy distribution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbeacon__tdoa_a6cc24ef3b335055433335e0d1358fe56}\label{classbeacon__tdoa_a6cc24ef3b335055433335e0d1358fe56}} 
+\index{beacon\_tdoa@{beacon\_tdoa}!beacon\_tdoa@{beacon\_tdoa}}
+\index{beacon\_tdoa@{beacon\_tdoa}!beacon\_tdoa@{beacon\_tdoa}}
+\doxyparagraph{\texorpdfstring{beacon\_tdoa()}{beacon\_tdoa()}}
+{\footnotesize\ttfamily beacon\+\_\+tdoa\+::beacon\+\_\+tdoa (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Construction. \mbox{\hyperlink{classbeacon__tdoa}{beacon\+\_\+tdoa}} is a child class of \mbox{\hyperlink{classBeacon}{Beacon}}. 
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbeacon__tdoa_a6fea03d62f2a5c2f7c39613d92875738}\label{classbeacon__tdoa_a6fea03d62f2a5c2f7c39613d92875738}} 
+\index{beacon\_tdoa@{beacon\_tdoa}!add\_ht\_cauchy\_noise@{add\_ht\_cauchy\_noise}}
+\index{add\_ht\_cauchy\_noise@{add\_ht\_cauchy\_noise}!beacon\_tdoa@{beacon\_tdoa}}
+\doxyparagraph{\texorpdfstring{add\_ht\_cauchy\_noise()}{add\_ht\_cauchy\_noise()}}
+{\footnotesize\ttfamily float beacon\+\_\+tdoa\+::add\+\_\+ht\+\_\+cauchy\+\_\+noise (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Return noisy value following cauchy distribution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & value to which noise is to be added \\
+\hline
+{\em mean} & mean of the gaussian noise \\
+\hline
+{\em stddev} & standard deviation of the gaussian noise \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBeacon_a72af19286dee263d414c43e646bfa2ac}{Beacon}}.
+
+\mbox{\Hypertarget{classbeacon__tdoa_a59ae05c3eb02f8785bc67afe96a20cb2}\label{classbeacon__tdoa_a59ae05c3eb02f8785bc67afe96a20cb2}} 
+\index{beacon\_tdoa@{beacon\_tdoa}!measurement@{measurement}}
+\index{measurement@{measurement}!beacon\_tdoa@{beacon\_tdoa}}
+\doxyparagraph{\texorpdfstring{measurement()}{measurement()}}
+{\footnotesize\ttfamily float beacon\+\_\+tdoa\+::measurement (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{ID,  }\item[{const uint16\+\_\+t}]{I\+D\+\_\+beacon\+\_\+0,  }\item[{const uint16\+\_\+t}]{I\+D\+\_\+beacon\+\_\+1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Output twr range from agent to all active beacons to the terminal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & agent \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBeacon_acd20cb3492835f153567139e41ce9537}{Beacon}}.
+
+\mbox{\Hypertarget{classbeacon__tdoa_a34f4f29478ab19ae5b1a8c25d74d374b}\label{classbeacon__tdoa_a34f4f29478ab19ae5b1a8c25d74d374b}} 
+\index{beacon\_tdoa@{beacon\_tdoa}!ranges\_terminal@{ranges\_terminal}}
+\index{ranges\_terminal@{ranges\_terminal}!beacon\_tdoa@{beacon\_tdoa}}
+\doxyparagraph{\texorpdfstring{ranges\_terminal()}{ranges\_terminal()}}
+{\footnotesize\ttfamily void beacon\+\_\+tdoa\+::ranges\+\_\+terminal (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Output exact distances from agent to all active beacons to the terminal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & agent \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBeacon_a6216ba1257d339415af99ff1ade1c1da}{Beacon}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sw/simulation/beacons/beacon\+\_\+tdoa/beacon\+\_\+tdoa.\+h\item 
+sw/simulation/beacons/beacon\+\_\+tdoa/beacon\+\_\+tdoa.\+cpp\end{DoxyCompactItemize}

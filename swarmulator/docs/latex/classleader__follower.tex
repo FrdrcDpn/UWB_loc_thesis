@@ -1,0 +1,72 @@
+\hypertarget{classleader__follower}{}\doxysubsection{leader\+\_\+follower Class Reference}
+\label{classleader__follower}\index{leader\_follower@{leader\_follower}}
+
+
+Inheritance diagram for leader\+\_\+follower\+:
+% FIG 0
+
+
+Collaboration diagram for leader\+\_\+follower\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classleader__follower_ab6c7e5abf6760d3a98b2be416ffcd146}\label{classleader__follower_ab6c7e5abf6760d3a98b2be416ffcd146}} 
+float {\bfseries access\+Circular\+Float\+Arr\+Element} (float arr\mbox{[}$\,$\mbox{]}, int index)
+\item 
+\mbox{\Hypertarget{classleader__follower_abe7c11ec8071149079bed71486fc5f95}\label{classleader__follower_abe7c11ec8071149079bed71486fc5f95}} 
+float {\bfseries compute\+Ndi\+Float\+Integral} (float ndiarr\mbox{[}$\,$\mbox{]}, float curtime)
+\item 
+\mbox{\Hypertarget{classleader__follower_a1a8cc3f1db79ed282829ec0c50e5ffbd}\label{classleader__follower_a1a8cc3f1db79ed282829ec0c50e5ffbd}} 
+void {\bfseries clean\+Ndi\+Values} (float tcur)
+\item 
+\mbox{\Hypertarget{classleader__follower_aebd5fe38723c2689e59325c07d158859}\label{classleader__follower_aebd5fe38723c2689e59325c07d158859}} 
+bool {\bfseries ndi\+\_\+follow\+\_\+leader} (void)
+\item 
+\mbox{\Hypertarget{classleader__follower_ab37a6c3d7279e4e7ccacd3f66bb03b7c}\label{classleader__follower_ab37a6c3d7279e4e7ccacd3f66bb03b7c}} 
+void {\bfseries bind\+Norm} (float max\+\_\+command)
+\item 
+void \mbox{\hyperlink{classleader__follower_ac53af1392a93ab4ce274773d78c82e48}{uwb\+\_\+follower\+\_\+control\+\_\+periodic}} (void)
+\item 
+virtual void \mbox{\hyperlink{classleader__follower_ad273b6a71703b24d6ad22bbe54972bd0}{get\+\_\+velocity\+\_\+command}} (const uint16\+\_\+t ID, float \&x\+\_\+des, float \&vy\+\_\+des)
+\item 
+\mbox{\Hypertarget{classleader__follower_a1b15f87446738875bc147a300b568af6}\label{classleader__follower_a1b15f87446738875bc147a300b568af6}} 
+virtual void {\bfseries animation} (const uint16\+\_\+t ID)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classleader__follower_ad273b6a71703b24d6ad22bbe54972bd0}\label{classleader__follower_ad273b6a71703b24d6ad22bbe54972bd0}} 
+\index{leader\_follower@{leader\_follower}!get\_velocity\_command@{get\_velocity\_command}}
+\index{get\_velocity\_command@{get\_velocity\_command}!leader\_follower@{leader\_follower}}
+\doxyparagraph{\texorpdfstring{get\_velocity\_command()}{get\_velocity\_command()}}
+{\footnotesize\ttfamily void leader\+\_\+follower\+::get\+\_\+velocity\+\_\+command (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{ID,  }\item[{float \&}]{v\+\_\+x,  }\item[{float \&}]{v\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Virtual function to be implemented by child class that defines the controller The outputs are the desired v\+\_\+x and v\+\_\+y velocities
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & The ID of the robot to control \\
+\hline
+{\em v\+\_\+x} & The desired velocity in v\+\_\+x (to be set in this function) \\
+\hline
+{\em v\+\_\+y} & The desired velocity in v\+\_\+y (to be set in this function) \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classController_a2cefe37f2817de5f54535ebb35e0d32f}{Controller}}.
+
+\mbox{\Hypertarget{classleader__follower_ac53af1392a93ab4ce274773d78c82e48}\label{classleader__follower_ac53af1392a93ab4ce274773d78c82e48}} 
+\index{leader\_follower@{leader\_follower}!uwb\_follower\_control\_periodic@{uwb\_follower\_control\_periodic}}
+\index{uwb\_follower\_control\_periodic@{uwb\_follower\_control\_periodic}!leader\_follower@{leader\_follower}}
+\doxyparagraph{\texorpdfstring{uwb\_follower\_control\_periodic()}{uwb\_follower\_control\_periodic()}}
+{\footnotesize\ttfamily void leader\+\_\+follower\+::uwb\+\_\+follower\+\_\+control\+\_\+periodic (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Update the N\+DI controller periodically 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sw/simulation/controllers/leader\+\_\+follower/leader\+\_\+follower.\+h\item 
+sw/simulation/controllers/leader\+\_\+follower/leader\+\_\+follower.\+cpp\end{DoxyCompactItemize}

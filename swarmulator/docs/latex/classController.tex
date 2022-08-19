@@ -1,0 +1,308 @@
+\hypertarget{classController}{}\doxysubsection{Controller Class Reference}
+\label{classController}\index{Controller@{Controller}}
+
+
+{\ttfamily \#include $<$controller.\+h$>$}
+
+
+
+Inheritance diagram for Controller\+:
+% FIG 0
+
+
+Collaboration diagram for Controller\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classController_a95c56822d667e94b031451729ce069a9}{Controller}} ()
+\item 
+\mbox{\hyperlink{classController_a0ab87934c4f7a266cfdb86e0f36bc1b5}{$\sim$\+Controller}} ()
+\item 
+void \mbox{\hyperlink{classController_a7981bf875271dae62195fa2c4fde077b}{set\+\_\+saturation}} (const float \&saturation\+\_\+limits)
+\item 
+void \mbox{\hyperlink{classController_a0ba92524f1e9e6ab4e3a183f3f3a139b}{saturate}} (float \&f)
+\item 
+float \mbox{\hyperlink{classController_a6919b362bea3a0f1954a7e6dde04f9a1}{f\+\_\+attraction}} (float u)
+\item 
+float \mbox{\hyperlink{classController_aa2e64a63256e2ca45bd57a8f7a312ae8}{f\+\_\+attraction\+\_\+equilibrium}} (float u, float eq\+\_\+distance)
+\item 
+float \mbox{\hyperlink{classController_a9f31bdacbc3f1472a26d30ba988733ec}{f\+\_\+repulsion}} (float u)
+\item 
+void \mbox{\hyperlink{classController_a6e2c7cbf2351b1e4f900f083b6c16a61}{get\+\_\+lattice\+\_\+motion}} (const int \&ID, const int \&state\+\_\+\+ID, float \&v\+\_\+x, float \&v\+\_\+y)
+\item 
+void \mbox{\hyperlink{classController_aeba24943720516f7496052d92624d464}{get\+\_\+lattice\+\_\+motion\+\_\+range}} (const int \&ID, float \&v\+\_\+x, float \&v\+\_\+y, float rangesensor)
+\begin{DoxyCompactList}\small\item\em Get the lattice motion all object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classController_a0514aa567d3a540c34a2d012f72b298b}{get\+\_\+lattice\+\_\+motion\+\_\+k\+\_\+nearest}} (const int \&ID, float \&v\+\_\+x, float \&v\+\_\+y, uint8\+\_\+t k)
+\begin{DoxyCompactList}\small\item\em Get the lattice motion all object. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classController_a6cafbff3e4f1f8a6e1d999d8a34512f9}{get\+\_\+attraction\+\_\+velocity}} (float u)
+\begin{DoxyCompactList}\small\item\em Get the attraction velocity object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classController_a2cefe37f2817de5f54535ebb35e0d32f}{get\+\_\+velocity\+\_\+command}} (const uint16\+\_\+t ID, float \&v\+\_\+x, float \&v\+\_\+y)=0
+\item 
+bool \mbox{\hyperlink{classController_a47de39048982e5fda6f135ebdb708b71}{wall\+\_\+avoidance\+\_\+bounce}} (const uint16\+\_\+t ID, float \&v\+\_\+x, float \&v\+\_\+y, float rangesensor)
+\item 
+\mbox{\Hypertarget{classController_a0ff0c1acc83950fdd5c702b0fc998143}\label{classController_a0ff0c1acc83950fdd5c702b0fc998143}} 
+bool {\bfseries wall\+\_\+avoidance\+\_\+turn} (const uint16\+\_\+t ID, float \&v\+\_\+x, float \&v\+\_\+y, float rangesensor)
+\item 
+\mbox{\Hypertarget{classController_ab8d593e1144f64954839569414cb5f05}\label{classController_ab8d593e1144f64954839569414cb5f05}} 
+virtual void {\bfseries animation} (const uint16\+\_\+t ID)=0
+\item 
+\mbox{\Hypertarget{classController_a5edcf1efa680d2b70caea3442235680d}\label{classController_a5edcf1efa680d2b70caea3442235680d}} 
+float {\bfseries get\+\_\+max\+\_\+sensor\+\_\+range} ()
+\item 
+\mbox{\Hypertarget{classController_a18e316f214aa9160739a83ead14b8855}\label{classController_a18e316f214aa9160739a83ead14b8855}} 
+void {\bfseries set\+\_\+max\+\_\+sensor\+\_\+range} (float r)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classController_a6f2b268c12edeffdc2d466039c5a4afa}\label{classController_a6f2b268c12edeffdc2d466039c5a4afa}} 
+float {\bfseries \+\_\+ddes\+\_\+x}
+\item 
+\mbox{\Hypertarget{classController_a2c91ca7b0af7cbcb27490d3ae108473c}\label{classController_a2c91ca7b0af7cbcb27490d3ae108473c}} 
+float {\bfseries \+\_\+ddes\+\_\+y}
+\item 
+\mbox{\Hypertarget{classController_a68da706f592ef3e64be6469b7a7d20b4}\label{classController_a68da706f592ef3e64be6469b7a7d20b4}} 
+float {\bfseries \+\_\+kr}
+\item 
+\mbox{\Hypertarget{classController_a912816298fefe3a1ce84223caecb4d60}\label{classController_a912816298fefe3a1ce84223caecb4d60}} 
+float {\bfseries \+\_\+ka}
+\item 
+\mbox{\Hypertarget{classController_acff94b94cb1c11d206efb803799a81f2}\label{classController_acff94b94cb1c11d206efb803799a81f2}} 
+bool {\bfseries saturation}
+\item 
+\mbox{\Hypertarget{classController_ab2c9467a7250067fe43c29a9254741fc}\label{classController_ab2c9467a7250067fe43c29a9254741fc}} 
+float {\bfseries saturation\+\_\+limits}
+\item 
+\mbox{\Hypertarget{classController_adb02c4a3889f8fb8d6b5bbfa413a4ce6}\label{classController_adb02c4a3889f8fb8d6b5bbfa413a4ce6}} 
+bool {\bfseries moving}
+\item 
+\mbox{\Hypertarget{classController_a5e97e27a4421940f89d73f20f3b8c270}\label{classController_a5e97e27a4421940f89d73f20f3b8c270}} 
+bool {\bfseries happy}
+\item 
+\mbox{\Hypertarget{classController_acf8e54a732891cd6d4b1153f10ee21f1}\label{classController_acf8e54a732891cd6d4b1153f10ee21f1}} 
+float {\bfseries sensor\+\_\+range\+\_\+max}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classController_abb49b474194057174f4d1437043d46c7}\label{classController_abb49b474194057174f4d1437043d46c7}} 
+\mbox{\hyperlink{classOmniscientObserver}{Omniscient\+Observer}} {\bfseries o}
+\item 
+\mbox{\Hypertarget{classController_ab071c7259a70b612a3b984c1848529a1}\label{classController_ab071c7259a70b612a3b984c1848529a1}} 
+\mbox{\hyperlink{classrandom__generator}{random\+\_\+generator}} {\bfseries rg}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+This is a parent class for a controller. All controllers are children functions that must contain an implementation of get\+\_\+velocity\+\_\+command, which is declared virtual here. 
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classController_a95c56822d667e94b031451729ce069a9}\label{classController_a95c56822d667e94b031451729ce069a9}} 
+\index{Controller@{Controller}!Controller@{Controller}}
+\index{Controller@{Controller}!Controller@{Controller}}
+\doxyparagraph{\texorpdfstring{Controller()}{Controller()}}
+{\footnotesize\ttfamily Controller\+::\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor \mbox{\Hypertarget{classController_a0ab87934c4f7a266cfdb86e0f36bc1b5}\label{classController_a0ab87934c4f7a266cfdb86e0f36bc1b5}} 
+\index{Controller@{Controller}!````~Controller@{$\sim$Controller}}
+\index{````~Controller@{$\sim$Controller}!Controller@{Controller}}
+\doxyparagraph{\texorpdfstring{$\sim$Controller()}{~Controller()}}
+{\footnotesize\ttfamily Controller\+::$\sim$\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Destructor 
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classController_a6919b362bea3a0f1954a7e6dde04f9a1}\label{classController_a6919b362bea3a0f1954a7e6dde04f9a1}} 
+\index{Controller@{Controller}!f\_attraction@{f\_attraction}}
+\index{f\_attraction@{f\_attraction}!Controller@{Controller}}
+\doxyparagraph{\texorpdfstring{f\_attraction()}{f\_attraction()}}
+{\footnotesize\ttfamily float Controller\+::f\+\_\+attraction (\begin{DoxyParamCaption}\item[{float}]{u }\end{DoxyParamCaption})}
+
+Attraction function This is defined here since it is a basic behavior for collision avoidance which many higher level controllers may want to use, although it does not have to be. 
+\begin{DoxyParams}{Parameters}
+{\em u} & Distance to neighbor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float Attraction speed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classController_aa2e64a63256e2ca45bd57a8f7a312ae8}\label{classController_aa2e64a63256e2ca45bd57a8f7a312ae8}} 
+\index{Controller@{Controller}!f\_attraction\_equilibrium@{f\_attraction\_equilibrium}}
+\index{f\_attraction\_equilibrium@{f\_attraction\_equilibrium}!Controller@{Controller}}
+\doxyparagraph{\texorpdfstring{f\_attraction\_equilibrium()}{f\_attraction\_equilibrium()}}
+{\footnotesize\ttfamily float Controller\+::f\+\_\+attraction\+\_\+equilibrium (\begin{DoxyParamCaption}\item[{float}]{u,  }\item[{float}]{eq\+\_\+distance }\end{DoxyParamCaption})}
+
+Attraction function This is defined here since it is a basic behavior for collision avoidance. which many higher level controllers may want to use, although it does not have to be. 
+\begin{DoxyParams}{Parameters}
+{\em u} & Distance to neighbor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float Attraction speed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classController_a9f31bdacbc3f1472a26d30ba988733ec}\label{classController_a9f31bdacbc3f1472a26d30ba988733ec}} 
+\index{Controller@{Controller}!f\_repulsion@{f\_repulsion}}
+\index{f\_repulsion@{f\_repulsion}!Controller@{Controller}}
+\doxyparagraph{\texorpdfstring{f\_repulsion()}{f\_repulsion()}}
+{\footnotesize\ttfamily float Controller\+::f\+\_\+repulsion (\begin{DoxyParamCaption}\item[{float}]{u }\end{DoxyParamCaption})}
+
+Repulsion function. This is defined here since it is a basic behavior for collision avoidance which many higher level controllers may want to use, although it does not have to be.
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & Distance to other robot \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Repulsion velocity component 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classController_a6cafbff3e4f1f8a6e1d999d8a34512f9}\label{classController_a6cafbff3e4f1f8a6e1d999d8a34512f9}} 
+\index{Controller@{Controller}!get\_attraction\_velocity@{get\_attraction\_velocity}}
+\index{get\_attraction\_velocity@{get\_attraction\_velocity}!Controller@{Controller}}
+\doxyparagraph{\texorpdfstring{get\_attraction\_velocity()}{get\_attraction\_velocity()}}
+{\footnotesize\ttfamily float Controller\+::get\+\_\+attraction\+\_\+velocity (\begin{DoxyParamCaption}\item[{float}]{u }\end{DoxyParamCaption})}
+
+
+
+Get the attraction velocity object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classController_a6e2c7cbf2351b1e4f900f083b6c16a61}\label{classController_a6e2c7cbf2351b1e4f900f083b6c16a61}} 
+\index{Controller@{Controller}!get\_lattice\_motion@{get\_lattice\_motion}}
+\index{get\_lattice\_motion@{get\_lattice\_motion}!Controller@{Controller}}
+\doxyparagraph{\texorpdfstring{get\_lattice\_motion()}{get\_lattice\_motion()}}
+{\footnotesize\ttfamily void Controller\+::get\+\_\+lattice\+\_\+motion (\begin{DoxyParamCaption}\item[{const int \&}]{ID,  }\item[{const int \&}]{state\+\_\+\+ID,  }\item[{float \&}]{v\+\_\+x,  }\item[{float \&}]{v\+\_\+y }\end{DoxyParamCaption})}
+
+Implementation of lattice behavior.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & \\
+\hline
+{\em state\+\_\+\+ID} & \\
+\hline
+{\em v\+\_\+x} & \\
+\hline
+{\em v\+\_\+y} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classController_a0514aa567d3a540c34a2d012f72b298b}\label{classController_a0514aa567d3a540c34a2d012f72b298b}} 
+\index{Controller@{Controller}!get\_lattice\_motion\_k\_nearest@{get\_lattice\_motion\_k\_nearest}}
+\index{get\_lattice\_motion\_k\_nearest@{get\_lattice\_motion\_k\_nearest}!Controller@{Controller}}
+\doxyparagraph{\texorpdfstring{get\_lattice\_motion\_k\_nearest()}{get\_lattice\_motion\_k\_nearest()}}
+{\footnotesize\ttfamily void Controller\+::get\+\_\+lattice\+\_\+motion\+\_\+k\+\_\+nearest (\begin{DoxyParamCaption}\item[{const int \&}]{ID,  }\item[{float \&}]{v\+\_\+x,  }\item[{float \&}]{v\+\_\+y,  }\item[{uint8\+\_\+t}]{k }\end{DoxyParamCaption})}
+
+
+
+Get the lattice motion all object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & \\
+\hline
+{\em v\+\_\+x} & \\
+\hline
+{\em v\+\_\+y} & \\
+\hline
+{\em k} & (maximum) number of nearest neighbors \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classController_aeba24943720516f7496052d92624d464}\label{classController_aeba24943720516f7496052d92624d464}} 
+\index{Controller@{Controller}!get\_lattice\_motion\_range@{get\_lattice\_motion\_range}}
+\index{get\_lattice\_motion\_range@{get\_lattice\_motion\_range}!Controller@{Controller}}
+\doxyparagraph{\texorpdfstring{get\_lattice\_motion\_range()}{get\_lattice\_motion\_range()}}
+{\footnotesize\ttfamily void Controller\+::get\+\_\+lattice\+\_\+motion\+\_\+range (\begin{DoxyParamCaption}\item[{const int \&}]{ID,  }\item[{float \&}]{v\+\_\+x,  }\item[{float \&}]{v\+\_\+y,  }\item[{float}]{rangesensor }\end{DoxyParamCaption})}
+
+
+
+Get the lattice motion all object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & \\
+\hline
+{\em v\+\_\+x} & \\
+\hline
+{\em v\+\_\+y} & \\
+\hline
+{\em rangesensor} & maximum range of the sensor \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classController_a2cefe37f2817de5f54535ebb35e0d32f}\label{classController_a2cefe37f2817de5f54535ebb35e0d32f}} 
+\index{Controller@{Controller}!get\_velocity\_command@{get\_velocity\_command}}
+\index{get\_velocity\_command@{get\_velocity\_command}!Controller@{Controller}}
+\doxyparagraph{\texorpdfstring{get\_velocity\_command()}{get\_velocity\_command()}}
+{\footnotesize\ttfamily virtual void Controller\+::get\+\_\+velocity\+\_\+command (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{ID,  }\item[{float \&}]{v\+\_\+x,  }\item[{float \&}]{v\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Virtual function to be implemented by child class that defines the controller The outputs are the desired v\+\_\+x and v\+\_\+y velocities
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & The ID of the robot to control \\
+\hline
+{\em v\+\_\+x} & The desired velocity in v\+\_\+x (to be set in this function) \\
+\hline
+{\em v\+\_\+y} & The desired velocity in v\+\_\+y (to be set in this function) \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classleader__follower_ad273b6a71703b24d6ad22bbe54972bd0}{leader\+\_\+follower}}, \mbox{\hyperlink{classlattice__basic_a99340bcfce48acc50843c7ef79952aaf}{lattice\+\_\+basic}}, \mbox{\hyperlink{classpattern__formation_a1b493eb7852adaa305ebb190777aa420}{pattern\+\_\+formation}}, \mbox{\hyperlink{classbehavior__tree_a78aa96f1d7e238d2e55bac5d4625522d}{behavior\+\_\+tree}}, \mbox{\hyperlink{classbehavior__tree__wheeled_a5b4e8a4ae5e9368bc554a45140f930c9}{behavior\+\_\+tree\+\_\+wheeled}}, \mbox{\hyperlink{classaggregation_a3b22eb2fd2e1f1f3dd383347c032926b}{aggregation}}, \mbox{\hyperlink{classpytorch_af054fb440841071b5cbe181cd8b09372}{pytorch}}, \mbox{\hyperlink{classrandom__exploration_ab83fdaa455fc9b6d8183286790cf553e}{random\+\_\+exploration}}, \mbox{\hyperlink{classforage_a4bf1779b50da19d87f869dc2fef97b22}{forage}}, \mbox{\hyperlink{classboid_a83e89c7a1d12811135c9066c015b5010}{boid}}, and \mbox{\hyperlink{classlattice_af494dfd7003a13e58a0d61dac1b5bcd8}{lattice}}.
+
+\mbox{\Hypertarget{classController_a0ba92524f1e9e6ab4e3a183f3f3a139b}\label{classController_a0ba92524f1e9e6ab4e3a183f3f3a139b}} 
+\index{Controller@{Controller}!saturate@{saturate}}
+\index{saturate@{saturate}!Controller@{Controller}}
+\doxyparagraph{\texorpdfstring{saturate()}{saturate()}}
+{\footnotesize\ttfamily void Controller\+::saturate (\begin{DoxyParamCaption}\item[{float \&}]{f }\end{DoxyParamCaption})}
+
+Function to saturate the commands
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Value to be saturated \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classController_a7981bf875271dae62195fa2c4fde077b}\label{classController_a7981bf875271dae62195fa2c4fde077b}} 
+\index{Controller@{Controller}!set\_saturation@{set\_saturation}}
+\index{set\_saturation@{set\_saturation}!Controller@{Controller}}
+\doxyparagraph{\texorpdfstring{set\_saturation()}{set\_saturation()}}
+{\footnotesize\ttfamily void Controller\+::set\+\_\+saturation (\begin{DoxyParamCaption}\item[{const float \&}]{saturation\+\_\+limits }\end{DoxyParamCaption})}
+
+Set the speed saturation to true and set the saturation limits. If this is not used then the saturation won\textquotesingle{}t take place.
+
+
+\begin{DoxyParams}{Parameters}
+{\em saturation\+\_\+limits} & The limit of the saturation (velocity) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classController_a47de39048982e5fda6f135ebdb708b71}\label{classController_a47de39048982e5fda6f135ebdb708b71}} 
+\index{Controller@{Controller}!wall\_avoidance\_bounce@{wall\_avoidance\_bounce}}
+\index{wall\_avoidance\_bounce@{wall\_avoidance\_bounce}!Controller@{Controller}}
+\doxyparagraph{\texorpdfstring{wall\_avoidance\_bounce()}{wall\_avoidance\_bounce()}}
+{\footnotesize\ttfamily bool Controller\+::wall\+\_\+avoidance\+\_\+bounce (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{ID,  }\item[{float \&}]{v\+\_\+x,  }\item[{float \&}]{v\+\_\+y,  }\item[{float}]{rangesensor }\end{DoxyParamCaption})}
+
+General wall avoidance function to use within \mbox{\hyperlink{classController_a2cefe37f2817de5f54535ebb35e0d32f}{get\+\_\+velocity\+\_\+command()}} to instigate a wall avoidance maneuver
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & The ID of the robot to control \\
+\hline
+{\em v\+\_\+x} & The desired velocity in v\+\_\+x (amended in this function) \\
+\hline
+{\em v\+\_\+y} & The desired velocity in v\+\_\+y (amended in this function) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sw/simulation/controller.\+h\item 
+sw/simulation/controller.\+cpp\end{DoxyCompactItemize}

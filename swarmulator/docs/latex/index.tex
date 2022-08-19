@@ -1,0 +1,139 @@
+
+
+Swarmulator is a lightweight C++ simulator for simulating swarms. Swarmulator offers a simple platform to prototype swarm behaviors.
+
+\doxysubsection*{Install Instructions}
+
+{\itshape Note\+: Swarmulator was tested on Ubuntu 16.\+04, 18.\+04, and 20.\+04} {\itshape Swarmulator was also tested successfully on Windows 10 using Ubuntu for Windows, which you can download here\+: \href{https://ubuntu.com/tutorials/ubuntu-on-windows\#4-install-ubuntu-for-windows-10}{\texttt{ https\+://ubuntu.\+com/tutorials/ubuntu-\/on-\/windows\#4-\/install-\/ubuntu-\/for-\/windows-\/10}}. Once installed, you can just follow the steps below as if you were on Ubuntu. (Unfortunately for now, the animation may not work, but all other primary functionalities should work)}
+
+\doxyparagraph*{Download the repository}
+
+Download/clone the repository. \begin{DoxyVerb}git clone https://github.com/coppolam/swarmulator.git
+cd swarmulator
+\end{DoxyVerb}
+
+
+\doxyparagraph*{Packages Required}
+
+Swarmulator runs using Open\+GL and X\+ML parsing. You will need the following packages. Run the following to make sure you have everything you need, installed in order\+: \begin{DoxyVerb}sudo apt-get install make g++ freeglut3-dev libxerces-c-dev xsdcxx libeigen3-dev libprotobuf-dev xmlstarlet
+\end{DoxyVerb}
+
+
+\doxyparagraph*{Build instructions}
+
+Once you have all the packages needed to build Swarmulator, you can build it with\+: \begin{DoxyVerb}make clean && make ANIMATION=ON LOG=ON VERBOSE=ON
+\end{DoxyVerb}
+
+
+If you don\textquotesingle{}t want the animation, just don\textquotesingle{}t type the {\ttfamily A\+N\+I\+M\+A\+T\+I\+ON=ON} part, same for {\ttfamily L\+OG}, which logs data, or {\ttfamily V\+E\+R\+B\+O\+SE} which outputs information to the console
+
+Swarmulator is designed to be modular, so that you can compile for any combination of controller and robot dynamics that you wish. By default, the {\ttfamily aggregation} controller and the {\ttfamily particle} agent will be used. To use another one, speficity this in the make command, as follows\+: \begin{DoxyVerb}make clean && make CONTROLLER=<yourcontrollername> AGENT=<youragentname> ANIMATION=ON
+\end{DoxyVerb}
+
+
+for example, try out\+: \begin{DoxyVerb}make clean && make CONTROLLER=boid AGENT=particle_oriented ANIMATION=ON
+\end{DoxyVerb}
+
+
+To find which agents and controllers are available in the branch, check the folders {\ttfamily sw/simulation/controllers} and {\ttfamily sw/simulation/agents}. See the next section \char`\"{}\+Prototyping with Swarmulator\char`\"{} for instructions on how to make your own!
+
+(Pro tip\+: If you want it to build fast, use {\ttfamily make -\/j} instead of just {\ttfamily make}, but this will take up more memory. On a virtual machine, where memory is limited, using {\ttfamily -\/j} may cause it to fail to build.)
+
+For other controllers, please note that you may have to indicate a correct policy in the X\+ML file {\ttfamily conf/parameters.\+xml}. Read the controller specific R\+E\+A\+D\+M\+Es to find out more about what they do. Also, note that not all provided controllers work with all agents (because they control different variables). This is also detailed in the controller specific R\+E\+A\+D\+M\+Es.
+
+\doxyparagraph*{Extra\+: Generate the doxygen documetation}
+
+Swarmulator was commented using the doxygen format. To generate the doxygen documentation, use \begin{DoxyVerb}doxygen doxyfile
+\end{DoxyVerb}
+
+
+And access the documentation using \begin{DoxyVerb}xdg-open docs/html/index.html 
+\end{DoxyVerb}
+
+
+\doxysubsection*{Running Swarmulator}
+
+Swarmulator can be launched from the terminal. To run Swarmulator, use the following command\+: \begin{DoxyVerb}./swarmulator <nagents>
+\end{DoxyVerb}
+
+
+Where $<$nagents$>$ is the number of agents you would like to have at the start of the simulation. ./swarmulator 10
+
+\doxyparagraph*{Setting up the runtime parameters}
+
+Swarmulator uses a configuration file called {\ttfamily parameters.\+xml} in order to load run-\/time parameters. These are loaded when Swarmulator starts, without having to re-\/build!
+
+{\ttfamily parameters.\+xml} is to be found in in the {\ttfamily conf} folder.
+
+Here you can edit all the run-\/time parameters. The standard ones are described below. In the next sub-\/section, you can find out how to make your own!
+
+
+\begin{DoxyItemize}
+\item {\ttfamily simulation\+\_\+updatefreq}\+: Refresh-\/rate of the simulation (Hz)
+\item {\ttfamily simulation\+\_\+realtimefactor}\+: Simulation real-\/time factor. The higher the faster, up to whatever your computer can handle, since eventually the mutex synchronization will win, which is particularly relavant for large numbers of robots.
+\item {\ttfamily time\+\_\+limit}\+: The time limit of simulated time after which the simulator will quit. If set to 0, then the simulation won\textquotesingle{}t quit until you make it quit.
+\item {\ttfamily environment}\+: The environment that the robots operate in (essentially defining the walls). Use {\ttfamily square} for a standard squared room, or leave it empty for a boundless environment. For a randomly generated environment, use {\ttfamily random}. You can always make your own enviromment by defining it and placing it in {\ttfamily conf/environments}.
+\item {\ttfamily window\+\_\+width}\+: Height of the animation window (in pixels)
+\item {\ttfamily window\+\_\+height}\+: Width of the animation window (in pixels)
+\item {\ttfamily scale}\+: Scale of the agents drawn in the animation window
+\item {\ttfamily mouse\+\_\+drag\+\_\+speed}\+: Sensitivity of the mouse during drag-\/and-\/drop actions. Use 1.\+0 for a 1 to 1 feel.
+\item {\ttfamily mouse\+\_\+zoom\+\_\+speed}\+: Sensitivity of zoom function to motion of the scroll wheel.
+\item {\ttfamily animation\+\_\+updatefreq}\+: Frame-\/rate of the animation.
+\item {\ttfamily logger\+\_\+updatefreq}\+: Log-\/rate. If the logger thread is activated, then this will create a text log at the indicated rate (with respect to the simulation time).
+\item {\ttfamily policy} \+: This is the (relative) path to a file that holds the specifics of a policy (if your controller needs one, else it\textquotesingle{}s not relevant). For instance, it can be a txt file holding the probability of doing something, or the weights of a neural network.
+\item {\ttfamily fitness}\+: This specifies the fitness function that would like to use (if relevant to your application). Please see the file for the current options {\ttfamily \mbox{\hyperlink{fitness__functions_8h_source}{sw/simulation/fitness\+\_\+functions.\+h}}}, and feel free to implement your own! To use it, specify the name of the fitness function. For instance {\ttfamily $<$fitness$>$aggregation\+\_\+clusters$<$/fitness$>$} will measure how aggregated the swarm is.
+\end{DoxyItemize}
+
+\doxyparagraph*{Adding your own additional runtime parameters}
+
+It is possible to easily add your own runtime parameter to Swarmulator. This can be done into three quick steps.
+\begin{DoxyEnumerate}
+\item Open {\ttfamily conf/parameters.\+xsd}. Here you declare the new parameter as an additional X\+SD element. {\ttfamily $<$xs\+:element name=\char`\"{}parameter\+\_\+name\char`\"{} type=\char`\"{}xs\+:parameter\+\_\+type\char`\"{}/$>$}
+\item Open {\ttfamily conf/parameters.\+xml}. Here you define the value of the parameter to be read at runtime. {\ttfamily $<$new\+\_\+parameter\+\_\+name$>$default value$<$/new\+\_\+parameter\+\_\+name$>$} That\textquotesingle{}s it! Now you use the parameter anywhere in the code by calling {\ttfamily param-\/$>$new\+\_\+parameter\+\_\+name()}.
+\end{DoxyEnumerate}
+
+\doxyparagraph*{Interactive user commands when using the animation}
+
+You can interact with Swarmulator in real time through the animation window. It is possible to intuitively move and zoom within the animation using drag-\/and-\/drop and your mouse\textquotesingle{}s scroll wheel.
+
+Additionally, there are a number of keyboard commands for the following\+:
+\begin{DoxyItemize}
+\item Add a new agent ({\ttfamily a}). This can be done by pressing the {\ttfamily a}, at which point a new agent will be created at the location pointed by the mouse cursor.
+\item Pause ({\ttfamily p}). The simulation can be paused by pressing the {\ttfamily p} key.
+\item Resume ({\ttfamily r}, note\+: it only works after pausing by pressing {\ttfamily p}). Resume the simulation.
+\item Step-\/through ({\ttfamily s}, note\+: it only works after pausing by pressing {\ttfamily p}). This will run the simulation for a very small time step and then pause. It can be pressed repeatedly to slowly step through the simulation.
+\item Toggle real-\/time factor ({\ttfamily m}). Toggle the realtime factor between the value specified in {\ttfamily conf/parameters.\+xml} and {\ttfamily 1}. This allows you analyze the swarm in the animation.
+\item Quit ({\ttfamily q}). This will quit Swarmulator.
+\end{DoxyItemize}
+
+\doxysubsection*{Prototyping with Swarmulator}
+
+Swarmulator is built for quick prototyping, making it simple to switch out different controllers and agents in the swarm. The controller and agent in use are defined in {\ttfamily \mbox{\hyperlink{settings_8h_source}{sw/settings.\+h}}}. Using this approach, you can quickly switch out different controllers and then recompile the code.
+
+\doxyparagraph*{Using your own controller}
+
+All controllers must be a child of the class {\ttfamily \mbox{\hyperlink{classController}{Controller}}}, to be found at {\ttfamily sw/simulation/controller.\+cpp}. You can define a controller as a child class of {\ttfamily \mbox{\hyperlink{classController}{Controller}}}, and then define that you want to use it in {\ttfamily \mbox{\hyperlink{settings_8h_source}{sw/settings.\+h}}}. You can look at the controllers in {\ttfamily sw/simulation/controllers/...} for examples. You can use the functions in {\ttfamily \mbox{\hyperlink{classOmniscientObserver}{Omniscient\+Observer}}} in order to simulate the sensing of other agents as you see fit.
+
+The bash script found in {\ttfamily scripts/make\+\_\+new\+\_\+controller.\+sh} will create an empty controller for you, ready for use! You can run it as follows\+: \begin{DoxyVerb}cd scripts
+./make_new_controller.sh myawesomenewcontroller
+\end{DoxyVerb}
+
+
+\doxyparagraph*{Using your agent dynamics}
+
+All agents must be a child of the class {\ttfamily \mbox{\hyperlink{classAgent}{Agent}}}, to be found at {\ttfamily sw/simulation/agent.\+cpp}. You can define an agent as a child class of {\ttfamily \mbox{\hyperlink{classAgent}{Agent}}}, and, as for controllers, define that you want to use it in {\ttfamily \mbox{\hyperlink{settings_8h_source}{sw/settings.\+h}}}. You can look at the controllers in {\ttfamily sw/simulation/agents/...} for examples of agents, where you can declare the dynamics of the agents.
+
+The bash script found in {\ttfamily scripts/make\+\_\+new\+\_\+agent.\+sh} will create an empty controller for you, ready for use! You can run it as follows\+: \begin{DoxyVerb}cd scripts
+./make_new_agent.sh myawesomenewagent
+\end{DoxyVerb}
+
+
+\doxysubsection*{Using Swarmulator to evolve a swarm behavior}
+
+Swarmulator was originally designed just to quickly prototype and analyze swarm behaviors. However, thanks to its speed and ability to operate at high real time factors, it also lends itself to doing evolution of swarm controllers in a (relatively) short amount of time.
+
+Please see the file {\ttfamily scripts/python/example\+\_\+evolution.\+py} and the R\+E\+A\+D\+ME file in the same folder for an example that uses evolution to evolve a policy.
+
+\doxysubsection*{P\+Y\+T\+O\+R\+C\+H!}
+
+It\textquotesingle{}s now possible to use Swarmulator with the Py\+Torch C++ library. An example controller with R\+E\+A\+D\+ME instructions to set it up is avaiable in the controller {\ttfamily pytorch} under {\ttfamily sw/simulation/controllers}. Go check it out and have fun! 

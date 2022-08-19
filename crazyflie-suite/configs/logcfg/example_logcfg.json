@@ -1,0 +1,69 @@
+{
+
+    "kalman":{
+        "name": "kalman",
+        "type": "CF",
+        "period": 10,
+        "variables": ["kalman.varX", "kalman.varY"],
+                      
+        "headers": ["varx, vary"]
+    },
+
+    "tdoaen":{
+        "name": "tdoaen",
+        "type": "CF",
+        "period": 10,
+        "variables": ["tdoa_mode.tdoa_modus"],
+                      
+        "headers": ["tdoamode"]
+    },
+
+    "twr":{
+        "name": "twr",
+        "type": "CF",
+        "period": 10,
+        "variables": ["ranging.distance0",
+                      "ranging.distance1",
+                      "ranging.distance2",
+                      "ranging.distance3",
+                      "ranging.rangedev"],
+                      
+        "headers": ["twr0", "twr1", "twr2", "twr3", "rangedev"]
+    },
+
+    "attitude":{
+        "name": "attitude",
+        "type": "CF",
+        "period": 10,
+        "variables": ["stabilizer.roll",
+                      "stabilizer.pitch",
+                      "stabilizer.yaw"],
+        "headers": ["roll", "pitch", "yaw"]
+    },
+
+    "state":{
+        "name": "state",
+        "type": "CF",
+        "period": 10,
+        "variables": ["stateEstimate.x",
+                      "stateEstimate.y",
+                      "stateEstimate.z",
+                      "stateEstimate.vx",
+                      "stateEstimate.vy",
+                      "stateEstimate.vz"],
+        "headers": ["stateX", "stateY", "stateZ", "stateVX", "stateVY", "stateVZ"]
+    },
+
+    "ot0":{
+        "name": "ot0",
+        "type": "EXT",
+        "period": 10,
+        "variables": ["otX0",
+                      "otY0",
+                      "otZ0",
+                      "otRoll0",
+                      "otPitch0",
+                      "otYaw0"],
+        "headers": ["otX0", "otY0", "otZ0", "otRoll0", "otPitch0", "otYaw0"]
+    }
+}

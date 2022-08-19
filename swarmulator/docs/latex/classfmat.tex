@@ -1,0 +1,219 @@
+\hypertarget{classfmat}{}\doxysubsection{fmat$<$ T $>$ Class Template Reference}
+\label{classfmat}\index{fmat$<$ T $>$@{fmat$<$ T $>$}}
+
+
+Template class for matrix operations.  
+
+
+
+
+{\ttfamily \#include $<$fmat.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classfmat_a1c00b43e5db83b7dd5ec7ba4e60f6e6a}{normalize}} (std\+::vector$<$ T, std\+::allocator$<$ T $>$$>$ \&matrix, const uint \&n\+\_\+rows, const uint \&n\+\_\+cols)
+\item 
+static void \mbox{\hyperlink{classfmat_a6e6c8f6476bf8c72f2bd1175a1eb399d}{normalize\+\_\+larger\+\_\+than\+\_\+1}} (std\+::vector$<$ T, std\+::allocator$<$ T $>$$>$ \&matrix, const uint \&n\+\_\+rows, const uint \&n\+\_\+cols)
+\begin{DoxyCompactList}\small\item\em Normalize all rows that are larger than 1. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classfmat_a0130a9a445f836bf7d1219369e0f8016}{make\+\_\+identity}} (std\+::vector$<$ T, std\+::allocator$<$ T $>$$>$ \&matrix, const uint \&n)
+\begin{DoxyCompactList}\small\item\em Make an identity matrix. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classfmat_a468198c2430c979d2e7c0c455fad9cff}{add}} (const uint \&n\+\_\+row, const uint \&n\+\_\+col, std\+::vector$<$ T, std\+::allocator$<$ T $>$$>$ \&r, std\+::vector$<$ T, std\+::allocator$<$ T $>$$>$ \&a, std\+::vector$<$ T, std\+::allocator$<$ T $>$$>$ \&b)
+\begin{DoxyCompactList}\small\item\em Add two matrix. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classfmat_aa04e339e87aa52567e10da5258390880}{print}} (const uint \&n\+\_\+row, const uint \&n\+\_\+col, std\+::vector$<$ T, std\+::allocator$<$ T $>$$>$ \&a, std\+::string name)
+\item 
+static void \mbox{\hyperlink{classfmat_a5dd9ca900fc67fa295c6bf62b6065ff3}{mult}} (const uint \&n\+\_\+rowa, const uint \&n\+\_\+cola, const uint \&n\+\_\+colb, std\+::vector$<$ T, std\+::allocator$<$ T $>$$>$ \&r, std\+::vector$<$ T, std\+::allocator$<$ T $>$$>$ \&a, std\+::vector$<$ T, std\+::allocator$<$ T $>$$>$ \&b)
+\begin{DoxyCompactList}\small\item\em Multiply two matrixces. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classfmat_a4c01c204eaa2cdffe610fcd7f984cf2b}{scal\+\_\+mult}} (const uint \&n\+\_\+row, const uint \&n\+\_\+col, std\+::vector$<$ T, std\+::allocator$<$ T $>$$>$ \&r, float k, std\+::vector$<$ T, std\+::allocator$<$ T $>$$>$ \&a)
+\item 
+static void \mbox{\hyperlink{classfmat_a0cccc6e164f2f71ebf67bd2670a3fc06}{write\+\_\+to\+\_\+csv}} (const std\+::string \&filename, const std\+::vector$<$ T, std\+::allocator$<$ T $>$$>$ \&mat, const uint \&rows, const uint \&cols)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class fmat$<$ T $>$}
+
+Template class for matrix operations. 
+
+Header class for matrix operations. Can be invoked anywhere by using fmat$<$type$>$\+::function(inputs). The class uses a template type so the matrix can be any std\+::vector$<$type$>$. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classfmat_a468198c2430c979d2e7c0c455fad9cff}\label{classfmat_a468198c2430c979d2e7c0c455fad9cff}} 
+\index{fmat$<$ T $>$@{fmat$<$ T $>$}!add@{add}}
+\index{add@{add}!fmat$<$ T $>$@{fmat$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classfmat}{fmat}}$<$ T $>$\+::add (\begin{DoxyParamCaption}\item[{const uint \&}]{n\+\_\+row,  }\item[{const uint \&}]{n\+\_\+col,  }\item[{std\+::vector$<$ T, std\+::allocator$<$ T $>$$>$ \&}]{r,  }\item[{std\+::vector$<$ T, std\+::allocator$<$ T $>$$>$ \&}]{a,  }\item[{std\+::vector$<$ T, std\+::allocator$<$ T $>$$>$ \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Add two matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+\_\+row} & Number of rows \\
+\hline
+{\em n\+\_\+col} & Number of columns \\
+\hline
+{\em r} & Output matrix = A + B \\
+\hline
+{\em a} & matrix A \\
+\hline
+{\em b} & matrix B \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfmat_a0130a9a445f836bf7d1219369e0f8016}\label{classfmat_a0130a9a445f836bf7d1219369e0f8016}} 
+\index{fmat$<$ T $>$@{fmat$<$ T $>$}!make\_identity@{make\_identity}}
+\index{make\_identity@{make\_identity}!fmat$<$ T $>$@{fmat$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{make\_identity()}{make\_identity()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classfmat}{fmat}}$<$ T $>$\+::make\+\_\+identity (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T, std\+::allocator$<$ T $>$$>$ \&}]{matrix,  }\item[{const uint \&}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Make an identity matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & Matrix to make into an identity matrix \\
+\hline
+{\em n} & Size of matrix \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfmat_a5dd9ca900fc67fa295c6bf62b6065ff3}\label{classfmat_a5dd9ca900fc67fa295c6bf62b6065ff3}} 
+\index{fmat$<$ T $>$@{fmat$<$ T $>$}!mult@{mult}}
+\index{mult@{mult}!fmat$<$ T $>$@{fmat$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{mult()}{mult()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classfmat}{fmat}}$<$ T $>$\+::mult (\begin{DoxyParamCaption}\item[{const uint \&}]{n\+\_\+rowa,  }\item[{const uint \&}]{n\+\_\+cola,  }\item[{const uint \&}]{n\+\_\+colb,  }\item[{std\+::vector$<$ T, std\+::allocator$<$ T $>$$>$ \&}]{r,  }\item[{std\+::vector$<$ T, std\+::allocator$<$ T $>$$>$ \&}]{a,  }\item[{std\+::vector$<$ T, std\+::allocator$<$ T $>$$>$ \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Multiply two matrixces. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+\_\+rowa} & Number of rows matrix A \\
+\hline
+{\em n\+\_\+cola} & Number of columns matrix A \\
+\hline
+{\em n\+\_\+colb} & Number of columns matrix B \\
+\hline
+{\em r} & Output matrix = A $\ast$ B \\
+\hline
+{\em a} & Matrix A \\
+\hline
+{\em b} & Matrix B \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfmat_a1c00b43e5db83b7dd5ec7ba4e60f6e6a}\label{classfmat_a1c00b43e5db83b7dd5ec7ba4e60f6e6a}} 
+\index{fmat$<$ T $>$@{fmat$<$ T $>$}!normalize@{normalize}}
+\index{normalize@{normalize}!fmat$<$ T $>$@{fmat$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classfmat}{fmat}}$<$ T $>$\+::normalize (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T, std\+::allocator$<$ T $>$$>$ \&}]{matrix,  }\item[{const uint \&}]{n\+\_\+rows,  }\item[{const uint \&}]{n\+\_\+cols }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Normalize a matrix with n rows and m columns
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & \\
+\hline
+{\em n\+\_\+rows} & number of rows \\
+\hline
+{\em n\+\_\+cols} & number of columns \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfmat_a6e6c8f6476bf8c72f2bd1175a1eb399d}\label{classfmat_a6e6c8f6476bf8c72f2bd1175a1eb399d}} 
+\index{fmat$<$ T $>$@{fmat$<$ T $>$}!normalize\_larger\_than\_1@{normalize\_larger\_than\_1}}
+\index{normalize\_larger\_than\_1@{normalize\_larger\_than\_1}!fmat$<$ T $>$@{fmat$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{normalize\_larger\_than\_1()}{normalize\_larger\_than\_1()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classfmat}{fmat}}$<$ T $>$\+::normalize\+\_\+larger\+\_\+than\+\_\+1 (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T, std\+::allocator$<$ T $>$$>$ \&}]{matrix,  }\item[{const uint \&}]{n\+\_\+rows,  }\item[{const uint \&}]{n\+\_\+cols }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Normalize all rows that are larger than 1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & \\
+\hline
+{\em n\+\_\+rows} & number of rows \\
+\hline
+{\em n\+\_\+cols} & number of columns \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfmat_aa04e339e87aa52567e10da5258390880}\label{classfmat_aa04e339e87aa52567e10da5258390880}} 
+\index{fmat$<$ T $>$@{fmat$<$ T $>$}!print@{print}}
+\index{print@{print}!fmat$<$ T $>$@{fmat$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classfmat}{fmat}}$<$ T $>$\+::print (\begin{DoxyParamCaption}\item[{const uint \&}]{n\+\_\+row,  }\item[{const uint \&}]{n\+\_\+col,  }\item[{std\+::vector$<$ T, std\+::allocator$<$ T $>$$>$ \&}]{a,  }\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Print a matrix to the terminal
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+\_\+row} & Number of rows \\
+\hline
+{\em n\+\_\+col} & Number of columns \\
+\hline
+{\em a} & Matrix \\
+\hline
+{\em name} & Name of matrix (as std\+::string) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfmat_a4c01c204eaa2cdffe610fcd7f984cf2b}\label{classfmat_a4c01c204eaa2cdffe610fcd7f984cf2b}} 
+\index{fmat$<$ T $>$@{fmat$<$ T $>$}!scal\_mult@{scal\_mult}}
+\index{scal\_mult@{scal\_mult}!fmat$<$ T $>$@{fmat$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{scal\_mult()}{scal\_mult()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classfmat}{fmat}}$<$ T $>$\+::scal\+\_\+mult (\begin{DoxyParamCaption}\item[{const uint \&}]{n\+\_\+row,  }\item[{const uint \&}]{n\+\_\+col,  }\item[{std\+::vector$<$ T, std\+::allocator$<$ T $>$$>$ \&}]{r,  }\item[{float}]{k,  }\item[{std\+::vector$<$ T, std\+::allocator$<$ T $>$$>$ \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Multiply a matrix by a scalar k
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+\_\+row} & Number of rows \\
+\hline
+{\em n\+\_\+col} & Number of columns \\
+\hline
+{\em r} & Output matrix = k $\ast$ A \\
+\hline
+{\em k} & Scalar \\
+\hline
+{\em a} & Matrix A \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfmat_a0cccc6e164f2f71ebf67bd2670a3fc06}\label{classfmat_a0cccc6e164f2f71ebf67bd2670a3fc06}} 
+\index{fmat$<$ T $>$@{fmat$<$ T $>$}!write\_to\_csv@{write\_to\_csv}}
+\index{write\_to\_csv@{write\_to\_csv}!fmat$<$ T $>$@{fmat$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{write\_to\_csv()}{write\_to\_csv()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classfmat}{fmat}}$<$ T $>$\+::write\+\_\+to\+\_\+csv (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{const std\+::vector$<$ T, std\+::allocator$<$ T $>$$>$ \&}]{mat,  }\item[{const uint \&}]{rows,  }\item[{const uint \&}]{cols }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Write the matrix to a C\+SV file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of file \\
+\hline
+{\em mat} & Matrix \\
+\hline
+{\em rows} & Number of rows \\
+\hline
+{\em cols} & Number of columns \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sw/math/fmat.\+h\end{DoxyCompactItemize}

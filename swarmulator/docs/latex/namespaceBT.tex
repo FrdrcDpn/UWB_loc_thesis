@@ -1,0 +1,309 @@
+\hypertarget{namespaceBT}{}\doxysubsection{BT Namespace Reference}
+\label{namespaceBT}\index{BT@{BT}}
+
+
+Behavior tree namespace.  
+
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classBT_1_1composite}{composite}}
+\item 
+class \mbox{\hyperlink{classBT_1_1condition}{condition}}
+\item 
+class \mbox{\hyperlink{classBT_1_1greater__than}{greater\+\_\+than}}
+\item 
+class \mbox{\hyperlink{classBT_1_1less__than}{less\+\_\+than}}
+\item 
+class \mbox{\hyperlink{classBT_1_1memory__set}{memory\+\_\+set}}
+\item 
+class \mbox{\hyperlink{classBT_1_1node}{node}}
+\item 
+class \mbox{\hyperlink{classBT_1_1parallel}{parallel}}
+\begin{DoxyCompactList}\small\item\em Parallel behaviors. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classBT_1_1selector}{selector}}
+\begin{DoxyCompactList}\small\item\em Selector behaviors. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classBT_1_1sequence}{sequence}}
+\begin{DoxyCompactList}\small\item\em Sequence behaviors. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structBT_1_1wheelSpeed}{wheel\+Speed}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceBT_a65d9025627a090013999dc4d89ba6ead}\label{namespaceBT_a65d9025627a090013999dc4d89ba6ead}} 
+typedef std\+::vector$<$ \mbox{\hyperlink{classBT_1_1node}{node}} $\ast$ $>$ {\bfseries nodes}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceBT_a3dd5e82a03ba708989e74b8d57b330c6}{B\+T\+\_\+\+Status}} \{ \newline
+{\bfseries B\+H\+\_\+\+I\+N\+V\+A\+L\+ID}, 
+{\bfseries B\+H\+\_\+\+S\+U\+C\+C\+E\+SS}, 
+{\bfseries B\+H\+\_\+\+R\+U\+N\+N\+I\+NG}, 
+{\bfseries B\+H\+\_\+\+S\+U\+S\+P\+E\+N\+D\+ED}, 
+\newline
+{\bfseries B\+H\+\_\+\+F\+A\+I\+L\+U\+RE}
+ \}
+\begin{DoxyCompactList}\small\item\em Task status types Important that order is maintained with more important states as higher values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBT_1_1composite}{composite}} $\ast$ \mbox{\hyperlink{namespaceBT_a48c77ea089340fb8c176f99196f50c7c}{load\+File}} (const char $\ast$file)
+\begin{DoxyCompactList}\small\item\em Load a behavior tree file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespaceBT_a0d64a69555f942f3c55b0ca44100a74e}{save\+File}} (const char $\ast$file, \mbox{\hyperlink{classBT_1_1composite}{composite}} $\ast$task)
+\item 
+void \mbox{\hyperlink{namespaceBT_ad46a1d1589c71afcdd78edb29e21de32}{write\+Composite}} (std\+::ofstream \&myfile, \mbox{\hyperlink{classBT_1_1composite}{composite}} $\ast$parent, size\+\_\+t tabs)
+\item 
+\mbox{\hyperlink{classBT_1_1node}{node}} $\ast$ \mbox{\hyperlink{namespaceBT_a56166749890ea41c1cb4bd22d2324f43}{new\+Task}} (\mbox{\hyperlink{classBT_1_1node}{node}} $\ast$Parent, std\+::string line)
+\item 
+\mbox{\hyperlink{classBT_1_1node}{node}} $\ast$ \mbox{\hyperlink{namespaceBT_a153254105d8bd91dfa47adb1497a781a}{decode\+Line}} (std\+::string line)
+\item 
+std\+::string \mbox{\hyperlink{namespaceBT_ac47c1c4e603aa0efa49f9df25b75a385}{code\+Line}} (\mbox{\hyperlink{classBT_1_1node}{node}} $\ast$task)
+\item 
+\mbox{\hyperlink{classBT_1_1composite}{composite}} $\ast$ \mbox{\hyperlink{namespaceBT_a5ba9981b425c7ef9767d67ef1ab33dff}{get\+Composite}} (std\+::string \mbox{\hyperlink{classBT_1_1composite}{composite}})
+\begin{DoxyCompactList}\small\item\em Get the Composite object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBT_1_1composite}{composite}} $\ast$ \mbox{\hyperlink{namespaceBT_a6e379ed6893cf40949340edd5ff7a28a}{get\+Composite}} (size\+\_\+t func)
+\begin{DoxyCompactList}\small\item\em Get the Composite object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBT_1_1composite}{composite}} $\ast$ \mbox{\hyperlink{namespaceBT_a98d2a874d2b1eac2bbbe7c961d39f804}{get\+Composite}} ()
+\begin{DoxyCompactList}\small\item\em Get the Composite object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceBT_ac68dbf516fed10208f8fe91301c6a0e3}{show\+Tree}} (\mbox{\hyperlink{classBT_1_1composite}{composite}} $\ast$task, size\+\_\+t tab)
+\item 
+\mbox{\Hypertarget{namespaceBT_a5b6ddd40466a9a29c1eb8bd5ae0b6f7e}\label{namespaceBT_a5b6ddd40466a9a29c1eb8bd5ae0b6f7e}} 
+std\+::tuple$<$ std\+::string, double, double, double $>$ {\bfseries input} (int i)
+\item 
+\mbox{\Hypertarget{namespaceBT_ad4def7512fa7a852776e1a538d1e5a22}\label{namespaceBT_ad4def7512fa7a852776e1a538d1e5a22}} 
+\mbox{\hyperlink{classBT_1_1node}{node}} $\ast$ {\bfseries get\+Condition} (std\+::string \mbox{\hyperlink{classBT_1_1condition}{condition}}, size\+\_\+t var=M\+A\+X\+\_\+\+S\+I\+ZE)
+\item 
+\mbox{\Hypertarget{namespaceBT_ad87ea0185d9f4ee9c8c7602c691a1957}\label{namespaceBT_ad87ea0185d9f4ee9c8c7602c691a1957}} 
+\mbox{\hyperlink{classBT_1_1node}{node}} $\ast$ {\bfseries get\+Condition} (std\+::string \mbox{\hyperlink{classBT_1_1condition}{condition}}, std\+::vector$<$ double $>$ inputs)
+\item 
+\mbox{\Hypertarget{namespaceBT_ad5e960aed1d44880da2407520f93da3b}\label{namespaceBT_ad5e960aed1d44880da2407520f93da3b}} 
+\mbox{\hyperlink{classBT_1_1node}{node}} $\ast$ {\bfseries get\+Condition} (size\+\_\+t func=rand() \% K\+C\+O\+ND, size\+\_\+t var=M\+A\+X\+\_\+\+S\+I\+ZE)
+\item 
+\mbox{\hyperlink{classBT_1_1node}{node}} $\ast$ \mbox{\hyperlink{namespaceBT_aca8678bd40422e1fce8860daf7c8a212}{get\+Action}} (std\+::string action, std\+::vector$<$ double $>$ inputs)
+\begin{DoxyCompactList}\small\item\em Get the action node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBT_1_1node}{node}} $\ast$ \mbox{\hyperlink{namespaceBT_a9c3da6aca173e1af9859e5e4702f265c}{get\+Action}} (size\+\_\+t func=(size\+\_\+t) -\/ 1)
+\begin{DoxyCompactList}\small\item\em Get the Action object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceBT_ab911f2f05a7ba3914d90bceda11d3896}\label{namespaceBT_ab911f2f05a7ba3914d90bceda11d3896}} 
+size\+\_\+t {\bfseries K\+C\+O\+MP} = 1
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Behavior tree namespace. 
+
+Holds the behavior tree structure. 
+
+\doxysubsubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespaceBT_a3dd5e82a03ba708989e74b8d57b330c6}\label{namespaceBT_a3dd5e82a03ba708989e74b8d57b330c6}} 
+\index{BT@{BT}!BT\_Status@{BT\_Status}}
+\index{BT\_Status@{BT\_Status}!BT@{BT}}
+\doxyparagraph{\texorpdfstring{BT\_Status}{BT\_Status}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceBT_a3dd5e82a03ba708989e74b8d57b330c6}{B\+T\+::\+B\+T\+\_\+\+Status}}}
+
+
+
+Task status types Important that order is maintained with more important states as higher values. 
+
+
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceBT_ac47c1c4e603aa0efa49f9df25b75a385}\label{namespaceBT_ac47c1c4e603aa0efa49f9df25b75a385}} 
+\index{BT@{BT}!codeLine@{codeLine}}
+\index{codeLine@{codeLine}!BT@{BT}}
+\doxyparagraph{\texorpdfstring{codeLine()}{codeLine()}}
+{\footnotesize\ttfamily std\+::string B\+T\+::code\+Line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBT_1_1node}{node}} $\ast$}]{task }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em task} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceBT_a153254105d8bd91dfa47adb1497a781a}\label{namespaceBT_a153254105d8bd91dfa47adb1497a781a}} 
+\index{BT@{BT}!decodeLine@{decodeLine}}
+\index{decodeLine@{decodeLine}!BT@{BT}}
+\doxyparagraph{\texorpdfstring{decodeLine()}{decodeLine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBT_1_1node}{node}} $\ast$ B\+T\+::decode\+Line (\begin{DoxyParamCaption}\item[{std\+::string}]{line }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+node$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceBT_a9c3da6aca173e1af9859e5e4702f265c}\label{namespaceBT_a9c3da6aca173e1af9859e5e4702f265c}} 
+\index{BT@{BT}!getAction@{getAction}}
+\index{getAction@{getAction}!BT@{BT}}
+\doxyparagraph{\texorpdfstring{getAction()}{getAction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBT_1_1node}{node}} $\ast$ B\+T\+::get\+Action (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{func = {\ttfamily (size\+\_\+t)~-\/~1} }\end{DoxyParamCaption})}
+
+
+
+Get the Action object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+node$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceBT_aca8678bd40422e1fce8860daf7c8a212}\label{namespaceBT_aca8678bd40422e1fce8860daf7c8a212}} 
+\index{BT@{BT}!getAction@{getAction}}
+\index{getAction@{getAction}!BT@{BT}}
+\doxyparagraph{\texorpdfstring{getAction()}{getAction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBT_1_1node}{node}} $\ast$ B\+T\+::get\+Action (\begin{DoxyParamCaption}\item[{std\+::string}]{action,  }\item[{std\+::vector$<$ double $>$}]{inputs }\end{DoxyParamCaption})}
+
+
+
+Get the action node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & \\
+\hline
+{\em inputs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+node$\ast$ of the action 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceBT_a98d2a874d2b1eac2bbbe7c961d39f804}\label{namespaceBT_a98d2a874d2b1eac2bbbe7c961d39f804}} 
+\index{BT@{BT}!getComposite@{getComposite}}
+\index{getComposite@{getComposite}!BT@{BT}}
+\doxyparagraph{\texorpdfstring{getComposite()}{getComposite()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBT_1_1composite}{composite}} $\ast$ B\+T\+::get\+Composite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Composite object. 
+
+\begin{DoxyReturn}{Returns}
+composite$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceBT_a6e379ed6893cf40949340edd5ff7a28a}\label{namespaceBT_a6e379ed6893cf40949340edd5ff7a28a}} 
+\index{BT@{BT}!getComposite@{getComposite}}
+\index{getComposite@{getComposite}!BT@{BT}}
+\doxyparagraph{\texorpdfstring{getComposite()}{getComposite()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBT_1_1composite}{composite}} $\ast$ B\+T\+::get\+Composite (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{func }\end{DoxyParamCaption})}
+
+
+
+Get the Composite object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+composite$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceBT_a5ba9981b425c7ef9767d67ef1ab33dff}\label{namespaceBT_a5ba9981b425c7ef9767d67ef1ab33dff}} 
+\index{BT@{BT}!getComposite@{getComposite}}
+\index{getComposite@{getComposite}!BT@{BT}}
+\doxyparagraph{\texorpdfstring{getComposite()}{getComposite()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBT_1_1composite}{composite}} $\ast$ B\+T\+::get\+Composite (\begin{DoxyParamCaption}\item[{std\+::string}]{composite }\end{DoxyParamCaption})}
+
+
+
+Get the Composite object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em composite} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+composite$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceBT_a48c77ea089340fb8c176f99196f50c7c}\label{namespaceBT_a48c77ea089340fb8c176f99196f50c7c}} 
+\index{BT@{BT}!loadFile@{loadFile}}
+\index{loadFile@{loadFile}!BT@{BT}}
+\doxyparagraph{\texorpdfstring{loadFile()}{loadFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBT_1_1composite}{B\+T\+::composite}} $\ast$ B\+T\+::load\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Load a behavior tree file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The name of the file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+composite$\ast$ The composite tree structure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceBT_a56166749890ea41c1cb4bd22d2324f43}\label{namespaceBT_a56166749890ea41c1cb4bd22d2324f43}} 
+\index{BT@{BT}!newTask@{newTask}}
+\index{newTask@{newTask}!BT@{BT}}
+\doxyparagraph{\texorpdfstring{newTask()}{newTask()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBT_1_1node}{node}} $\ast$ B\+T\+::new\+Task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBT_1_1node}{node}} $\ast$}]{Parent,  }\item[{std\+::string}]{line }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Parent} & \\
+\hline
+{\em line} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+node$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceBT_a0d64a69555f942f3c55b0ca44100a74e}\label{namespaceBT_a0d64a69555f942f3c55b0ca44100a74e}} 
+\index{BT@{BT}!saveFile@{saveFile}}
+\index{saveFile@{saveFile}!BT@{BT}}
+\doxyparagraph{\texorpdfstring{saveFile()}{saveFile()}}
+{\footnotesize\ttfamily bool B\+T\+::save\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file,  }\item[{\mbox{\hyperlink{classBT_1_1composite}{composite}} $\ast$}]{task }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & \\
+\hline
+{\em task} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Success 
+
+false Failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceBT_ac68dbf516fed10208f8fe91301c6a0e3}\label{namespaceBT_ac68dbf516fed10208f8fe91301c6a0e3}} 
+\index{BT@{BT}!showTree@{showTree}}
+\index{showTree@{showTree}!BT@{BT}}
+\doxyparagraph{\texorpdfstring{showTree()}{showTree()}}
+{\footnotesize\ttfamily void B\+T\+::show\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBT_1_1composite}{composite}} $\ast$}]{task,  }\item[{size\+\_\+t}]{tab }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em task} & \\
+\hline
+{\em tab} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespaceBT_ad46a1d1589c71afcdd78edb29e21de32}\label{namespaceBT_ad46a1d1589c71afcdd78edb29e21de32}} 
+\index{BT@{BT}!writeComposite@{writeComposite}}
+\index{writeComposite@{writeComposite}!BT@{BT}}
+\doxyparagraph{\texorpdfstring{writeComposite()}{writeComposite()}}
+{\footnotesize\ttfamily void B\+T\+::write\+Composite (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{myfile,  }\item[{\mbox{\hyperlink{classBT_1_1composite}{composite}} $\ast$}]{parent,  }\item[{size\+\_\+t}]{tabs }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em myfile} & \\
+\hline
+{\em parent} & \\
+\hline
+{\em tabs} & \\
+\hline
+\end{DoxyParams}

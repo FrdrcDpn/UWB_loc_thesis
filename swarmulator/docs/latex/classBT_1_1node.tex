@@ -1,0 +1,138 @@
+\hypertarget{classBT_1_1node}{}\doxysubsection{BT\+::node Class Reference}
+\label{classBT_1_1node}\index{BT::node@{BT::node}}
+
+
+{\ttfamily \#include $<$node.\+h$>$}
+
+
+
+Inheritance diagram for BT\+::node\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBT_1_1node_a6b556d5e856960c2c2589e3c46ef3b5e}{node}} (std\+::string Name, std\+::string Type, std\+::string Function)
+\begin{DoxyCompactList}\small\item\em Construct a new node object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classBT_1_1node_adc79cb8c75e5406b3967a4ad73043e1e}{$\sim$node}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the node object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceBT_a3dd5e82a03ba708989e74b8d57b330c6}{B\+T\+\_\+\+Status}} \mbox{\hyperlink{classBT_1_1node_abe7f89823f88ad1d8f2a9a7cc5397913}{tick}} (\mbox{\hyperlink{structblackboard}{blackboard}} $\ast$B\+L\+KB)
+\begin{DoxyCompactList}\small\item\em Tick the current behavior tree. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespaceBT_a3dd5e82a03ba708989e74b8d57b330c6}{B\+T\+\_\+\+Status}} \mbox{\hyperlink{classBT_1_1node_ae86073fff305b5e625fd3003a1209df3}{update}} (\mbox{\hyperlink{structblackboard}{blackboard}} $\ast$B\+L\+KB)=0
+\begin{DoxyCompactList}\small\item\em Update the status of the behavior tree. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBT_1_1node_a9b2dca56116ae084ce7462c9588f3c76}\label{classBT_1_1node_a9b2dca56116ae084ce7462c9588f3c76}} 
+virtual void {\bfseries on\+Initialise} ()
+\item 
+\mbox{\Hypertarget{classBT_1_1node_a6c6e1102150856e6bfbd26103d73546e}\label{classBT_1_1node_a6c6e1102150856e6bfbd26103d73546e}} 
+virtual void {\bfseries on\+Terminate} (\mbox{\hyperlink{namespaceBT_a3dd5e82a03ba708989e74b8d57b330c6}{B\+T\+\_\+\+Status}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBT_1_1node_afdff2d1c2bf38cc1daabf37156360a9a}\label{classBT_1_1node_afdff2d1c2bf38cc1daabf37156360a9a}} 
+\mbox{\hyperlink{namespaceBT_a3dd5e82a03ba708989e74b8d57b330c6}{B\+T\+\_\+\+Status}} {\bfseries m\+\_\+e\+Status}
+\item 
+\mbox{\Hypertarget{classBT_1_1node_a930553f7b7d30c74787e8f178c48df8d}\label{classBT_1_1node_a930553f7b7d30c74787e8f178c48df8d}} 
+std\+::string {\bfseries name}
+\item 
+\mbox{\Hypertarget{classBT_1_1node_abfd61202e8790013602cfcd40608d0ea}\label{classBT_1_1node_abfd61202e8790013602cfcd40608d0ea}} 
+std\+::string {\bfseries type}
+\item 
+\mbox{\Hypertarget{classBT_1_1node_aed7c68bbd6317dd02e08674510476b3d}\label{classBT_1_1node_aed7c68bbd6317dd02e08674510476b3d}} 
+std\+::string {\bfseries function}
+\item 
+\mbox{\Hypertarget{classBT_1_1node_ada385af04538329c6e081ebcf85a5fd3}\label{classBT_1_1node_ada385af04538329c6e081ebcf85a5fd3}} 
+size\+\_\+t {\bfseries tick\+\_\+counter}
+\item 
+\mbox{\Hypertarget{classBT_1_1node_ac1de26c73640a43640ddb0ec950c6388}\label{classBT_1_1node_ac1de26c73640a43640ddb0ec950c6388}} 
+std\+::vector$<$ double $>$ {\bfseries vars}
+\item 
+\mbox{\Hypertarget{classBT_1_1node_a054828740f94f710d6a1e4f9be402c99}\label{classBT_1_1node_a054828740f94f710d6a1e4f9be402c99}} 
+std\+::vector$<$ double $>$ {\bfseries vars\+\_\+upper\+\_\+lim}
+\item 
+\mbox{\Hypertarget{classBT_1_1node_af45cebc93853c2609bd86a473cca157e}\label{classBT_1_1node_af45cebc93853c2609bd86a473cca157e}} 
+std\+::vector$<$ double $>$ {\bfseries vars\+\_\+lower\+\_\+lim}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Base class for actions, conditions and composites 
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBT_1_1node_a6b556d5e856960c2c2589e3c46ef3b5e}\label{classBT_1_1node_a6b556d5e856960c2c2589e3c46ef3b5e}} 
+\index{BT::node@{BT::node}!node@{node}}
+\index{node@{node}!BT::node@{BT::node}}
+\doxyparagraph{\texorpdfstring{node()}{node()}}
+{\footnotesize\ttfamily B\+T\+::node\+::node (\begin{DoxyParamCaption}\item[{std\+::string}]{Name,  }\item[{std\+::string}]{Type,  }\item[{std\+::string}]{Function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new node object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Name} & \\
+\hline
+{\em Type} & \\
+\hline
+{\em Function} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBT_1_1node_adc79cb8c75e5406b3967a4ad73043e1e}\label{classBT_1_1node_adc79cb8c75e5406b3967a4ad73043e1e}} 
+\index{BT::node@{BT::node}!````~node@{$\sim$node}}
+\index{````~node@{$\sim$node}!BT::node@{BT::node}}
+\doxyparagraph{\texorpdfstring{$\sim$node()}{~node()}}
+{\footnotesize\ttfamily virtual B\+T\+::node\+::$\sim$node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroy the node object. 
+
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBT_1_1node_abe7f89823f88ad1d8f2a9a7cc5397913}\label{classBT_1_1node_abe7f89823f88ad1d8f2a9a7cc5397913}} 
+\index{BT::node@{BT::node}!tick@{tick}}
+\index{tick@{tick}!BT::node@{BT::node}}
+\doxyparagraph{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBT_a3dd5e82a03ba708989e74b8d57b330c6}{B\+T\+\_\+\+Status}} B\+T\+::node\+::tick (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structblackboard}{blackboard}} $\ast$}]{B\+L\+KB }\end{DoxyParamCaption})}
+
+
+
+Tick the current behavior tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em B\+L\+KB} & Blackboard object keeping track of the current state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+T\+\_\+\+Status 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBT_1_1node_ae86073fff305b5e625fd3003a1209df3}\label{classBT_1_1node_ae86073fff305b5e625fd3003a1209df3}} 
+\index{BT::node@{BT::node}!update@{update}}
+\index{update@{update}!BT::node@{BT::node}}
+\doxyparagraph{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespaceBT_a3dd5e82a03ba708989e74b8d57b330c6}{B\+T\+\_\+\+Status}} B\+T\+::node\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structblackboard}{blackboard}} $\ast$}]{B\+L\+KB }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Update the status of the behavior tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em B\+L\+KB} & Blackboard object keeping track of the current state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+T\+\_\+\+Status 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBT_1_1parallel_addb9c971df519ba7d9f75b8f4c9aea62}{B\+T\+::parallel}}, \mbox{\hyperlink{classBT_1_1selector_a0a0f4c9191daa7ebad71483ebea9f218}{B\+T\+::selector}}, \mbox{\hyperlink{classBT_1_1sequence_ad3f1c47d1f21249562c32c4d05eee2d1}{B\+T\+::sequence}}, \mbox{\hyperlink{classBT_1_1less__than_aa7bdeaa4a37a412e2254491ea395f362}{B\+T\+::less\+\_\+than}}, \mbox{\hyperlink{classBT_1_1greater__than_a913327eea4275c9f9aa293e1e0f3eeb0}{B\+T\+::greater\+\_\+than}}, \mbox{\hyperlink{classBT_1_1memory__set_abc0bf30b6b4f66510591fd2fc75b1f3f}{B\+T\+::memory\+\_\+set}}, and \mbox{\hyperlink{structBT_1_1wheelSpeed_a4281f0b98546d0ba367362f5a77daed1}{B\+T\+::wheel\+Speed}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sw/simulation/controllers/behavior\+\_\+tree/bt/node.\+h\item 
+sw/simulation/controllers/behavior\+\_\+tree/bt/node.\+cpp\end{DoxyCompactItemize}

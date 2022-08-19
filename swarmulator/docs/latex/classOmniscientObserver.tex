@@ -1,0 +1,365 @@
+\hypertarget{classOmniscientObserver}{}\doxysubsection{Omniscient\+Observer Class Reference}
+\label{classOmniscientObserver}\index{OmniscientObserver@{OmniscientObserver}}
+
+
+{\ttfamily \#include $<$omniscient\+\_\+observer.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classOmniscientObserver_a74182b8c7a3003292a7b89024bdb8753}{Omniscient\+Observer}} ()
+\item 
+\mbox{\hyperlink{classOmniscientObserver_a7fd6270131503e6157d2d85613ae722c}{$\sim$\+Omniscient\+Observer}} ()
+\item 
+void \mbox{\hyperlink{classOmniscientObserver_aa3d13eb8298a7b8d04cfaf399a273621}{uwb\+\_\+beacon}} (const uint16\+\_\+t ID, float \&r, float \&b, const uint16\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Return the location to the uwb beacon location in the environment. \end{DoxyCompactList}\item 
+std\+::vector$<$ uint $>$ \mbox{\hyperlink{classOmniscientObserver_a405ecbb107a3431de49c064939800ec1}{request\+\_\+closest}} (const uint16\+\_\+t \&ID)
+\item 
+std\+::vector$<$ uint $>$ \mbox{\hyperlink{classOmniscientObserver_a42e8a231adfa601f4b538e86f1e121dc}{request\+\_\+closest\+\_\+inrange}} (const uint16\+\_\+t \&ID, const float \&range)
+\begin{DoxyCompactList}\small\item\em Get the closest within a range. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classOmniscientObserver_a8f2a2e5c999da61965f1936b8af52c98}{request\+\_\+distance\+\_\+dim}} (const uint16\+\_\+t \&ID, const uint16\+\_\+t \&I\+D\+\_\+tracked, const uint16\+\_\+t \&dim)
+\item 
+float \mbox{\hyperlink{classOmniscientObserver_a99b495d594f7ca62cc55d395c5d138bb}{request\+\_\+distance}} (const uint16\+\_\+t \&ID, const uint16\+\_\+t \&I\+D\+\_\+tracked)
+\item 
+float \mbox{\hyperlink{classOmniscientObserver_ac5f34e991dbb0d3856454eb0037dee2f}{request\+\_\+bearing}} (const uint16\+\_\+t \&ID, const uint16\+\_\+t \&I\+D\+\_\+tracked)
+\item 
+bool \mbox{\hyperlink{classOmniscientObserver_a773e6052172e16c5fe5f9c411bc42bad}{connected\+\_\+graph\+\_\+range}} (const float \&range)
+\item 
+float \mbox{\hyperlink{classOmniscientObserver_abff13b66a3589b5ef3e36761fad0473b}{get\+\_\+centroid}} (const uint16\+\_\+t \&dim)
+\item 
+float \mbox{\hyperlink{classOmniscientObserver_a04a44a924f51c054f2738362b5b013f1}{own\+\_\+bearing}} (const uint16\+\_\+t \&ID)
+\item 
+bool \mbox{\hyperlink{classOmniscientObserver_a99ff8abfb321ab62c0240c553bf1fff5}{see\+\_\+if\+\_\+moving}} (const uint16\+\_\+t \&ID)
+\begin{DoxyCompactList}\small\item\em This function returns true if the agent with the specified ID is declared as moving It is used to simulate the fact that a robot may detect motion by another robot. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classOmniscientObserver_a541a83f7b73d77deb8e708744f279c2d}{check\+\_\+happy}} (void)
+\begin{DoxyCompactList}\small\item\em This function returns whether all the agents in the swarm are in a desired local state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classOmniscientObserver_a7ccca5ea1bd5597e58e86241d1b82311}{relative\+\_\+location\+\_\+inrange}} (const uint16\+\_\+t ID, const float range, std\+::vector$<$ float $>$ \&r, std\+::vector$<$ float $>$ \&b)
+\begin{DoxyCompactList}\small\item\em Get the relative location of neighbor if they are within range. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classOmniscientObserver_a060783e629870c12a7ec9fdbe651c4a5}{relative\+\_\+location}} (const uint16\+\_\+t ID, std\+::vector$<$ float $>$ \&r, std\+::vector$<$ float $>$ \&b)
+\begin{DoxyCompactList}\small\item\em Relative location to all robots. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classOmniscientObserver_a769d3927e858f17f8e93ab6d2f042cc7}{sense\+\_\+food}} (const uint16\+\_\+t ID, uint16\+\_\+t \&food\+\_\+\+ID, float rangesensor)
+\begin{DoxyCompactList}\small\item\em Returns true if there is nearby food. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classOmniscientObserver_a1a7dbf5da39c768e2e178a08acdb6fbb}{beacon}} (const uint16\+\_\+t ID, float \&r, float \&b)
+\begin{DoxyCompactList}\small\item\em Return the location to the beacon location in the environment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classOmniscientObserver_a62a5fa1ae1d3067ad6648ed3b2ff4702}{set\+\_\+sensor\+\_\+range}} (float r)
+\begin{DoxyCompactList}\small\item\em Set the sensor range object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Collects data from all the agents and spits out the k-\/nearest for each one 
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classOmniscientObserver_a74182b8c7a3003292a7b89024bdb8753}\label{classOmniscientObserver_a74182b8c7a3003292a7b89024bdb8753}} 
+\index{OmniscientObserver@{OmniscientObserver}!OmniscientObserver@{OmniscientObserver}}
+\index{OmniscientObserver@{OmniscientObserver}!OmniscientObserver@{OmniscientObserver}}
+\doxyparagraph{\texorpdfstring{OmniscientObserver()}{OmniscientObserver()}}
+{\footnotesize\ttfamily Omniscient\+Observer\+::\+Omniscient\+Observer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor \mbox{\Hypertarget{classOmniscientObserver_a7fd6270131503e6157d2d85613ae722c}\label{classOmniscientObserver_a7fd6270131503e6157d2d85613ae722c}} 
+\index{OmniscientObserver@{OmniscientObserver}!````~OmniscientObserver@{$\sim$OmniscientObserver}}
+\index{````~OmniscientObserver@{$\sim$OmniscientObserver}!OmniscientObserver@{OmniscientObserver}}
+\doxyparagraph{\texorpdfstring{$\sim$OmniscientObserver()}{~OmniscientObserver()}}
+{\footnotesize\ttfamily Omniscient\+Observer\+::$\sim$\+Omniscient\+Observer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Destructor 
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classOmniscientObserver_a1a7dbf5da39c768e2e178a08acdb6fbb}\label{classOmniscientObserver_a1a7dbf5da39c768e2e178a08acdb6fbb}} 
+\index{OmniscientObserver@{OmniscientObserver}!beacon@{beacon}}
+\index{beacon@{beacon}!OmniscientObserver@{OmniscientObserver}}
+\doxyparagraph{\texorpdfstring{beacon()}{beacon()}}
+{\footnotesize\ttfamily void Omniscient\+Observer\+::beacon (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{ID,  }\item[{float \&}]{r,  }\item[{float \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Return the location to the beacon location in the environment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & \\
+\hline
+{\em r} & \\
+\hline
+{\em b} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classOmniscientObserver_a541a83f7b73d77deb8e708744f279c2d}\label{classOmniscientObserver_a541a83f7b73d77deb8e708744f279c2d}} 
+\index{OmniscientObserver@{OmniscientObserver}!check\_happy@{check\_happy}}
+\index{check\_happy@{check\_happy}!OmniscientObserver@{OmniscientObserver}}
+\doxyparagraph{\texorpdfstring{check\_happy()}{check\_happy()}}
+{\footnotesize\ttfamily bool Omniscient\+Observer\+::check\+\_\+happy (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function returns whether all the agents in the swarm are in a desired local state. 
+
+The idea of desired local states is treate in these two papers\+:
+\begin{DoxyItemize}
+\item Provable self-\/organizing pattern formation by a swarm of robots with limited knowledge Mario Coppola, Jian Guo, Eberhard Gill \& Guido C. H. E. de Croon. Swarm Intelligence. Volume 13, Pages 59–94. (2019) \href{https://link.springer.com/article/10.1007/s11721-019-00163-0}{\texttt{ https\+://link.\+springer.\+com/article/10.\+1007/s11721-\/019-\/00163-\/0}}
+\item The Page\+Rank algorithm as a method to optimize swarm behavior through local analysis M. Coppola, J. Guo, E. Gill \& G. C. H. E. de Croon. Swarm Intelligence, Volume 13, Pages 277–319. (2019) \href{https://link.springer.com/article/10.1007/s11721-019-00172-z}{\texttt{ https\+://link.\+springer.\+com/article/10.\+1007/s11721-\/019-\/00172-\/z}}
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+bool True if happy, false if not happy 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOmniscientObserver_a773e6052172e16c5fe5f9c411bc42bad}\label{classOmniscientObserver_a773e6052172e16c5fe5f9c411bc42bad}} 
+\index{OmniscientObserver@{OmniscientObserver}!connected\_graph\_range@{connected\_graph\_range}}
+\index{connected\_graph\_range@{connected\_graph\_range}!OmniscientObserver@{OmniscientObserver}}
+\doxyparagraph{\texorpdfstring{connected\_graph\_range()}{connected\_graph\_range()}}
+{\footnotesize\ttfamily bool Omniscient\+Observer\+::connected\+\_\+graph\+\_\+range (\begin{DoxyParamCaption}\item[{const float \&}]{range }\end{DoxyParamCaption})}
+
+Checks that the graph is connected
+
+
+\begin{DoxyParams}{Parameters}
+{\em range} & range of the relative sensing between robots \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Returns true if the swarm is connected, considering that the robots have relative sensing with a given range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOmniscientObserver_abff13b66a3589b5ef3e36761fad0473b}\label{classOmniscientObserver_abff13b66a3589b5ef3e36761fad0473b}} 
+\index{OmniscientObserver@{OmniscientObserver}!get\_centroid@{get\_centroid}}
+\index{get\_centroid@{get\_centroid}!OmniscientObserver@{OmniscientObserver}}
+\doxyparagraph{\texorpdfstring{get\_centroid()}{get\_centroid()}}
+{\footnotesize\ttfamily float Omniscient\+Observer\+::get\+\_\+centroid (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{dim }\end{DoxyParamCaption})}
+
+Returns the centroid of the swarm along the dimension dim (0=East, 1=North)
+
+
+\begin{DoxyParams}{Parameters}
+{\em dim} & Dimension of interest \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float The position of the centroid along the dimension dim 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOmniscientObserver_a04a44a924f51c054f2738362b5b013f1}\label{classOmniscientObserver_a04a44a924f51c054f2738362b5b013f1}} 
+\index{OmniscientObserver@{OmniscientObserver}!own\_bearing@{own\_bearing}}
+\index{own\_bearing@{own\_bearing}!OmniscientObserver@{OmniscientObserver}}
+\doxyparagraph{\texorpdfstring{own\_bearing()}{own\_bearing()}}
+{\footnotesize\ttfamily float Omniscient\+Observer\+::own\+\_\+bearing (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{ID }\end{DoxyParamCaption})}
+
+Gets the current orientation of the robot
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & The ID of the robot \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float The orientation of the robot (in radians) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOmniscientObserver_a060783e629870c12a7ec9fdbe651c4a5}\label{classOmniscientObserver_a060783e629870c12a7ec9fdbe651c4a5}} 
+\index{OmniscientObserver@{OmniscientObserver}!relative\_location@{relative\_location}}
+\index{relative\_location@{relative\_location}!OmniscientObserver@{OmniscientObserver}}
+\doxyparagraph{\texorpdfstring{relative\_location()}{relative\_location()}}
+{\footnotesize\ttfamily void Omniscient\+Observer\+::relative\+\_\+location (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{ID,  }\item[{std\+::vector$<$ float $>$ \&}]{r,  }\item[{std\+::vector$<$ float $>$ \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Relative location to all robots. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & \\
+\hline
+{\em r} & \\
+\hline
+{\em b} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classOmniscientObserver_a7ccca5ea1bd5597e58e86241d1b82311}\label{classOmniscientObserver_a7ccca5ea1bd5597e58e86241d1b82311}} 
+\index{OmniscientObserver@{OmniscientObserver}!relative\_location\_inrange@{relative\_location\_inrange}}
+\index{relative\_location\_inrange@{relative\_location\_inrange}!OmniscientObserver@{OmniscientObserver}}
+\doxyparagraph{\texorpdfstring{relative\_location\_inrange()}{relative\_location\_inrange()}}
+{\footnotesize\ttfamily void Omniscient\+Observer\+::relative\+\_\+location\+\_\+inrange (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{ID,  }\item[{const float}]{range,  }\item[{std\+::vector$<$ float $>$ \&}]{r,  }\item[{std\+::vector$<$ float $>$ \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Get the relative location of neighbor if they are within range. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & Robot who calls the function (with the sensor) \\
+\hline
+{\em range} & Extent of range sensor \\
+\hline
+{\em r} & List or ranges to neighbors within the range sensor (output) \\
+\hline
+{\em b} & Bearing to neighbors (output) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classOmniscientObserver_ac5f34e991dbb0d3856454eb0037dee2f}\label{classOmniscientObserver_ac5f34e991dbb0d3856454eb0037dee2f}} 
+\index{OmniscientObserver@{OmniscientObserver}!request\_bearing@{request\_bearing}}
+\index{request\_bearing@{request\_bearing}!OmniscientObserver@{OmniscientObserver}}
+\doxyparagraph{\texorpdfstring{request\_bearing()}{request\_bearing()}}
+{\footnotesize\ttfamily float Omniscient\+Observer\+::request\+\_\+bearing (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{ID,  }\item[{const uint16\+\_\+t \&}]{I\+D\+\_\+tracked }\end{DoxyParamCaption})}
+
+Get the relative bearing between two agents
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & The ID of the robot that is performing the request \\
+\hline
+{\em I\+D\+\_\+tracked} & The ID of the robot to be sensed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float The angle from robot ID to robot I\+D\+\_\+tracked in radians 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOmniscientObserver_a405ecbb107a3431de49c064939800ec1}\label{classOmniscientObserver_a405ecbb107a3431de49c064939800ec1}} 
+\index{OmniscientObserver@{OmniscientObserver}!request\_closest@{request\_closest}}
+\index{request\_closest@{request\_closest}!OmniscientObserver@{OmniscientObserver}}
+\doxyparagraph{\texorpdfstring{request\_closest()}{request\_closest()}}
+{\footnotesize\ttfamily std\+::vector$<$ uint $>$ Omniscient\+Observer\+::request\+\_\+closest (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{ID }\end{DoxyParamCaption})}
+
+Get a std\+::vector of the closest neighbors, in order from closest to furthest.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & The ID of the robot that is performing the request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$uint$>$ A std\+::vector of the I\+Ds of all the neighbors, from closest to furthest. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOmniscientObserver_a42e8a231adfa601f4b538e86f1e121dc}\label{classOmniscientObserver_a42e8a231adfa601f4b538e86f1e121dc}} 
+\index{OmniscientObserver@{OmniscientObserver}!request\_closest\_inrange@{request\_closest\_inrange}}
+\index{request\_closest\_inrange@{request\_closest\_inrange}!OmniscientObserver@{OmniscientObserver}}
+\doxyparagraph{\texorpdfstring{request\_closest\_inrange()}{request\_closest\_inrange()}}
+{\footnotesize\ttfamily std\+::vector$<$ uint $>$ Omniscient\+Observer\+::request\+\_\+closest\+\_\+inrange (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{ID,  }\item[{const float \&}]{range }\end{DoxyParamCaption})}
+
+
+
+Get the closest within a range. 
+
+This function is the same as as request\+\_\+closest, but only returns agents within a given range, instead of the whole swarm
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & The ID of the robot that is performing the request \\
+\hline
+{\em range} & The maximum range that the agent can sense \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$uint$>$ A std\+::vector of the I\+Ds of all the neighbors within the range, from closest to furthest. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOmniscientObserver_a99b495d594f7ca62cc55d395c5d138bb}\label{classOmniscientObserver_a99b495d594f7ca62cc55d395c5d138bb}} 
+\index{OmniscientObserver@{OmniscientObserver}!request\_distance@{request\_distance}}
+\index{request\_distance@{request\_distance}!OmniscientObserver@{OmniscientObserver}}
+\doxyparagraph{\texorpdfstring{request\_distance()}{request\_distance()}}
+{\footnotesize\ttfamily float Omniscient\+Observer\+::request\+\_\+distance (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{ID,  }\item[{const uint16\+\_\+t \&}]{I\+D\+\_\+tracked }\end{DoxyParamCaption})}
+
+Get the relative distance between two agents
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & The ID of the robot that is performing the request \\
+\hline
+{\em I\+D\+\_\+tracked} & The ID of the robot to be sensed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float The distance from robot ID to robot I\+D\+\_\+tracked 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOmniscientObserver_a8f2a2e5c999da61965f1936b8af52c98}\label{classOmniscientObserver_a8f2a2e5c999da61965f1936b8af52c98}} 
+\index{OmniscientObserver@{OmniscientObserver}!request\_distance\_dim@{request\_distance\_dim}}
+\index{request\_distance\_dim@{request\_distance\_dim}!OmniscientObserver@{OmniscientObserver}}
+\doxyparagraph{\texorpdfstring{request\_distance\_dim()}{request\_distance\_dim()}}
+{\footnotesize\ttfamily float Omniscient\+Observer\+::request\+\_\+distance\+\_\+dim (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{ID,  }\item[{const uint16\+\_\+t \&}]{I\+D\+\_\+tracked,  }\item[{const uint16\+\_\+t \&}]{dim }\end{DoxyParamCaption})}
+
+Get the relative distance between two agents along x or y
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & The ID of the robot that is performing the request \\
+\hline
+{\em I\+D\+\_\+tracked} & The ID of the robot to be sensed \\
+\hline
+{\em dim} & The dimension along which we measure the distance (x or y) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The distance from robot ID to robot I\+D\+\_\+tracked along the dimension dim 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOmniscientObserver_a99ff8abfb321ab62c0240c553bf1fff5}\label{classOmniscientObserver_a99ff8abfb321ab62c0240c553bf1fff5}} 
+\index{OmniscientObserver@{OmniscientObserver}!see\_if\_moving@{see\_if\_moving}}
+\index{see\_if\_moving@{see\_if\_moving}!OmniscientObserver@{OmniscientObserver}}
+\doxyparagraph{\texorpdfstring{see\_if\_moving()}{see\_if\_moving()}}
+{\footnotesize\ttfamily bool Omniscient\+Observer\+::see\+\_\+if\+\_\+moving (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{ID }\end{DoxyParamCaption})}
+
+
+
+This function returns true if the agent with the specified ID is declared as moving It is used to simulate the fact that a robot may detect motion by another robot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & Gets a local state of the robot that declares whether it is active or not \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Returns true if the robot is moving. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOmniscientObserver_a769d3927e858f17f8e93ab6d2f042cc7}\label{classOmniscientObserver_a769d3927e858f17f8e93ab6d2f042cc7}} 
+\index{OmniscientObserver@{OmniscientObserver}!sense\_food@{sense\_food}}
+\index{sense\_food@{sense\_food}!OmniscientObserver@{OmniscientObserver}}
+\doxyparagraph{\texorpdfstring{sense\_food()}{sense\_food()}}
+{\footnotesize\ttfamily bool Omniscient\+Observer\+::sense\+\_\+food (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{ID,  }\item[{uint16\+\_\+t \&}]{food\+\_\+\+ID,  }\item[{float}]{rangesensor }\end{DoxyParamCaption})}
+
+
+
+Returns true if there is nearby food. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & \\
+\hline
+{\em r} & \\
+\hline
+{\em b} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classOmniscientObserver_a62a5fa1ae1d3067ad6648ed3b2ff4702}\label{classOmniscientObserver_a62a5fa1ae1d3067ad6648ed3b2ff4702}} 
+\index{OmniscientObserver@{OmniscientObserver}!set\_sensor\_range@{set\_sensor\_range}}
+\index{set\_sensor\_range@{set\_sensor\_range}!OmniscientObserver@{OmniscientObserver}}
+\doxyparagraph{\texorpdfstring{set\_sensor\_range()}{set\_sensor\_range()}}
+{\footnotesize\ttfamily void Omniscient\+Observer\+::set\+\_\+sensor\+\_\+range (\begin{DoxyParamCaption}\item[{float}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the sensor range object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classOmniscientObserver_aa3d13eb8298a7b8d04cfaf399a273621}\label{classOmniscientObserver_aa3d13eb8298a7b8d04cfaf399a273621}} 
+\index{OmniscientObserver@{OmniscientObserver}!uwb\_beacon@{uwb\_beacon}}
+\index{uwb\_beacon@{uwb\_beacon}!OmniscientObserver@{OmniscientObserver}}
+\doxyparagraph{\texorpdfstring{uwb\_beacon()}{uwb\_beacon()}}
+{\footnotesize\ttfamily void Omniscient\+Observer\+::uwb\+\_\+beacon (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{ID,  }\item[{float \&}]{r,  }\item[{float \&}]{b,  }\item[{const uint16\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Return the location to the uwb beacon location in the environment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & \\
+\hline
+{\em r} & \\
+\hline
+{\em b} & \\
+\hline
+{\em n} & number of beacon \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sw/simulation/sensors/omniscient\+\_\+observer.\+h\item 
+sw/simulation/sensors/omniscient\+\_\+observer.\+cpp\end{DoxyCompactItemize}

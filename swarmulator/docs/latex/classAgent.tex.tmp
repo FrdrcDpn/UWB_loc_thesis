@@ -1,0 +1,169 @@
+\hypertarget{classAgent}{}\doxysubsection{Agent Class Reference}
+\label{classAgent}\index{Agent@{Agent}}
+
+
+{\ttfamily \#include $<$agent.\+h$>$}
+
+
+
+Inheritance diagram for Agent\+:
+% FIG 0
+
+
+Collaboration diagram for Agent\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAgent_a24a60f1d260bf19a4f7f8a5f36881d3f}{Agent}} ()
+\item 
+virtual \mbox{\hyperlink{classAgent_a4feb26df1cf81760a0e411e393c24d4e}{$\sim$\+Agent}} ()
+\item 
+float \mbox{\hyperlink{classAgent_aae4823ea7f654da83641504bdda658b7}{get\+\_\+position}} (uint16\+\_\+t dim)
+\item 
+float \mbox{\hyperlink{classAgent_a6352221b9e5b75a2f50070821b70758b}{get\+\_\+orientation}} ()
+\item 
+float \mbox{\hyperlink{classAgent_a46cc0e419e8d8ba090602d776a9baeed}{get\+\_\+state}} (const uint16\+\_\+t dim)
+\item 
+virtual std\+::vector$<$ float $>$ \mbox{\hyperlink{classAgent_ac52e74a6e61302777e5bbca0042785d8}{state\+\_\+update}} (std\+::vector$<$ float $>$)=0
+\item 
+virtual void \mbox{\hyperlink{classAgent_a35916fdf13ea43b557d16906018780bf}{animation}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAgent_a82fcaba3025e584a5902ba5fac59ad64}\label{classAgent_a82fcaba3025e584a5902ba5fac59ad64}} 
+uint16\+\_\+t {\bfseries ID}
+\item 
+\mbox{\Hypertarget{classAgent_a86311773075b02808e04bb3f21765b5d}\label{classAgent_a86311773075b02808e04bb3f21765b5d}} 
+bool {\bfseries activated}
+\item 
+\mbox{\Hypertarget{classAgent_ac532d338b7c4e2a3ac910b614028a4bc}\label{classAgent_ac532d338b7c4e2a3ac910b614028a4bc}} 
+float {\bfseries dt}
+\item 
+\mbox{\Hypertarget{classAgent_af214c6b7940c9d63f865a63986b1680b}\label{classAgent_af214c6b7940c9d63f865a63986b1680b}} 
+std\+::vector$<$ float $>$ {\bfseries state}
+\item 
+\mbox{\Hypertarget{classAgent_a650878921efc0fc7f05016b8341fd9e2}\label{classAgent_a650878921efc0fc7f05016b8341fd9e2}} 
+float {\bfseries orientation}
+\item 
+\mbox{\Hypertarget{classAgent_ae01d098ef38eb6ab1ef68b4af2e4bef7}\label{classAgent_ae01d098ef38eb6ab1ef68b4af2e4bef7}} 
+bool {\bfseries moving}
+\item 
+\mbox{\Hypertarget{classAgent_a2e4022c71172e9e69f3f622232793932}\label{classAgent_a2e4022c71172e9e69f3f622232793932}} 
+float {\bfseries manualx}
+\item 
+\mbox{\Hypertarget{classAgent_a2d509619184bfb9c0626c49f8f0b942a}\label{classAgent_a2d509619184bfb9c0626c49f8f0b942a}} 
+float {\bfseries manualy}
+\item 
+\mbox{\Hypertarget{classAgent_a53e2a2d6810cd481f71559ea00e57282}\label{classAgent_a53e2a2d6810cd481f71559ea00e57282}} 
+bool {\bfseries manual}
+\item 
+\mbox{\Hypertarget{classAgent_a6848da8a9970749f4e1e2700759120b0}\label{classAgent_a6848da8a9970749f4e1e2700759120b0}} 
+float {\bfseries manualpsi\+\_\+delta}
+\item 
+\mbox{\Hypertarget{classAgent_a19b15b80991bc45d0f08923db7f53088}\label{classAgent_a19b15b80991bc45d0f08923db7f53088}} 
+\mbox{\hyperlink{classrandom__generator}{random\+\_\+generator}} {\bfseries rg}
+\item 
+\mbox{\Hypertarget{classAgent_a35138f4fa7fa31760928b84680f7a886}\label{classAgent_a35138f4fa7fa31760928b84680f7a886}} 
+\mbox{\hyperlink{classController}{Controller}} $\ast$ {\bfseries controller} = new C\+O\+N\+T\+R\+O\+L\+L\+ER
+\item 
+\mbox{\Hypertarget{classAgent_a55d87fa183e71ab41f236daf1fc754a9}\label{classAgent_a55d87fa183e71ab41f236daf1fc754a9}} 
+\mbox{\hyperlink{classBeacon}{Beacon}} $\ast$ {\bfseries beacon} = new B\+E\+A\+C\+ON
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Parent class defining an agent. The dynamic implementation is handled in children classes. 
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAgent_a24a60f1d260bf19a4f7f8a5f36881d3f}\label{classAgent_a24a60f1d260bf19a4f7f8a5f36881d3f}} 
+\index{Agent@{Agent}!Agent@{Agent}}
+\index{Agent@{Agent}!Agent@{Agent}}
+\doxyparagraph{\texorpdfstring{Agent()}{Agent()}}
+{\footnotesize\ttfamily Agent\+::\+Agent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor \mbox{\Hypertarget{classAgent_a4feb26df1cf81760a0e411e393c24d4e}\label{classAgent_a4feb26df1cf81760a0e411e393c24d4e}} 
+\index{Agent@{Agent}!````~Agent@{$\sim$Agent}}
+\index{````~Agent@{$\sim$Agent}!Agent@{Agent}}
+\doxyparagraph{\texorpdfstring{$\sim$Agent()}{~Agent()}}
+{\footnotesize\ttfamily virtual Agent\+::$\sim$\+Agent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Destructor 
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAgent_a35916fdf13ea43b557d16906018780bf}\label{classAgent_a35916fdf13ea43b557d16906018780bf}} 
+\index{Agent@{Agent}!animation@{animation}}
+\index{animation@{animation}!Agent@{Agent}}
+\doxyparagraph{\texorpdfstring{animation()}{animation()}}
+{\footnotesize\ttfamily virtual void Agent\+::animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+The agent class is only the parent class of a child class that specifies the dynamics and control of a given agent (robot/animal/whatever). The way that the agent looks is specified in the child class. 
+
+Implemented in \mbox{\hyperlink{classwheeled_adaaa3880939f3cf51d5afe6300e74365}{wheeled}}, \mbox{\hyperlink{classparticle_a056be542e7e86db0698116a95602b27f}{particle}}, \mbox{\hyperlink{classparticle__oriented_a8ddfc505a29f5f717bd70b9d239c08a8}{particle\+\_\+oriented}}, and \mbox{\hyperlink{classparticle__oriented__xy_ad5025b5b6d5b6f76cfa1e0b360e9258e}{particle\+\_\+oriented\+\_\+xy}}.
+
+\mbox{\Hypertarget{classAgent_a6352221b9e5b75a2f50070821b70758b}\label{classAgent_a6352221b9e5b75a2f50070821b70758b}} 
+\index{Agent@{Agent}!get\_orientation@{get\_orientation}}
+\index{get\_orientation@{get\_orientation}!Agent@{Agent}}
+\doxyparagraph{\texorpdfstring{get\_orientation()}{get\_orientation()}}
+{\footnotesize\ttfamily float Agent\+::get\+\_\+orientation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the orientation object
+
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAgent_aae4823ea7f654da83641504bdda658b7}\label{classAgent_aae4823ea7f654da83641504bdda658b7}} 
+\index{Agent@{Agent}!get\_position@{get\_position}}
+\index{get\_position@{get\_position}!Agent@{Agent}}
+\doxyparagraph{\texorpdfstring{get\_position()}{get\_position()}}
+{\footnotesize\ttfamily float Agent\+::get\+\_\+position (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{dim }\end{DoxyParamCaption})}
+
+Returns the position of the agent along a certain dimension (i.\+e., North(0) and East(1)) This is used by the \mbox{\hyperlink{classOmniscientObserver}{Omniscient\+Observer}} class in order to simulate the presence of sensors. 
+\begin{DoxyParams}{Parameters}
+{\em dim} & dimension x or y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+position along x or y 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAgent_a46cc0e419e8d8ba090602d776a9baeed}\label{classAgent_a46cc0e419e8d8ba090602d776a9baeed}} 
+\index{Agent@{Agent}!get\_state@{get\_state}}
+\index{get\_state@{get\_state}!Agent@{Agent}}
+\doxyparagraph{\texorpdfstring{get\_state()}{get\_state()}}
+{\footnotesize\ttfamily float Agent\+::get\+\_\+state (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{dim }\end{DoxyParamCaption})}
+
+Get the state along a given dimension
+
+
+\begin{DoxyParams}{Parameters}
+{\em dim} & dimension \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAgent_ac52e74a6e61302777e5bbca0042785d8}\label{classAgent_ac52e74a6e61302777e5bbca0042785d8}} 
+\index{Agent@{Agent}!state\_update@{state\_update}}
+\index{state\_update@{state\_update}!Agent@{Agent}}
+\doxyparagraph{\texorpdfstring{state\_update()}{state\_update()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$float$>$ Agent\+::state\+\_\+update (\begin{DoxyParamCaption}\item[{std\+::vector$<$ float $>$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+The agent class is only the parent class of a child class that specifies the dynamics and control of a given agent (robot/animal/whatever). The state\+\_\+update function is handled by the child class. 
+\begin{DoxyParams}{Parameters}
+{\em s} & current state vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+next state vector 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classwheeled_ae0736e2a40fb00054a6509a7147ac9b8}{wheeled}}, \mbox{\hyperlink{classparticle_ad893b05e96fbbb14abf53c7331837b6e}{particle}}, \mbox{\hyperlink{classparticle__oriented_ad85cf4ae8380b1775cbd753d2c7e4e53}{particle\+\_\+oriented}}, and \mbox{\hyperlink{classparticle__oriented__xy_a80ba8f1284f549bd3120bf186530c1c3}{particle\+\_\+oriented\+\_\+xy}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sw/simulation/agent.\+h\item 
+sw/simulation/agent.\+cpp\end{DoxyCompactItemize}

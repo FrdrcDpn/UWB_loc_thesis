@@ -1,0 +1,104 @@
+\hypertarget{classswarmulator_1_1swarmulator}{}\doxysubsection{swarmulator.\+swarmulator Class Reference}
+\label{classswarmulator_1_1swarmulator}\index{swarmulator.swarmulator@{swarmulator.swarmulator}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classswarmulator_1_1swarmulator_a9fee3dc925db1eb1a298ef6561683434}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, path=\char`\"{}../../\char`\"{}, verbose=True)
+\item 
+def \mbox{\hyperlink{classswarmulator_1_1swarmulator_a24eac829ff5b890756959b44e4e2601a}{make}} (self, controller=None, agent=None, animation=False, logger=False, verbose=False, speed=True, clean=False)
+\item 
+def \mbox{\hyperlink{classswarmulator_1_1swarmulator_a5ef971e84ab676ae51ed17516bc8bb2f}{run}} (self, n, run\+\_\+id=None)
+\item 
+def \mbox{\hyperlink{classswarmulator_1_1swarmulator_ab0691bea1605e83e6fbe973a3142f548}{load}} (self, file=None)
+\item 
+def \mbox{\hyperlink{classswarmulator_1_1swarmulator_a612af38eef78740c976024a6cfa808dd}{plot\+\_\+log}} (self, log=None, file=None, time\+\_\+column=0, id\+\_\+column=1, x\+\_\+column=2, y\+\_\+column=3)
+\item 
+def \mbox{\hyperlink{classswarmulator_1_1swarmulator_a9330a100aa97d7918d22e3ea65a72cd8}{runtime\+\_\+setting}} (self, setting, value)
+\item 
+def \mbox{\hyperlink{classswarmulator_1_1swarmulator_ab3867a0127f8af365c0a68d0108d1d63}{get\+\_\+runtime\+\_\+setting}} (self, setting)
+\item 
+def \mbox{\hyperlink{classswarmulator_1_1swarmulator_a7a8558af0fcf3fed64a1e67c3c42c3eb}{batch\+\_\+run}} (self, n, runs)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classswarmulator_1_1swarmulator_a9ae5cd5a3f2acd20082db12e8dab62dd}\label{classswarmulator_1_1swarmulator_a9ae5cd5a3f2acd20082db12e8dab62dd}} 
+{\bfseries path}
+\item 
+\mbox{\Hypertarget{classswarmulator_1_1swarmulator_af49e4ff9e865ae781f09d21952a5f6e4}\label{classswarmulator_1_1swarmulator_af49e4ff9e865ae781f09d21952a5f6e4}} 
+{\bfseries verbose}
+\item 
+\mbox{\Hypertarget{classswarmulator_1_1swarmulator_a3342cf852493d203ec36f39c5ff5c0dc}\label{classswarmulator_1_1swarmulator_a3342cf852493d203ec36f39c5ff5c0dc}} 
+{\bfseries run\+\_\+id}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+\begin{DoxyVerb}Python API class for Swarmulator. Allows to interact with swarmulator via Python\end{DoxyVerb}
+ 
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classswarmulator_1_1swarmulator_a9fee3dc925db1eb1a298ef6561683434}\label{classswarmulator_1_1swarmulator_a9fee3dc925db1eb1a298ef6561683434}} 
+\index{swarmulator.swarmulator@{swarmulator.swarmulator}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!swarmulator.swarmulator@{swarmulator.swarmulator}}
+\doxyparagraph{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def swarmulator.\+swarmulator.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path = {\ttfamily \char`\"{}../../\char`\"{}},  }\item[{}]{verbose = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Load swarmulator object. Ensure that the correct path to swarmulator is given as input\end{DoxyVerb}
+ 
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classswarmulator_1_1swarmulator_a7a8558af0fcf3fed64a1e67c3c42c3eb}\label{classswarmulator_1_1swarmulator_a7a8558af0fcf3fed64a1e67c3c42c3eb}} 
+\index{swarmulator.swarmulator@{swarmulator.swarmulator}!batch\_run@{batch\_run}}
+\index{batch\_run@{batch\_run}!swarmulator.swarmulator@{swarmulator.swarmulator}}
+\doxyparagraph{\texorpdfstring{batch\_run()}{batch\_run()}}
+{\footnotesize\ttfamily def swarmulator.\+swarmulator.\+batch\+\_\+run (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{n,  }\item[{}]{runs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Runs a batch of parallel simulations in parallel. By being different processes, the simulations can run unobstructed.\end{DoxyVerb}
+ \mbox{\Hypertarget{classswarmulator_1_1swarmulator_ab3867a0127f8af365c0a68d0108d1d63}\label{classswarmulator_1_1swarmulator_ab3867a0127f8af365c0a68d0108d1d63}} 
+\index{swarmulator.swarmulator@{swarmulator.swarmulator}!get\_runtime\_setting@{get\_runtime\_setting}}
+\index{get\_runtime\_setting@{get\_runtime\_setting}!swarmulator.swarmulator@{swarmulator.swarmulator}}
+\doxyparagraph{\texorpdfstring{get\_runtime\_setting()}{get\_runtime\_setting()}}
+{\footnotesize\ttfamily def swarmulator.\+swarmulator.\+get\+\_\+runtime\+\_\+setting (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{setting }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the value of a runtime parameter currently specified in swarmulator conf/parameters.xml\end{DoxyVerb}
+ \mbox{\Hypertarget{classswarmulator_1_1swarmulator_ab0691bea1605e83e6fbe973a3142f548}\label{classswarmulator_1_1swarmulator_ab0691bea1605e83e6fbe973a3142f548}} 
+\index{swarmulator.swarmulator@{swarmulator.swarmulator}!load@{load}}
+\index{load@{load}!swarmulator.swarmulator@{swarmulator.swarmulator}}
+\doxyparagraph{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily def swarmulator.\+swarmulator.\+load (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{file = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Loads the log of a swarmulator run. If id is not specified, it will take the most recent log\end{DoxyVerb}
+ \mbox{\Hypertarget{classswarmulator_1_1swarmulator_a24eac829ff5b890756959b44e4e2601a}\label{classswarmulator_1_1swarmulator_a24eac829ff5b890756959b44e4e2601a}} 
+\index{swarmulator.swarmulator@{swarmulator.swarmulator}!make@{make}}
+\index{make@{make}!swarmulator.swarmulator@{swarmulator.swarmulator}}
+\doxyparagraph{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily def swarmulator.\+swarmulator.\+make (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{controller = {\ttfamily None},  }\item[{}]{agent = {\ttfamily None},  }\item[{}]{animation = {\ttfamily False},  }\item[{}]{logger = {\ttfamily False},  }\item[{}]{verbose = {\ttfamily False},  }\item[{}]{speed = {\ttfamily True},  }\item[{}]{clean = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Builds swarmulator\end{DoxyVerb}
+ \mbox{\Hypertarget{classswarmulator_1_1swarmulator_a612af38eef78740c976024a6cfa808dd}\label{classswarmulator_1_1swarmulator_a612af38eef78740c976024a6cfa808dd}} 
+\index{swarmulator.swarmulator@{swarmulator.swarmulator}!plot\_log@{plot\_log}}
+\index{plot\_log@{plot\_log}!swarmulator.swarmulator@{swarmulator.swarmulator}}
+\doxyparagraph{\texorpdfstring{plot\_log()}{plot\_log()}}
+{\footnotesize\ttfamily def swarmulator.\+swarmulator.\+plot\+\_\+log (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{log = {\ttfamily None},  }\item[{}]{file = {\ttfamily None},  }\item[{}]{time\+\_\+column = {\ttfamily 0},  }\item[{}]{id\+\_\+column = {\ttfamily 1},  }\item[{}]{x\+\_\+column = {\ttfamily 2},  }\item[{}]{y\+\_\+column = {\ttfamily 3} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Visualizes the log of a swarmulator run\end{DoxyVerb}
+ \mbox{\Hypertarget{classswarmulator_1_1swarmulator_a5ef971e84ab676ae51ed17516bc8bb2f}\label{classswarmulator_1_1swarmulator_a5ef971e84ab676ae51ed17516bc8bb2f}} 
+\index{swarmulator.swarmulator@{swarmulator.swarmulator}!run@{run}}
+\index{run@{run}!swarmulator.swarmulator@{swarmulator.swarmulator}}
+\doxyparagraph{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily def swarmulator.\+swarmulator.\+run (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{n,  }\item[{}]{run\+\_\+id = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Runs swarmulator. If run_id is not specified, it will assign a random id\end{DoxyVerb}
+ \mbox{\Hypertarget{classswarmulator_1_1swarmulator_a9330a100aa97d7918d22e3ea65a72cd8}\label{classswarmulator_1_1swarmulator_a9330a100aa97d7918d22e3ea65a72cd8}} 
+\index{swarmulator.swarmulator@{swarmulator.swarmulator}!runtime\_setting@{runtime\_setting}}
+\index{runtime\_setting@{runtime\_setting}!swarmulator.swarmulator@{swarmulator.swarmulator}}
+\doxyparagraph{\texorpdfstring{runtime\_setting()}{runtime\_setting()}}
+{\footnotesize\ttfamily def swarmulator.\+swarmulator.\+runtime\+\_\+setting (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{setting,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Assigns a value to a runtime setting of conf/parameters.xml\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+scripts/python/classes/swarmulator.\+py\end{DoxyCompactItemize}

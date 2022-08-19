@@ -1,0 +1,72 @@
+\hypertarget{classtxtwrite}{}\doxysubsection{txtwrite Class Reference}
+\label{classtxtwrite}\index{txtwrite@{txtwrite}}
+
+
+{\ttfamily \#include $<$txtwrite.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtxtwrite_a6241c1e8e4602a816a41864b8519fc8c}{txtwrite}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new txtwrite object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtxtwrite_a7474c4ae614bcde8bb5c415306dcd656}{setfilename}} (const std\+::string \&s)
+\item 
+void \mbox{\hyperlink{classtxtwrite_aa6c369b8ae44b884acacdd93959a2318}{txtwrite\+\_\+state}} (std\+::ofstream \&logfile)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtxtwrite_af37e85979635a297415e789372801b37}\label{classtxtwrite_af37e85979635a297415e789372801b37}} 
+std\+::string {\bfseries filename}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Class to write data to a txt file, used for logging purposes 
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtxtwrite_a6241c1e8e4602a816a41864b8519fc8c}\label{classtxtwrite_a6241c1e8e4602a816a41864b8519fc8c}} 
+\index{txtwrite@{txtwrite}!txtwrite@{txtwrite}}
+\index{txtwrite@{txtwrite}!txtwrite@{txtwrite}}
+\doxyparagraph{\texorpdfstring{txtwrite()}{txtwrite()}}
+{\footnotesize\ttfamily txtwrite\+::txtwrite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new txtwrite object. 
+
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtxtwrite_a7474c4ae614bcde8bb5c415306dcd656}\label{classtxtwrite_a7474c4ae614bcde8bb5c415306dcd656}} 
+\index{txtwrite@{txtwrite}!setfilename@{setfilename}}
+\index{setfilename@{setfilename}!txtwrite@{txtwrite}}
+\doxyparagraph{\texorpdfstring{setfilename()}{setfilename()}}
+{\footnotesize\ttfamily void txtwrite\+::setfilename (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})}
+
+Set the name of the txt file to be used
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The name of the txt file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtxtwrite_aa6c369b8ae44b884acacdd93959a2318}\label{classtxtwrite_aa6c369b8ae44b884acacdd93959a2318}} 
+\index{txtwrite@{txtwrite}!txtwrite\_state@{txtwrite\_state}}
+\index{txtwrite\_state@{txtwrite\_state}!txtwrite@{txtwrite}}
+\doxyparagraph{\texorpdfstring{txtwrite\_state()}{txtwrite\_state()}}
+{\footnotesize\ttfamily void txtwrite\+::txtwrite\+\_\+state (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{logfile }\end{DoxyParamCaption})}
+
+Write the state of a robot to a txt file
+
+
+\begin{DoxyParams}{Parameters}
+{\em logfile} & The txt file ID (from ofstream) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sw/logger/txtwrite.\+h\item 
+sw/logger/txtwrite.\+cpp\end{DoxyCompactItemize}

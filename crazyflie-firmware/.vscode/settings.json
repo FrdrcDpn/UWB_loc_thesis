@@ -1,0 +1,19 @@
+{
+    "search.exclude": {
+        "**/generated": true,
+        "**/node_modules": true,
+        "**/bower_components": true
+    },
+    "files.associations": {
+        "bootloader.h": "c",
+        "algorithm": "c",
+        "*.tcc": "c",
+        "functional": "c",
+        "numeric": "c",
+        "cmath": "c",
+        "random": "c",
+        "mac.h": "c",
+        "cstdlib": "c",
+        "log.h": "c"
+    }
+}

@@ -1,0 +1,135 @@
+\hypertarget{classterminalinfo}{}\doxysubsection{terminalinfo Class Reference}
+\label{classterminalinfo}\index{terminalinfo@{terminalinfo}}
+
+
+{\ttfamily \#include $<$terminalinfo.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classterminalinfo_a5c986bbfcf3026973d85695da686288c}{terminalinfo}} ()
+\item 
+\mbox{\hyperlink{classterminalinfo_afa7444e31b36090e99d665697c424cee}{$\sim$terminalinfo}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classterminalinfo_a0ccc7714e624c25eb890dbb6900337ce}{debug\+\_\+msg}} (std\+::string str)
+\item 
+static void \mbox{\hyperlink{classterminalinfo_aa09da55c2cc53c3cbbe00727326d186f}{debug\+\_\+msg}} (std\+::string str, int ID)
+\item 
+static void \mbox{\hyperlink{classterminalinfo_a79e48eedea12d16fc9e5d49d0d6cd1a5}{info\+\_\+msg}} (std\+::string str)
+\item 
+static void \mbox{\hyperlink{classterminalinfo_ad2d6bc88ed1e8d79ac8f8a90903d960f}{info\+\_\+msg}} (std\+::string str, int ID)
+\item 
+static void \mbox{\hyperlink{classterminalinfo_a249697ddc54ea9fa79dce9df99bdd92f}{warning\+\_\+msg}} (std\+::string str)
+\item 
+static void \mbox{\hyperlink{classterminalinfo_a609b08deb9ab4e4d046bf809db1575a7}{error\+\_\+msg}} (std\+::string str)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+terminalinfo is used to print info commands to the terminal. These can come in the form of info messages or debug messages The debug and info flags are activated (or deactivated) in the makefile 
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classterminalinfo_a5c986bbfcf3026973d85695da686288c}\label{classterminalinfo_a5c986bbfcf3026973d85695da686288c}} 
+\index{terminalinfo@{terminalinfo}!terminalinfo@{terminalinfo}}
+\index{terminalinfo@{terminalinfo}!terminalinfo@{terminalinfo}}
+\doxyparagraph{\texorpdfstring{terminalinfo()}{terminalinfo()}}
+{\footnotesize\ttfamily terminalinfo\+::terminalinfo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor \mbox{\Hypertarget{classterminalinfo_afa7444e31b36090e99d665697c424cee}\label{classterminalinfo_afa7444e31b36090e99d665697c424cee}} 
+\index{terminalinfo@{terminalinfo}!````~terminalinfo@{$\sim$terminalinfo}}
+\index{````~terminalinfo@{$\sim$terminalinfo}!terminalinfo@{terminalinfo}}
+\doxyparagraph{\texorpdfstring{$\sim$terminalinfo()}{~terminalinfo()}}
+{\footnotesize\ttfamily terminalinfo\+::$\sim$terminalinfo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Destructor 
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classterminalinfo_a0ccc7714e624c25eb890dbb6900337ce}\label{classterminalinfo_a0ccc7714e624c25eb890dbb6900337ce}} 
+\index{terminalinfo@{terminalinfo}!debug\_msg@{debug\_msg}}
+\index{debug\_msg@{debug\_msg}!terminalinfo@{terminalinfo}}
+\doxyparagraph{\texorpdfstring{debug\_msg()}{debug\_msg()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void terminalinfo\+::debug\+\_\+msg (\begin{DoxyParamCaption}\item[{std\+::string}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Print a debug message, only if debug messages are turned on
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & Debug string to print \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classterminalinfo_aa09da55c2cc53c3cbbe00727326d186f}\label{classterminalinfo_aa09da55c2cc53c3cbbe00727326d186f}} 
+\index{terminalinfo@{terminalinfo}!debug\_msg@{debug\_msg}}
+\index{debug\_msg@{debug\_msg}!terminalinfo@{terminalinfo}}
+\doxyparagraph{\texorpdfstring{debug\_msg()}{debug\_msg()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void terminalinfo\+::debug\+\_\+msg (\begin{DoxyParamCaption}\item[{std\+::string}]{str,  }\item[{int}]{ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Print a debug message, only if debug messages are turned on
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & Debug string to print \\
+\hline
+{\em ID} & Robot ID \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classterminalinfo_a609b08deb9ab4e4d046bf809db1575a7}\label{classterminalinfo_a609b08deb9ab4e4d046bf809db1575a7}} 
+\index{terminalinfo@{terminalinfo}!error\_msg@{error\_msg}}
+\index{error\_msg@{error\_msg}!terminalinfo@{terminalinfo}}
+\doxyparagraph{\texorpdfstring{error\_msg()}{error\_msg()}}
+{\footnotesize\ttfamily void terminalinfo\+::error\+\_\+msg (\begin{DoxyParamCaption}\item[{std\+::string}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Print an error message
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & Error string to print \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classterminalinfo_a79e48eedea12d16fc9e5d49d0d6cd1a5}\label{classterminalinfo_a79e48eedea12d16fc9e5d49d0d6cd1a5}} 
+\index{terminalinfo@{terminalinfo}!info\_msg@{info\_msg}}
+\index{info\_msg@{info\_msg}!terminalinfo@{terminalinfo}}
+\doxyparagraph{\texorpdfstring{info\_msg()}{info\_msg()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void terminalinfo\+::info\+\_\+msg (\begin{DoxyParamCaption}\item[{std\+::string}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Print an info message, only if info messages are turned on
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & Info string to print \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classterminalinfo_ad2d6bc88ed1e8d79ac8f8a90903d960f}\label{classterminalinfo_ad2d6bc88ed1e8d79ac8f8a90903d960f}} 
+\index{terminalinfo@{terminalinfo}!info\_msg@{info\_msg}}
+\index{info\_msg@{info\_msg}!terminalinfo@{terminalinfo}}
+\doxyparagraph{\texorpdfstring{info\_msg()}{info\_msg()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void terminalinfo\+::info\+\_\+msg (\begin{DoxyParamCaption}\item[{std\+::string}]{str,  }\item[{int}]{ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Print an info message, only if warnings are turned on
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & Info string to print \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classterminalinfo_a249697ddc54ea9fa79dce9df99bdd92f}\label{classterminalinfo_a249697ddc54ea9fa79dce9df99bdd92f}} 
+\index{terminalinfo@{terminalinfo}!warning\_msg@{warning\_msg}}
+\index{warning\_msg@{warning\_msg}!terminalinfo@{terminalinfo}}
+\doxyparagraph{\texorpdfstring{warning\_msg()}{warning\_msg()}}
+{\footnotesize\ttfamily void terminalinfo\+::warning\+\_\+msg (\begin{DoxyParamCaption}\item[{std\+::string}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Print a warning message, only if warnings are turned on
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & Warning string to print \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sw/animation/terminalinfo.\+h\item 
+sw/animation/terminalinfo.\+cpp\end{DoxyCompactItemize}

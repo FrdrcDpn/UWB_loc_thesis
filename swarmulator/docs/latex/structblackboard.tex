@@ -1,0 +1,83 @@
+\hypertarget{structblackboard}{}\doxysubsection{blackboard Struct Reference}
+\label{structblackboard}\index{blackboard@{blackboard}}
+
+
+{\ttfamily \#include $<$blackboard.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structblackboard_a15bb779b10a50123ca73bca68b5d98c2}{blackboard}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new blackboard object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structblackboard_ae0e6f1d566a57edd0626f9dc9f39c513}{$\sim$blackboard}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the blackboard object. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structblackboard_ae7b3733e02f5174c552492cb0f9c01e7}{get}} (const char $\ast$var, const int k=-\/1)
+\item 
+void \mbox{\hyperlink{structblackboard_ac91c14992d0fb5159a863ed0a35998c2}{set}} (const char $\ast$var, double data, const int k=-\/1)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+blackboard Used to store all data for the Behaviour Tree to access \mbox{\hyperlink{structblackboard_ae7b3733e02f5174c552492cb0f9c01e7}{get()}} -\/ returns the value in the blackboard with name \char`\"{}var\char`\"{} for multiple entries with the same name k is used as an iterator throws an error if element does not exist in list \mbox{\hyperlink{structblackboard_ac91c14992d0fb5159a863ed0a35998c2}{set()}} -\/ sets the value of the variable named \char`\"{}var\char`\"{} if var is not in the list it is added for multiple entries with the same name k is used as an iterator 
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structblackboard_a15bb779b10a50123ca73bca68b5d98c2}\label{structblackboard_a15bb779b10a50123ca73bca68b5d98c2}} 
+\index{blackboard@{blackboard}!blackboard@{blackboard}}
+\index{blackboard@{blackboard}!blackboard@{blackboard}}
+\doxyparagraph{\texorpdfstring{blackboard()}{blackboard()}}
+{\footnotesize\ttfamily blackboard\+::blackboard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new blackboard object. 
+
+\mbox{\Hypertarget{structblackboard_ae0e6f1d566a57edd0626f9dc9f39c513}\label{structblackboard_ae0e6f1d566a57edd0626f9dc9f39c513}} 
+\index{blackboard@{blackboard}!````~blackboard@{$\sim$blackboard}}
+\index{````~blackboard@{$\sim$blackboard}!blackboard@{blackboard}}
+\doxyparagraph{\texorpdfstring{$\sim$blackboard()}{~blackboard()}}
+{\footnotesize\ttfamily blackboard\+::$\sim$blackboard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destroy the blackboard object. 
+
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{structblackboard_ae7b3733e02f5174c552492cb0f9c01e7}\label{structblackboard_ae7b3733e02f5174c552492cb0f9c01e7}} 
+\index{blackboard@{blackboard}!get@{get}}
+\index{get@{get}!blackboard@{blackboard}}
+\doxyparagraph{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily double blackboard\+::get (\begin{DoxyParamCaption}\item[{const char $\ast$}]{var,  }\item[{const int}]{k = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em var} & \\
+\hline
+{\em k} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structblackboard_ac91c14992d0fb5159a863ed0a35998c2}\label{structblackboard_ac91c14992d0fb5159a863ed0a35998c2}} 
+\index{blackboard@{blackboard}!set@{set}}
+\index{set@{set}!blackboard@{blackboard}}
+\doxyparagraph{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily void blackboard\+::set (\begin{DoxyParamCaption}\item[{const char $\ast$}]{var,  }\item[{double}]{data,  }\item[{const int}]{k = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em var} & \\
+\hline
+{\em data} & \\
+\hline
+{\em k} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sw/simulation/controllers/behavior\+\_\+tree/bt/blackboard.\+h\item 
+sw/simulation/controllers/behavior\+\_\+tree/bt/blackboard.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,264 @@
+\hypertarget{classdraw}{}\doxysubsection{draw Class Reference}
+\label{classdraw}\index{draw@{draw}}
+
+
+Object that takes care of Open\+GL drawing for all elements of interest. This class contains general open\+GL function that can be used to animate and visualize the swarm at runtime. It is launched and managed by the animation thread.  
+
+
+
+
+{\ttfamily \#include $<$draw.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classdraw_ac418208793bef051f068d07723dd83f9}{uwb\+\_\+beacon\+\_\+range}} (const uint16\+\_\+t \&ID)
+\item 
+void \mbox{\hyperlink{classdraw_a3ffcfdf48d8c0585576272601c8a1dc7}{uwb\+\_\+beacon}} (const float \&xb, const float \&yb)
+\item 
+void \mbox{\hyperlink{classdraw_a4afe0f654b5da89085e86043796a64e7}{triangle}} (const float \&s)
+\item 
+void \mbox{\hyperlink{classdraw_a741b22bb0b2a71da2c1b9998a8b9d412}{circle}} (const float \&r)
+\item 
+void \mbox{\hyperlink{classdraw_aa2ff155deba216f0e60208aaaa3fa0da}{circle\+\_\+loop}} (const float \&r)
+\item 
+void \mbox{\hyperlink{classdraw_adc71649216fe3e0f1bb696d7702a1e73}{line}} (const float \&x, const float \&y)
+\item 
+void \mbox{\hyperlink{classdraw_addee16668244667fb5c7a7659564c793}{line}} (const float \&x, const float \&y, const float \&width)
+\begin{DoxyCompactList}\small\item\em Draw a white line with a specified width from (0,0) to (x,y) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdraw_a63a6d119bc325c010843b18f42f3e955}{axes}} ()
+\item 
+void \mbox{\hyperlink{classdraw_a6d0cccb623e484291888eb7a50702cac}{segment}} (const float \&x0, const float \&y0, const float \&x1, const float \&y1)
+\item 
+void \mbox{\hyperlink{classdraw_a4b89eee60aabaf2e8e1133585c9b57cc}{point}} ()
+\item 
+void \mbox{\hyperlink{classdraw_a315bd58d1bc33b4ce816b93b2fbb6382}{data}} ()
+\item 
+void \mbox{\hyperlink{classdraw_a55fd393c7bbd30bb34b6f48077d892fa}{axis\+\_\+label}} ()
+\item 
+void \mbox{\hyperlink{classdraw_aee68427154e7ce6e7d487da5317c90e2}{agent\+\_\+number}} (const uint16\+\_\+t \&ID)
+\item 
+void \mbox{\hyperlink{classdraw_ae656b0afb8e42f25b9c3b03fc04f4a4d}{agent}} (const uint16\+\_\+t \&ID, const float \&x, const float \&y, const float \&orientation)
+\item 
+void \mbox{\hyperlink{classdraw_a5f2d4d4762438993018041c49aca492b}{velocity\+\_\+arrow}} (const uint16\+\_\+t \&ID, const float \&x, const float \&y, const float \&v\+\_\+x, const float \&v\+\_\+y)
+\item 
+void \mbox{\hyperlink{classdraw_ac5164f4cbd7da84b566ff4518bc7e071}{food}} (const float \&x, const float \&y)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Object that takes care of Open\+GL drawing for all elements of interest. This class contains general open\+GL function that can be used to animate and visualize the swarm at runtime. It is launched and managed by the animation thread. 
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdraw_ae656b0afb8e42f25b9c3b03fc04f4a4d}\label{classdraw_ae656b0afb8e42f25b9c3b03fc04f4a4d}} 
+\index{draw@{draw}!agent@{agent}}
+\index{agent@{agent}!draw@{draw}}
+\doxyparagraph{\texorpdfstring{agent()}{agent()}}
+{\footnotesize\ttfamily void draw\+::agent (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{ID,  }\item[{const float \&}]{x,  }\item[{const float \&}]{y,  }\item[{const float \&}]{orientation }\end{DoxyParamCaption})}
+
+Draw the agent (uses internal function defined by the agent class)
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & The ID of the robot in question \\
+\hline
+{\em x} & The x position of the robot \\
+\hline
+{\em y} & The y position of the robot \\
+\hline
+{\em orientation} & The orientation of the robot \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdraw_aee68427154e7ce6e7d487da5317c90e2}\label{classdraw_aee68427154e7ce6e7d487da5317c90e2}} 
+\index{draw@{draw}!agent\_number@{agent\_number}}
+\index{agent\_number@{agent\_number}!draw@{draw}}
+\doxyparagraph{\texorpdfstring{agent\_number()}{agent\_number()}}
+{\footnotesize\ttfamily void draw\+::agent\+\_\+number (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{ID }\end{DoxyParamCaption})}
+
+Draw the ID number of an agent on top of the agent
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & The ID of the robot in question \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdraw_a63a6d119bc325c010843b18f42f3e955}\label{classdraw_a63a6d119bc325c010843b18f42f3e955}} 
+\index{draw@{draw}!axes@{axes}}
+\index{axes@{axes}!draw@{draw}}
+\doxyparagraph{\texorpdfstring{axes()}{axes()}}
+{\footnotesize\ttfamily void draw\+::axes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Draw the global x and y axes at (0,0) \mbox{\Hypertarget{classdraw_a55fd393c7bbd30bb34b6f48077d892fa}\label{classdraw_a55fd393c7bbd30bb34b6f48077d892fa}} 
+\index{draw@{draw}!axis\_label@{axis\_label}}
+\index{axis\_label@{axis\_label}!draw@{draw}}
+\doxyparagraph{\texorpdfstring{axis\_label()}{axis\_label()}}
+{\footnotesize\ttfamily void draw\+::axis\+\_\+label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Write the x,y label on the global axis along the given dimension dim
+
+
+\begin{DoxyParams}{Parameters}
+{\em dim} & Specifies (=0) for writing the x label and (=1) for writing the y label \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdraw_a741b22bb0b2a71da2c1b9998a8b9d412}\label{classdraw_a741b22bb0b2a71da2c1b9998a8b9d412}} 
+\index{draw@{draw}!circle@{circle}}
+\index{circle@{circle}!draw@{draw}}
+\doxyparagraph{\texorpdfstring{circle()}{circle()}}
+{\footnotesize\ttfamily void draw\+::circle (\begin{DoxyParamCaption}\item[{const float \&}]{r }\end{DoxyParamCaption})}
+
+Draw a red circle of radius r
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Radius of the circle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdraw_aa2ff155deba216f0e60208aaaa3fa0da}\label{classdraw_aa2ff155deba216f0e60208aaaa3fa0da}} 
+\index{draw@{draw}!circle\_loop@{circle\_loop}}
+\index{circle\_loop@{circle\_loop}!draw@{draw}}
+\doxyparagraph{\texorpdfstring{circle\_loop()}{circle\_loop()}}
+{\footnotesize\ttfamily void draw\+::circle\+\_\+loop (\begin{DoxyParamCaption}\item[{const float \&}]{r }\end{DoxyParamCaption})}
+
+Draw a white unfilled circular loop
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Radius of the circular loop \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdraw_a315bd58d1bc33b4ce816b93b2fbb6382}\label{classdraw_a315bd58d1bc33b4ce816b93b2fbb6382}} 
+\index{draw@{draw}!data@{data}}
+\index{data@{data}!draw@{draw}}
+\doxyparagraph{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily void draw\+::data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Draw relevant simulation data in the bottom left corner (like the time of simulation) \mbox{\Hypertarget{classdraw_ac5164f4cbd7da84b566ff4518bc7e071}\label{classdraw_ac5164f4cbd7da84b566ff4518bc7e071}} 
+\index{draw@{draw}!food@{food}}
+\index{food@{food}!draw@{draw}}
+\doxyparagraph{\texorpdfstring{food()}{food()}}
+{\footnotesize\ttfamily void draw\+::food (\begin{DoxyParamCaption}\item[{const float \&}]{x,  }\item[{const float \&}]{y }\end{DoxyParamCaption})}
+
+Draw a gray dot indicating food (or something else if you like) at position (x,y)
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x position of the food \\
+\hline
+{\em y} & The y position of the food \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdraw_adc71649216fe3e0f1bb696d7702a1e73}\label{classdraw_adc71649216fe3e0f1bb696d7702a1e73}} 
+\index{draw@{draw}!line@{line}}
+\index{line@{line}!draw@{draw}}
+\doxyparagraph{\texorpdfstring{line()}{line()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void draw\+::line (\begin{DoxyParamCaption}\item[{const float \&}]{x,  }\item[{const float \&}]{y }\end{DoxyParamCaption})}
+
+Draw a white line from (0,0) to (x,y)
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x position (East) \\
+\hline
+{\em y} & y position (North) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdraw_addee16668244667fb5c7a7659564c793}\label{classdraw_addee16668244667fb5c7a7659564c793}} 
+\index{draw@{draw}!line@{line}}
+\index{line@{line}!draw@{draw}}
+\doxyparagraph{\texorpdfstring{line()}{line()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void draw\+::line (\begin{DoxyParamCaption}\item[{const float \&}]{x,  }\item[{const float \&}]{y,  }\item[{const float \&}]{width }\end{DoxyParamCaption})}
+
+
+
+Draw a white line with a specified width from (0,0) to (x,y) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em width} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdraw_a4b89eee60aabaf2e8e1133585c9b57cc}\label{classdraw_a4b89eee60aabaf2e8e1133585c9b57cc}} 
+\index{draw@{draw}!point@{point}}
+\index{point@{point}!draw@{draw}}
+\doxyparagraph{\texorpdfstring{point()}{point()}}
+{\footnotesize\ttfamily void draw\+::point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Draw a small white point \mbox{\Hypertarget{classdraw_a6d0cccb623e484291888eb7a50702cac}\label{classdraw_a6d0cccb623e484291888eb7a50702cac}} 
+\index{draw@{draw}!segment@{segment}}
+\index{segment@{segment}!draw@{draw}}
+\doxyparagraph{\texorpdfstring{segment()}{segment()}}
+{\footnotesize\ttfamily void draw\+::segment (\begin{DoxyParamCaption}\item[{const float \&}]{x0,  }\item[{const float \&}]{y0,  }\item[{const float \&}]{x1,  }\item[{const float \&}]{y1 }\end{DoxyParamCaption})}
+
+Draw a segment (used for walls and obstacles) \mbox{\Hypertarget{classdraw_a4afe0f654b5da89085e86043796a64e7}\label{classdraw_a4afe0f654b5da89085e86043796a64e7}} 
+\index{draw@{draw}!triangle@{triangle}}
+\index{triangle@{triangle}!draw@{draw}}
+\doxyparagraph{\texorpdfstring{triangle()}{triangle()}}
+{\footnotesize\ttfamily void draw\+::triangle (\begin{DoxyParamCaption}\item[{const float \&}]{s }\end{DoxyParamCaption})}
+
+Draw a simple triangle of size scl
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Scale of the triangle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdraw_a3ffcfdf48d8c0585576272601c8a1dc7}\label{classdraw_a3ffcfdf48d8c0585576272601c8a1dc7}} 
+\index{draw@{draw}!uwb\_beacon@{uwb\_beacon}}
+\index{uwb\_beacon@{uwb\_beacon}!draw@{draw}}
+\doxyparagraph{\texorpdfstring{uwb\_beacon()}{uwb\_beacon()}}
+{\footnotesize\ttfamily void draw\+::uwb\+\_\+beacon (\begin{DoxyParamCaption}\item[{const float \&}]{xb,  }\item[{const float \&}]{yb }\end{DoxyParamCaption})}
+
+Draw a red uwb beacon with coordinates x and y
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x position (East) \\
+\hline
+{\em y} & y position (North) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdraw_ac418208793bef051f068d07723dd83f9}\label{classdraw_ac418208793bef051f068d07723dd83f9}} 
+\index{draw@{draw}!uwb\_beacon\_range@{uwb\_beacon\_range}}
+\index{uwb\_beacon\_range@{uwb\_beacon\_range}!draw@{draw}}
+\doxyparagraph{\texorpdfstring{uwb\_beacon\_range()}{uwb\_beacon\_range()}}
+{\footnotesize\ttfamily void draw\+::uwb\+\_\+beacon\+\_\+range (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{ID }\end{DoxyParamCaption})}
+
+Draw the range of an agent towards an uwb beacon on top of the uwb beacon
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & The ID of the robot in question \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdraw_a5f2d4d4762438993018041c49aca492b}\label{classdraw_a5f2d4d4762438993018041c49aca492b}} 
+\index{draw@{draw}!velocity\_arrow@{velocity\_arrow}}
+\index{velocity\_arrow@{velocity\_arrow}!draw@{draw}}
+\doxyparagraph{\texorpdfstring{velocity\_arrow()}{velocity\_arrow()}}
+{\footnotesize\ttfamily void draw\+::velocity\+\_\+arrow (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{ID,  }\item[{const float \&}]{x,  }\item[{const float \&}]{y,  }\item[{const float \&}]{v\+\_\+x,  }\item[{const float \&}]{v\+\_\+y }\end{DoxyParamCaption})}
+
+Draw a line showing the velocity of the agent
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & The ID of the robot in question \\
+\hline
+{\em x} & The x position of the robot (East) \\
+\hline
+{\em y} & The y position of the robot (North) \\
+\hline
+{\em v\+\_\+x} & The velocity of the robot in x (global) \\
+\hline
+{\em v\+\_\+y} & The velocity of the robot in y (global) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sw/animation/draw.\+h\item 
+sw/animation/draw.\+cpp\end{DoxyCompactItemize}

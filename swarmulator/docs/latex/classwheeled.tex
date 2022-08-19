@@ -1,0 +1,81 @@
+\hypertarget{classwheeled}{}\doxysubsection{wheeled Class Reference}
+\label{classwheeled}\index{wheeled@{wheeled}}
+
+
+Inheritance diagram for wheeled\+:
+% FIG 0
+
+
+Collaboration diagram for wheeled\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classwheeled_ab89ad3a3f5058fc88991f2364e7b0220}{wheeled}} (int i, std\+::vector$<$ float $>$ state, float tstep)
+\begin{DoxyCompactList}\small\item\em Construct a new wheeled object. \end{DoxyCompactList}\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{classwheeled_ae0736e2a40fb00054a6509a7147ac9b8}{state\+\_\+update}} (std\+::vector$<$ float $>$ state)
+\item 
+void \mbox{\hyperlink{classwheeled_adaaa3880939f3cf51d5afe6300e74365}{animation}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwheeled_ab89ad3a3f5058fc88991f2364e7b0220}\label{classwheeled_ab89ad3a3f5058fc88991f2364e7b0220}} 
+\index{wheeled@{wheeled}!wheeled@{wheeled}}
+\index{wheeled@{wheeled}!wheeled@{wheeled}}
+\doxyparagraph{\texorpdfstring{wheeled()}{wheeled()}}
+{\footnotesize\ttfamily wheeled\+::wheeled (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{std\+::vector$<$ float $>$}]{state,  }\item[{float}]{tstep }\end{DoxyParamCaption})}
+
+
+
+Construct a new wheeled object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & ID \\
+\hline
+{\em state} & Initial state \\
+\hline
+{\em tstep} & Simulation time step \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classwheeled_adaaa3880939f3cf51d5afe6300e74365}\label{classwheeled_adaaa3880939f3cf51d5afe6300e74365}} 
+\index{wheeled@{wheeled}!animation@{animation}}
+\index{animation@{animation}!wheeled@{wheeled}}
+\doxyparagraph{\texorpdfstring{animation()}{animation()}}
+{\footnotesize\ttfamily void wheeled\+::animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Drawing to animate the wheeled agent 
+
+Implements \mbox{\hyperlink{classAgent_a35916fdf13ea43b557d16906018780bf}{Agent}}.
+
+\mbox{\Hypertarget{classwheeled_ae0736e2a40fb00054a6509a7147ac9b8}\label{classwheeled_ae0736e2a40fb00054a6509a7147ac9b8}} 
+\index{wheeled@{wheeled}!state\_update@{state\_update}}
+\index{state\_update@{state\_update}!wheeled@{wheeled}}
+\doxyparagraph{\texorpdfstring{state\_update()}{state\_update()}}
+{\footnotesize\ttfamily vector$<$ float $>$ wheeled\+::state\+\_\+update (\begin{DoxyParamCaption}\item[{std\+::vector$<$ float $>$}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+State update over one time step
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & current state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$float$>$ next state 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classAgent_ac52e74a6e61302777e5bbca0042785d8}{Agent}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sw/simulation/agents/wheeled/wheeled.\+h\item 
+sw/simulation/agents/wheeled/wheeled.\+cpp\end{DoxyCompactItemize}

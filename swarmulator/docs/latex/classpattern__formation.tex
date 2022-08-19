@@ -1,0 +1,73 @@
+\hypertarget{classpattern__formation}{}\doxysubsection{pattern\+\_\+formation Class Reference}
+\label{classpattern__formation}\index{pattern\_formation@{pattern\_formation}}
+
+
+{\ttfamily \#include $<$pattern\+\_\+formation.\+h$>$}
+
+
+
+Inheritance diagram for pattern\+\_\+formation\+:
+% FIG 0
+
+
+Collaboration diagram for pattern\+\_\+formation\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpattern__formation_ad5f585d3ab7271db4be14157eabe4784}\label{classpattern__formation_ad5f585d3ab7271db4be14157eabe4784}} 
+\mbox{\hyperlink{classpattern__formation_ad5f585d3ab7271db4be14157eabe4784}{pattern\+\_\+formation}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new pattern formation object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classpattern__formation_aadb4add6db5c885b47ae581dbe082100}\label{classpattern__formation_aadb4add6db5c885b47ae581dbe082100}} 
+\mbox{\hyperlink{classpattern__formation_aadb4add6db5c885b47ae581dbe082100}{$\sim$pattern\+\_\+formation}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the pattern formation object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classpattern__formation_a1b493eb7852adaa305ebb190777aa420}{get\+\_\+velocity\+\_\+command}} (const uint16\+\_\+t ID, float \&v\+\_\+x, float \&v\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Get the velocity command object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classpattern__formation_a475ad922eed72f3ec55c5ea7366a7206}{animation}} (const uint16\+\_\+t ID)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+
+
+\doxysubsubsection{Detailed Description}
+This controller makes a pattern from a lattice. It is a child to \mbox{\hyperlink{classlattice__basic}{lattice\+\_\+basic}}, which handles the lattice control 
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpattern__formation_a475ad922eed72f3ec55c5ea7366a7206}\label{classpattern__formation_a475ad922eed72f3ec55c5ea7366a7206}} 
+\index{pattern\_formation@{pattern\_formation}!animation@{animation}}
+\index{animation@{animation}!pattern\_formation@{pattern\_formation}}
+\doxyparagraph{\texorpdfstring{animation()}{animation()}}
+{\footnotesize\ttfamily void pattern\+\_\+formation\+::animation (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Draw the controller 
+
+Implements \mbox{\hyperlink{classController}{Controller}}.
+
+\mbox{\Hypertarget{classpattern__formation_a1b493eb7852adaa305ebb190777aa420}\label{classpattern__formation_a1b493eb7852adaa305ebb190777aa420}} 
+\index{pattern\_formation@{pattern\_formation}!get\_velocity\_command@{get\_velocity\_command}}
+\index{get\_velocity\_command@{get\_velocity\_command}!pattern\_formation@{pattern\_formation}}
+\doxyparagraph{\texorpdfstring{get\_velocity\_command()}{get\_velocity\_command()}}
+{\footnotesize\ttfamily void pattern\+\_\+formation\+::get\+\_\+velocity\+\_\+command (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{ID,  }\item[{float \&}]{v\+\_\+x,  }\item[{float \&}]{v\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the velocity command object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & \\
+\hline
+{\em v\+\_\+x} & \\
+\hline
+{\em v\+\_\+y} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classlattice__basic_a99340bcfce48acc50843c7ef79952aaf}{lattice\+\_\+basic}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sw/simulation/controllers/pattern\+\_\+formation/pattern\+\_\+formation.\+h\item 
+sw/simulation/controllers/pattern\+\_\+formation/pattern\+\_\+formation.\+cpp\end{DoxyCompactItemize}

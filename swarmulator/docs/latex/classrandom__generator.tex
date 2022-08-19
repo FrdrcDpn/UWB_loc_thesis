@@ -1,0 +1,148 @@
+\hypertarget{classrandom__generator}{}\doxysubsection{random\+\_\+generator Class Reference}
+\label{classrandom__generator}\index{random\_generator@{random\_generator}}
+
+
+{\ttfamily \#include $<$randomgenerator.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrandom__generator_a1a7beb8bf7a6e2603bc68dbf7cd3aabc}{random\+\_\+generator}} ()
+\item 
+float \mbox{\hyperlink{classrandom__generator_aff83d4996eba2093155512c5d68f24e4}{uniform\+\_\+float}} (float min, float max)
+\item 
+int \mbox{\hyperlink{classrandom__generator_ac4368a24fb00b6258bdb07f936bf123e}{uniform\+\_\+int}} (int min, int max)
+\item 
+float \mbox{\hyperlink{classrandom__generator_ad80355c47a5a6be75e2b34fc983bcac6}{gaussian\+\_\+float}} (float mean, float stddev)
+\item 
+bool \mbox{\hyperlink{classrandom__generator_a3c0f24a80fe7369b80b7f0f08ea039ea}{bernoulli}} (float p)
+\item 
+\mbox{\Hypertarget{classrandom__generator_a2e3640a62463625a6937d7edc87edce0}\label{classrandom__generator_a2e3640a62463625a6937d7edc87edce0}} 
+int {\bfseries discrete\+\_\+int} (std\+::vector$<$ float $>$ \&d)
+\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{classrandom__generator_a0276f779d82f5e76e2411bd477b4ebbc}{gaussian\+\_\+float\+\_\+vector}} (const int \&length, const float \&mean, const float \&std)
+\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{classrandom__generator_a5beba5263e8cff523a8d1e69d6c264fb}{uniform\+\_\+float\+\_\+vector}} (const int \&length, const float \&min, const float \&max)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Defines a graph structure that can be used to assess the topology of the swarm 
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrandom__generator_a1a7beb8bf7a6e2603bc68dbf7cd3aabc}\label{classrandom__generator_a1a7beb8bf7a6e2603bc68dbf7cd3aabc}} 
+\index{random\_generator@{random\_generator}!random\_generator@{random\_generator}}
+\index{random\_generator@{random\_generator}!random\_generator@{random\_generator}}
+\doxyparagraph{\texorpdfstring{random\_generator()}{random\_generator()}}
+{\footnotesize\ttfamily random\+\_\+generator\+::random\+\_\+generator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor instatiates a list of all connections in the graph. 
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrandom__generator_a3c0f24a80fe7369b80b7f0f08ea039ea}\label{classrandom__generator_a3c0f24a80fe7369b80b7f0f08ea039ea}} 
+\index{random\_generator@{random\_generator}!bernoulli@{bernoulli}}
+\index{bernoulli@{bernoulli}!random\_generator@{random\_generator}}
+\doxyparagraph{\texorpdfstring{bernoulli()}{bernoulli()}}
+{\footnotesize\ttfamily bool random\+\_\+generator\+::bernoulli (\begin{DoxyParamCaption}\item[{float}]{p }\end{DoxyParamCaption})}
+
+Get a random bool value with probability p
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Probability \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrandom__generator_ad80355c47a5a6be75e2b34fc983bcac6}\label{classrandom__generator_ad80355c47a5a6be75e2b34fc983bcac6}} 
+\index{random\_generator@{random\_generator}!gaussian\_float@{gaussian\_float}}
+\index{gaussian\_float@{gaussian\_float}!random\_generator@{random\_generator}}
+\doxyparagraph{\texorpdfstring{gaussian\_float()}{gaussian\_float()}}
+{\footnotesize\ttfamily float random\+\_\+generator\+::gaussian\+\_\+float (\begin{DoxyParamCaption}\item[{float}]{mean,  }\item[{float}]{stddev }\end{DoxyParamCaption})}
+
+Get a random value according to a Gaussian distribution
+
+
+\begin{DoxyParams}{Parameters}
+{\em mean} & Mean of the gaussian distribution \\
+\hline
+{\em stddev} & Standard deviation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrandom__generator_a0276f779d82f5e76e2411bd477b4ebbc}\label{classrandom__generator_a0276f779d82f5e76e2411bd477b4ebbc}} 
+\index{random\_generator@{random\_generator}!gaussian\_float\_vector@{gaussian\_float\_vector}}
+\index{gaussian\_float\_vector@{gaussian\_float\_vector}!random\_generator@{random\_generator}}
+\doxyparagraph{\texorpdfstring{gaussian\_float\_vector()}{gaussian\_float\_vector()}}
+{\footnotesize\ttfamily std\+::vector$<$ float $>$ random\+\_\+generator\+::gaussian\+\_\+float\+\_\+vector (\begin{DoxyParamCaption}\item[{const int \&}]{length,  }\item[{const float \&}]{mean,  }\item[{const float \&}]{std }\end{DoxyParamCaption})}
+
+Generate a random vector with zero mean from a gaussian distribution
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & Desired length of the vector \\
+\hline
+{\em mean} & Mean of the gaussian distribution \\
+\hline
+{\em stddev} & Standard deviation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrandom__generator_aff83d4996eba2093155512c5d68f24e4}\label{classrandom__generator_aff83d4996eba2093155512c5d68f24e4}} 
+\index{random\_generator@{random\_generator}!uniform\_float@{uniform\_float}}
+\index{uniform\_float@{uniform\_float}!random\_generator@{random\_generator}}
+\doxyparagraph{\texorpdfstring{uniform\_float()}{uniform\_float()}}
+{\footnotesize\ttfamily float random\+\_\+generator\+::uniform\+\_\+float (\begin{DoxyParamCaption}\item[{float}]{min,  }\item[{float}]{max }\end{DoxyParamCaption})}
+
+Get a random value of type float between a min and max
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & Minimum value in range \\
+\hline
+{\em max} & Maximum value in range \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrandom__generator_a5beba5263e8cff523a8d1e69d6c264fb}\label{classrandom__generator_a5beba5263e8cff523a8d1e69d6c264fb}} 
+\index{random\_generator@{random\_generator}!uniform\_float\_vector@{uniform\_float\_vector}}
+\index{uniform\_float\_vector@{uniform\_float\_vector}!random\_generator@{random\_generator}}
+\doxyparagraph{\texorpdfstring{uniform\_float\_vector()}{uniform\_float\_vector()}}
+{\footnotesize\ttfamily std\+::vector$<$ float $>$ random\+\_\+generator\+::uniform\+\_\+float\+\_\+vector (\begin{DoxyParamCaption}\item[{const int \&}]{length,  }\item[{const float \&}]{min,  }\item[{const float \&}]{max }\end{DoxyParamCaption})}
+
+Generate a random vector with zero mean from a uniform distribution
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & Desired length of the vector \\
+\hline
+{\em min} & Minimum value in range \\
+\hline
+{\em max} & Maximum value in range\\
+\hline
+{\em length} & \\
+\hline
+{\em min} & \\
+\hline
+{\em max} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$float$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrandom__generator_ac4368a24fb00b6258bdb07f936bf123e}\label{classrandom__generator_ac4368a24fb00b6258bdb07f936bf123e}} 
+\index{random\_generator@{random\_generator}!uniform\_int@{uniform\_int}}
+\index{uniform\_int@{uniform\_int}!random\_generator@{random\_generator}}
+\doxyparagraph{\texorpdfstring{uniform\_int()}{uniform\_int()}}
+{\footnotesize\ttfamily int random\+\_\+generator\+::uniform\+\_\+int (\begin{DoxyParamCaption}\item[{int}]{min,  }\item[{int}]{max }\end{DoxyParamCaption})}
+
+Get a random value of type int between a min and a max
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & Minimum value in range \\
+\hline
+{\em max} & Maximum value in range \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sw/math/randomgenerator.\+h\item 
+sw/math/randomgenerator.\+cpp\end{DoxyCompactItemize}

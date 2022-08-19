@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<parameters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="parameters.xsd">
+  <!-- Simulation 1 0 3-->
+  <Kpphi>1</Kpphi>
+  <Kiphi>0.1</Kiphi>
+  <Kdphi>0.3</Kdphi>
+  <Kptheta>1</Kptheta>
+  <Kitheta>0.1</Kitheta>
+  <Kdtheta>0.3</Kdtheta>
+  <Kpx>3</Kpx>
+  <Kix>0</Kix>
+  <Kdx>1</Kdx>
+  <Kpy>3</Kpy>
+  <Kiy>0</Kiy>
+  <Kdy>1</Kdy>
+  <Kpz>2</Kpz>
+  <Kiz>0.01</Kiz>
+  <Kdz>1</Kdz>
+  <enable_UWB>1</enable_UWB>
+  <dynamic_beacons>1</dynamic_beacons>
+  <EKF_timestep>0.004</EKF_timestep> 
+  <IMU_timestep>0.001</IMU_timestep> 
+  <trajectory_frequency>100</trajectory_frequency> 
+  <UWB_frequency>50</UWB_frequency> 
+  <UWB_D_frequency>20</UWB_D_frequency> 
+  <UWB_signal_length>0.01</UWB_signal_length>
+  <max_UWB_range>6.5</max_UWB_range>
+  <s_tdoa>0.22</s_tdoa>
+  <s_twr>0.16</s_twr>
+  <Q>0.05</Q>
+  <kR>1</kR>
+  <beacon_1_en>1</beacon_1_en>
+  <beacon_2_en>1</beacon_2_en>
+  <beacon_3_en>1</beacon_3_en>
+  <beacon_4_en>1</beacon_4_en>
+  <beacon_5_en>1</beacon_5_en>
+  <beacon_6_en>1</beacon_6_en>
+  <beacon_7_en>1</beacon_7_en>
+  <beacon_8_en>1</beacon_8_en>
+  <beacon_1_freq>50</beacon_1_freq>
+  <beacon_2_freq>50</beacon_2_freq>
+  <beacon_3_freq>50</beacon_3_freq>
+  <beacon_4_freq>50</beacon_4_freq>
+  <beacon_5_freq>50</beacon_5_freq>
+  <beacon_6_freq>50</beacon_6_freq>
+  <beacon_7_freq>50</beacon_7_freq>
+  <beacon_8_freq>50</beacon_8_freq>
+  <beacon_dynamic_freq>400</beacon_dynamic_freq>
+  <dynamic_cov_approach>12</dynamic_cov_approach>
+  <beaconvelocity>0</beaconvelocity>
+  <x_beacon_1>3</x_beacon_1>
+  <y_beacon_1>12</y_beacon_1>
+  <x_beacon_2>-3</x_beacon_2>
+  <y_beacon_2>12</y_beacon_2>
+  <x_beacon_3>-3</x_beacon_3>
+  <y_beacon_3>-12</y_beacon_3>
+  <x_beacon_4>3</x_beacon_4>
+  <y_beacon_4>-12</y_beacon_4>
+  <x_beacon_5>-1.5</x_beacon_5>
+  <y_beacon_5>12</y_beacon_5>
+  <x_beacon_6>1.5</x_beacon_6>
+  <y_beacon_6>12</y_beacon_6>
+  <x_beacon_7>1.5</x_beacon_7>
+  <y_beacon_7>-12</y_beacon_7>
+  <x_beacon_8>-1.5</x_beacon_8>
+  <y_beacon_8>-12</y_beacon_8>
+  <acc_noise_sigma>0.01</acc_noise_sigma>
+  <noise_motor_sigma>0.001</noise_motor_sigma>
+  <noise_type>1</noise_type>
+  <gauss_sigma>0.16</gauss_sigma>
+  <gauss_sigma_twr>0.16</gauss_sigma_twr>
+  <gauss_sigma_tdoa>0.22</gauss_sigma_tdoa>
+  <htc_gamma>0.1</htc_gamma>
+  <htc_ratio>1.0</htc_ratio>
+  <htg_mu>0.0</htg_mu>
+  <htg_k>2.0</htg_k>
+  <htg_lambda>3.5</htg_lambda>
+  <htg_scale>1.0</htg_scale>
+  <terminaloutput>0.0</terminaloutput>
+  <simulation_updatefreq>1000</simulation_updatefreq>
+  <simulation_realtimefactor>1</simulation_realtimefactor>
+  <time_limit>0</time_limit>
+  <!-- (seconds). Use time_limit > 0 to set a limit. If = 0, then the simulation runs indefinitely. -->
+  <environment>square</environment>
+  <!-- See the folder conf/environments/ for available environments. 
+       Create your own or use "random" to generate a random map at runtime -->
+  <!-- Animation -->
+  <window_width>800</window_width>
+  <window_height>800</window_height>
+  <scale>0.15</scale>
+  <mouse_drag_speed>0.3</mouse_drag_speed>
+  <mouse_zoom_speed>0.4</mouse_zoom_speed>
+  <zoom>-15</zoom>
+  <!-- Start up zoom, bounded -90 and 9 -->
+  <animation_updatefreq>500</animation_updatefreq>
+  <!-- Logger -->
+  <logger_updatefreq>2</logger_updatefreq>
+  <!-- Additional parameters -->
+  <policy/>
+  <fitness>aggregation_clusters</fitness>
+  <!--new_parameter_name>default value</new_parameter_name-->
+</parameters>

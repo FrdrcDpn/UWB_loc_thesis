@@ -1,0 +1,76 @@
+\hypertarget{classfifo}{}\doxysubsection{fifo Class Reference}
+\label{classfifo}\index{fifo@{fifo}}
+
+
+{\ttfamily \#include $<$fifo.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfifo_a9a3dd94e721b02d77f5bd11953ccb717}{fifo}} (std\+::string a)
+\begin{DoxyCompactList}\small\item\em Construct a new fifo object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfifo_a4eb04415a0516acc3c0be143a235c5c2}{$\sim$fifo}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the fifo object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classfifo_aad136a392ae613cf1c311cc94f277b10}{open}} (std\+::string)
+\item 
+bool \mbox{\hyperlink{classfifo_a551c40d185b48afdadb22228567b101c}{send}} (float f)
+\begin{DoxyCompactList}\small\item\em Send out a F\+I\+FO message to interfact with external programs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Handles F\+I\+FO messaging for external interfacing. 
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classfifo_a9a3dd94e721b02d77f5bd11953ccb717}\label{classfifo_a9a3dd94e721b02d77f5bd11953ccb717}} 
+\index{fifo@{fifo}!fifo@{fifo}}
+\index{fifo@{fifo}!fifo@{fifo}}
+\doxyparagraph{\texorpdfstring{fifo()}{fifo()}}
+{\footnotesize\ttfamily fifo\+::fifo (\begin{DoxyParamCaption}\item[{std\+::string}]{a }\end{DoxyParamCaption})}
+
+
+
+Construct a new fifo object. 
+
+\mbox{\Hypertarget{classfifo_a4eb04415a0516acc3c0be143a235c5c2}\label{classfifo_a4eb04415a0516acc3c0be143a235c5c2}} 
+\index{fifo@{fifo}!````~fifo@{$\sim$fifo}}
+\index{````~fifo@{$\sim$fifo}!fifo@{fifo}}
+\doxyparagraph{\texorpdfstring{$\sim$fifo()}{~fifo()}}
+{\footnotesize\ttfamily fifo\+::$\sim$fifo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destroy the fifo object. 
+
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classfifo_aad136a392ae613cf1c311cc94f277b10}\label{classfifo_aad136a392ae613cf1c311cc94f277b10}} 
+\index{fifo@{fifo}!open@{open}}
+\index{open@{open}!fifo@{fifo}}
+\doxyparagraph{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily void fifo\+::open (\begin{DoxyParamCaption}\item[{std\+::string}]{file }\end{DoxyParamCaption})}
+
+Create and open the F\+I\+FO pipe to communicate/interface with external programs, if needed. By default, it is used to send the fitness. \mbox{\Hypertarget{classfifo_a551c40d185b48afdadb22228567b101c}\label{classfifo_a551c40d185b48afdadb22228567b101c}} 
+\index{fifo@{fifo}!send@{send}}
+\index{send@{send}!fifo@{fifo}}
+\doxyparagraph{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily bool fifo\+::send (\begin{DoxyParamCaption}\item[{float}]{f }\end{DoxyParamCaption})}
+
+
+
+Send out a F\+I\+FO message to interfact with external programs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fd} & F\+I\+FO file ID, initiated in the beginning of the thread \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sw/simulation/fifo.\+h\item 
+sw/simulation/fifo.\+cpp\end{DoxyCompactItemize}

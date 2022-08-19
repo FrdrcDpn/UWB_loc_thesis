@@ -1,0 +1,71 @@
+\hypertarget{classrandom__exploration}{}\doxysubsection{random\+\_\+exploration Class Reference}
+\label{classrandom__exploration}\index{random\_exploration@{random\_exploration}}
+
+
+{\ttfamily \#include $<$random\+\_\+exploration.\+h$>$}
+
+
+
+Inheritance diagram for random\+\_\+exploration\+:
+% FIG 0
+
+
+Collaboration diagram for random\+\_\+exploration\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrandom__exploration_ab96bbf328c93337b5686de513e7ce541}{random\+\_\+exploration}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new random exploration object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classrandom__exploration_ab83fdaa455fc9b6d8183286790cf553e}{get\+\_\+velocity\+\_\+command}} (const uint16\+\_\+t ID, float \&v\+\_\+x, float \&v\+\_\+y)
+\item 
+\mbox{\Hypertarget{classrandom__exploration_a7275e2eb1b8b4e80bc6f774777a151e9}\label{classrandom__exploration_a7275e2eb1b8b4e80bc6f774777a151e9}} 
+virtual void {\bfseries animation} (const uint16\+\_\+t ID)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+
+
+\doxysubsubsection{Detailed Description}
+Basic exploration behavior which randomly moves in an environment while avoiding neighbors. 
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrandom__exploration_ab96bbf328c93337b5686de513e7ce541}\label{classrandom__exploration_ab96bbf328c93337b5686de513e7ce541}} 
+\index{random\_exploration@{random\_exploration}!random\_exploration@{random\_exploration}}
+\index{random\_exploration@{random\_exploration}!random\_exploration@{random\_exploration}}
+\doxyparagraph{\texorpdfstring{random\_exploration()}{random\_exploration()}}
+{\footnotesize\ttfamily random\+\_\+exploration\+::random\+\_\+exploration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new random exploration object. 
+
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrandom__exploration_ab83fdaa455fc9b6d8183286790cf553e}\label{classrandom__exploration_ab83fdaa455fc9b6d8183286790cf553e}} 
+\index{random\_exploration@{random\_exploration}!get\_velocity\_command@{get\_velocity\_command}}
+\index{get\_velocity\_command@{get\_velocity\_command}!random\_exploration@{random\_exploration}}
+\doxyparagraph{\texorpdfstring{get\_velocity\_command()}{get\_velocity\_command()}}
+{\footnotesize\ttfamily void random\+\_\+exploration\+::get\+\_\+velocity\+\_\+command (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{ID,  }\item[{float \&}]{v\+\_\+x,  }\item[{float \&}]{v\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Virtual function to be implemented by child class that defines the controller The outputs are the desired v\+\_\+x and v\+\_\+y velocities
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & The ID of the robot to control \\
+\hline
+{\em v\+\_\+x} & The desired velocity in v\+\_\+x (to be set in this function) \\
+\hline
+{\em v\+\_\+y} & The desired velocity in v\+\_\+y (to be set in this function) \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classController_a2cefe37f2817de5f54535ebb35e0d32f}{Controller}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sw/simulation/controllers/random\+\_\+exploration/random\+\_\+exploration.\+h\item 
+sw/simulation/controllers/random\+\_\+exploration/random\+\_\+exploration.\+cpp\end{DoxyCompactItemize}

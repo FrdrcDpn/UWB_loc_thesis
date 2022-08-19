@@ -1,0 +1,79 @@
+\hypertarget{classTemplate__Calculator}{}\doxysubsection{Template\+\_\+\+Calculator Class Reference}
+\label{classTemplate__Calculator}\index{Template\_Calculator@{Template\_Calculator}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTemplate__Calculator_a5ddd15846f24fc9afe126121102a3acc}{Template\+\_\+\+Calculator}} (uint segments, float rangesensor)
+\item 
+\mbox{\hyperlink{classTemplate__Calculator_a473acdd403c20462d24268dadac1e9bf}{$\sim$\+Template\+\_\+\+Calculator}} ()
+\item 
+void \mbox{\hyperlink{classTemplate__Calculator_ad356205d501c9452f96f247e818e0155}{set\+\_\+state\+\_\+action\+\_\+matrix}} (std\+::string filename)
+\item 
+float \mbox{\hyperlink{classTemplate__Calculator_ac6c69cd4e49ee80dd63f42e3ea5fec6f}{get\+\_\+preferred\+\_\+bearing}} (const std\+::vector$<$ float $>$ \&bdes, const float v\+\_\+b)
+\item 
+bool \mbox{\hyperlink{classTemplate__Calculator_aaa7f83099b48435017916cb65f995363}{fill\+\_\+template}} (std\+::vector$<$ bool $>$ \&q, const float \&b\+\_\+i, const float \&u, const float \&dmax, const float \&angle\+\_\+err)
+\item 
+void \mbox{\hyperlink{classTemplate__Calculator_a4b36be3b2567023995f6bd055b5ad0b9}{assess\+\_\+situation}} (uint16\+\_\+t ID, std\+::vector$<$ bool $>$ \&q, std\+::vector$<$ int $>$ \&q\+\_\+\+ID)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ int, std\+::vector$<$ int $>$ $>$ \mbox{\hyperlink{classTemplate__Calculator_a7da20a0fb406bf23c6dbd22d0343ca3b}{state\+\_\+action\+\_\+matrix}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTemplate__Calculator_a5ddd15846f24fc9afe126121102a3acc}\label{classTemplate__Calculator_a5ddd15846f24fc9afe126121102a3acc}} 
+\index{Template\_Calculator@{Template\_Calculator}!Template\_Calculator@{Template\_Calculator}}
+\index{Template\_Calculator@{Template\_Calculator}!Template\_Calculator@{Template\_Calculator}}
+\doxyparagraph{\texorpdfstring{Template\_Calculator()}{Template\_Calculator()}}
+{\footnotesize\ttfamily Template\+\_\+\+Calculator\+::\+Template\+\_\+\+Calculator (\begin{DoxyParamCaption}\item[{uint}]{segments,  }\item[{float}]{rangesensor }\end{DoxyParamCaption})}
+
+Constructor \mbox{\Hypertarget{classTemplate__Calculator_a473acdd403c20462d24268dadac1e9bf}\label{classTemplate__Calculator_a473acdd403c20462d24268dadac1e9bf}} 
+\index{Template\_Calculator@{Template\_Calculator}!````~Template\_Calculator@{$\sim$Template\_Calculator}}
+\index{````~Template\_Calculator@{$\sim$Template\_Calculator}!Template\_Calculator@{Template\_Calculator}}
+\doxyparagraph{\texorpdfstring{$\sim$Template\_Calculator()}{~Template\_Calculator()}}
+{\footnotesize\ttfamily Template\+\_\+\+Calculator\+::$\sim$\+Template\+\_\+\+Calculator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Destructor 
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTemplate__Calculator_a4b36be3b2567023995f6bd055b5ad0b9}\label{classTemplate__Calculator_a4b36be3b2567023995f6bd055b5ad0b9}} 
+\index{Template\_Calculator@{Template\_Calculator}!assess\_situation@{assess\_situation}}
+\index{assess\_situation@{assess\_situation}!Template\_Calculator@{Template\_Calculator}}
+\doxyparagraph{\texorpdfstring{assess\_situation()}{assess\_situation()}}
+{\footnotesize\ttfamily void Template\+\_\+\+Calculator\+::assess\+\_\+situation (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{ID,  }\item[{std\+::vector$<$ bool $>$ \&}]{q,  }\item[{std\+::vector$<$ int $>$ \&}]{q\+\_\+\+ID }\end{DoxyParamCaption})}
+
+Define the current neighborhood \mbox{\Hypertarget{classTemplate__Calculator_aaa7f83099b48435017916cb65f995363}\label{classTemplate__Calculator_aaa7f83099b48435017916cb65f995363}} 
+\index{Template\_Calculator@{Template\_Calculator}!fill\_template@{fill\_template}}
+\index{fill\_template@{fill\_template}!Template\_Calculator@{Template\_Calculator}}
+\doxyparagraph{\texorpdfstring{fill\_template()}{fill\_template()}}
+{\footnotesize\ttfamily bool Template\+\_\+\+Calculator\+::fill\+\_\+template (\begin{DoxyParamCaption}\item[{std\+::vector$<$ bool $>$ \&}]{q,  }\item[{const float \&}]{b\+\_\+i,  }\item[{const float \&}]{u,  }\item[{const float \&}]{dmax,  }\item[{const float \&}]{angle\+\_\+err }\end{DoxyParamCaption})}
+
+Construct the local discrete state in binary form (q) from the continous neighborhood \mbox{\Hypertarget{classTemplate__Calculator_ac6c69cd4e49ee80dd63f42e3ea5fec6f}\label{classTemplate__Calculator_ac6c69cd4e49ee80dd63f42e3ea5fec6f}} 
+\index{Template\_Calculator@{Template\_Calculator}!get\_preferred\_bearing@{get\_preferred\_bearing}}
+\index{get\_preferred\_bearing@{get\_preferred\_bearing}!Template\_Calculator@{Template\_Calculator}}
+\doxyparagraph{\texorpdfstring{get\_preferred\_bearing()}{get\_preferred\_bearing()}}
+{\footnotesize\ttfamily float Template\+\_\+\+Calculator\+::get\+\_\+preferred\+\_\+bearing (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float $>$ \&}]{bdes,  }\item[{const float}]{v\+\_\+b }\end{DoxyParamCaption})}
+
+Function to select the desired relative bearing based on what is easiest \mbox{\Hypertarget{classTemplate__Calculator_ad356205d501c9452f96f247e818e0155}\label{classTemplate__Calculator_ad356205d501c9452f96f247e818e0155}} 
+\index{Template\_Calculator@{Template\_Calculator}!set\_state\_action\_matrix@{set\_state\_action\_matrix}}
+\index{set\_state\_action\_matrix@{set\_state\_action\_matrix}!Template\_Calculator@{Template\_Calculator}}
+\doxyparagraph{\texorpdfstring{set\_state\_action\_matrix()}{set\_state\_action\_matrix()}}
+{\footnotesize\ttfamily void Template\+\_\+\+Calculator\+::set\+\_\+state\+\_\+action\+\_\+matrix (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+Function to read the state-\/action map from a txt file and store it in the object 
+
+\doxysubsubsection{Member Data Documentation}
+\mbox{\Hypertarget{classTemplate__Calculator_a7da20a0fb406bf23c6dbd22d0343ca3b}\label{classTemplate__Calculator_a7da20a0fb406bf23c6dbd22d0343ca3b}} 
+\index{Template\_Calculator@{Template\_Calculator}!state\_action\_matrix@{state\_action\_matrix}}
+\index{state\_action\_matrix@{state\_action\_matrix}!Template\_Calculator@{Template\_Calculator}}
+\doxyparagraph{\texorpdfstring{state\_action\_matrix}{state\_action\_matrix}}
+{\footnotesize\ttfamily std\+::map$<$int, std\+::vector$<$int$>$ $>$ Template\+\_\+\+Calculator\+::state\+\_\+action\+\_\+matrix}
+
+State-\/action map storage 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sw/simulation/sensors/template\+\_\+calculator.\+h\item 
+sw/simulation/sensors/template\+\_\+calculator.\+cpp\end{DoxyCompactItemize}
